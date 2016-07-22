@@ -1,0 +1,7 @@
+@import "../../scss/_theme.scss";
+
+.app-gallery-item-fullsize > img {
+  border-color: $app_electricPink;
+  border-style: solid;
+  border-width: thick;
+}
