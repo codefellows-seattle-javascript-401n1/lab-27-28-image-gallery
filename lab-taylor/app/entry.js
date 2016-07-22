@@ -6,3 +6,4 @@ require('./scss/base.scss');
 const angular = require('angular');
 angular.module('galleryApp', []);
 require('./component/app-main');
+require('./component/app-gallery');
