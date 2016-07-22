@@ -26,6 +26,11 @@ function AppGalleryController() {
       title: 'Cat Three',
       desc: 'This is the thrid cat',
       imgSrc: 'https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png'
+    },
+    {
+      title: 'Cat Brittany',
+      desc: 'This is Brittanys Cat',
+      imgSrc: 'https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png'
     }
   ];
 
