@@ -22,6 +22,10 @@ module.exports = {
           presets: ['es2015']
         }
       }
+      // {
+      //   test: /\.html$/,
+      //   loader: 'file?name=[hash].[ext]',
+      // }
     ]
   },
   plugins: [
