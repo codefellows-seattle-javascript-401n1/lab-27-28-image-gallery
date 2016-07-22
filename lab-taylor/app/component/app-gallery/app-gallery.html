@@ -6,4 +6,8 @@
   <ul>
     <app-gallery-item-fullsize ng-repeat="item in appGalleryCtrl.images" title="{{item.title}}" desc="{{item.desc}}" img-src="{{item.imgSrc}}">
   </ul>
+  <hr>
+  <ul>
+    <app-gallery-item-thumbnail ng-repeat="item in appGalleryCtrl.images" img-src="{{item.imgSrc}}">
+  </ul>
 </section>
