@@ -8,3 +8,4 @@ angular.module('galleryApp', []);
 require('./component/app-main');
 require('./component/app-gallery');
 require('./component/app-gallery-item-text');
+require('./component/app-gallery-item-fullsize');
