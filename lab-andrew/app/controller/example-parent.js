@@ -1,7 +1,5 @@
 'use strict';
 
-const angular = require('angular');
-
-angular.module('ExampleController', ['$scope', function($scope) {
-  $scope.name= 'rimraf';
+require('angular').module('galleryApp').controller('ExampleController', ['$scope',function($scope){
+  $scope.name = 'troll time';
 }]);

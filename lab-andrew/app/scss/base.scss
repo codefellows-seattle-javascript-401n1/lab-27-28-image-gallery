@@ -1,5 +1,6 @@
 @import "vendor/normalize.css";
+@import "_theme.scss";
 
 body {
-  background-color: #6c9ed9;
+  background-color: $app_blue;
 }

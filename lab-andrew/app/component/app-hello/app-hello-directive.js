@@ -2,12 +2,12 @@
 
 const angular = require('angular');
 
-angular.module('galleryApp').directive('appHello', function() {
+angular.module('galleryApp').directive('appHello', function(){
   return {
     restrict: 'E',
     replace: true,
     scope: {
-      example: '@'
+      example:'@'
     },
     controller: 'AppHelloController',
     controllerAs: 'appHelloCtrl',
