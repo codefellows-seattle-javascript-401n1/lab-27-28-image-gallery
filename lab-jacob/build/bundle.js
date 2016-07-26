@@ -31599,7 +31599,7 @@
 /* 11 */
 /***/ function(module, exports) {
 
-	module.exports = "<section class=\"appGallery\">\n  <ul>\n    <app-gallery-item ng-repeat=\"item in appGalleryCtrl.images\" title=\"{{item.title}}\" desc=\"{{item.desc}}\" imgSrc=\"{{item.imgSrc}}\"></app-gallery-item>\n  </ul>\n</section>\n";
+	module.exports = "<section class=\"app-gallery\">\n  <ul>\n    <app-gallery-item ng-repeat=\"item in appGalleryCtrl.images\" title=\"{{item.title}}\" desc=\"{{item.desc}}\" img-src=\"{{item.imgSrc}}\"></app-gallery-item>\n  </ul>\n</section>\n";
 
 /***/ },
 /* 12 */
