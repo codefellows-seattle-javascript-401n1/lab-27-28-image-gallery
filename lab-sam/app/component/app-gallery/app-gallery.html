@@ -1,0 +1,16 @@
+<section class="app-gallery">
+
+  <form novalidate ng-submit="appGalleryCtrl.addImageFull()">
+    <label for="title">title: </label>
+    <input name="title" type="text" ng-model="appGalleryCtrl.ImageFull.title">
+    <label for="description">description: </label>
+    <input type="text" ng-model="appGalleryCtrl.ImageFull.description">
+    <label for="imgSrc">image source:</label>
+    <input type="text" ng-model="appGalleryCtrl.ImageFull.imgSrc">
+    <input type="submit" value="create item">
+  </form>
+  <ul>
+
+    <app-image-full ng-repeat="item in appGalleryCtrl.images" title="{{item.title}}" description="{{item.description}}" img-src="{{item.imgSrc}}"> </app-image-full>
+  </ul>
+</section>
