@@ -419,7 +419,14 @@ textarea {
 }
 body {
   background-color: #ff7a7a; }
+
+.app-main h1 {
+  text-align: center;
+  text-decoration: overline;
+  text-decoration: underline; }
 .app-gallery-item {
   display: inline-block; }
+.app-gallery-text {
+  background-color: #FF604C; }
 .app-main {
   background-color: white; }

@@ -1,5 +1,6 @@
 <section class="app-gallery">
   <ul>
+    <app-gallery-text ng-repeat="item in appGalleryCtrl.images" title="{{item.title}}" desc="{{item.desc}}" link="{{item.link}}"></app-gallery-text>
     <app-gallery-item ng-repeat="item in appGalleryCtrl.images" title="{{item.title}}" desc="{{item.desc}}" img-src="{{item.imgSrc}}"></app-gallery-item>
   </ul>
 </section>
