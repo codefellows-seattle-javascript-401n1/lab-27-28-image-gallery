@@ -7,4 +7,5 @@ const angular = require('angular');
 angular.module('imageGallery', []);
 
 require('./component/app-main');
+require('./component/app-gallery');
 require('./component/app-gallery-item');
