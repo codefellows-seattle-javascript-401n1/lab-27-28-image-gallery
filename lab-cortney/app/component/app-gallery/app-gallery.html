@@ -1,6 +1,6 @@
 <section class="app-gallery">
   <ul>
     <!-- create an app-gallery-item for each image in the controllers images array. -->
-    <app-gallery-text-only ng-repeat="item in appGalleryCtrl.images" title="{{item.title}}" desc="{{item.desc}}" img-src="{{item.imgSrc}}"></app-gallery-text-only>
+    <app-gallery-thumbnails ng-repeat="item in appGalleryCtrl.images" title="{{item.title}}" desc="{{item.desc}}" img-src="{{item.imgSrc}}"></app-gallery-thumbnails>
   </ul>
 </section>

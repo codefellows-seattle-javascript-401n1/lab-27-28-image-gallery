@@ -6,4 +6,4 @@ require('./scss/base.scss');
 require('./image-gallery.js');
 require('./component/app-main');
 require('./component/app-gallery');
-require('./component/app-gallery-text-only');
+require('./component/app-gallery-thumbnails');

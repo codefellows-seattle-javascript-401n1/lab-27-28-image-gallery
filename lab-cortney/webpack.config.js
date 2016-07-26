@@ -5,7 +5,7 @@ const ExtractText = require('extract-text-webpack-plugin');
 module.exports = {
   entry: `${__dirname}/app/entry.js`,
   output: {
-    folder: 'build',
+    path: 'build',
     filename: 'bundle.js'
   },
   plugins: [
@@ -31,6 +31,7 @@ module.exports = {
       },
       {
         test: /\.(jpg|gif|png)$/,
+        // loader: 'file?name=image/cake/[name]-[hash].[ext]'
         loader: 'file'
       }
     ]
