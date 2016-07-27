@@ -22,3 +22,4 @@ angular.module('galleryApp', []);
  * registering the directive.  In this case, there is an index.js file in this directory and requires the js, html, and scss files.  webpack will first look at the index.js and require in the rest of the files. webpack will then run the corresponding "test" for the file extension you defined with your regex in webpack.
  */
 require('./component/display-img-description');
+require('./component/app-main');
