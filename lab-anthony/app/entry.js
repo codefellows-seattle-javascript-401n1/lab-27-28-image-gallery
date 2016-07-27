@@ -13,4 +13,6 @@ angular.module('galleryApp', []);
 
 // angular module extensions
 require('./components/app-main');
+require('./components/app-gallery');
 require('./components/app-gallery-item');
+require('./components/app-edit-gallery-item-form');
