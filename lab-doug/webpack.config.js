@@ -8,6 +8,11 @@ module.exports = {
     filename: 'bundle.js',
     path: 'build'
   },
+
+  plugins: [
+    new ExtractTextPlugin('bundle.css')
+  ],
+
   module: {
     loaders: [
       {
@@ -32,7 +37,5 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new ExtractTextPlugin('bundle.css')
-  ]
+
 };
