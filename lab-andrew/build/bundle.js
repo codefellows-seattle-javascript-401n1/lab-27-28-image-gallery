@@ -47,14 +47,16 @@
 	'use strict';
 
 	__webpack_require__(1);
-	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./sass/base.scss\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	__webpack_require__(2);
 
-	var angular = __webpack_require__(2);
+	var angular = __webpack_require__(7);
 	angular.module('galleryApp', []);
 
-	__webpack_require__(4);
-	__webpack_require__(12);
-	__webpack_require__(17);
+	__webpack_require__(9);
+	__webpack_require__(14);
+	__webpack_require__(19);
+	__webpack_require__(31);
+	__webpack_require__(36);
 
 /***/ },
 /* 1 */
@@ -64,14 +66,24 @@
 
 /***/ },
 /* 2 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(3);
+	__webpack_require__(8);
 	module.exports = angular;
 
 
 /***/ },
-/* 3 */
+/* 8 */
 /***/ function(module, exports) {
 
 	/**
@@ -31549,85 +31561,61 @@
 	!window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
 
 /***/ },
-/* 4 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(5);
-	__webpack_require__(7);
-	__webpack_require__(8);
+	__webpack_require__(10);
+	__webpack_require__(12);
 
 /***/ },
-/* 5 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var angular = __webpack_require__(2);
+	var angular = __webpack_require__(7);
 
-	angular.module('galleryApp').directive('appHello', function () {
+	angular.module('galleryApp').directive('appMain', function () {
 	  return {
 	    restrict: 'E',
 	    replace: true,
-	    scope: {
-	      example: '@'
-	    },
-	    controller: 'AppHelloController',
-	    controllerAs: 'appHelloCtrl',
-	    bindToController: true,
-	    template: __webpack_require__(6)
+	    template: __webpack_require__(11)
 	  };
 	});
 
 /***/ },
-/* 6 */
+/* 11 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"app-hello\">\n  <h1>here is text</h1>\n  <p>{{appHelloCtrl.example}}</p>\n  <p>{{appHelloCtrl.name}}</p>\n</div>\n";
+	module.exports = "<main class=\"app-main\">\n  <app-gallery-item></app-gallery-item>\n</main>\n";
 
 /***/ },
-/* 7 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var angular = __webpack_require__(2);
-
-	angular.module('galleryApp').controller('AppHelloController', [AppHelloController]);
-
-	function AppHelloController() {
-	  this.name = 'should be this string';
-	}
-
-/***/ },
-/* 8 */
+/* 12 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */
+/* 13 */,
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(13);
 	__webpack_require__(15);
+	__webpack_require__(17);
 
 /***/ },
-/* 13 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	'use stict';
 
-	var angular = __webpack_require__(2);
+	var angular = __webpack_require__(7);
 
-	angular.module('galleryApp').directive('appGalleryItem', function () {
+	angular.module('galleryApp').directive('appText', function () {
 	  return {
 	    restrict: 'E',
 	    replace: true,
@@ -31636,56 +31624,242 @@
 	      title: '@',
 	      desc: '@'
 	    },
-	    template: __webpack_require__(14)
+	    template: __webpack_require__(16)
 	  };
 	});
 
 /***/ },
-/* 14 */
+/* 16 */
 /***/ function(module, exports) {
 
-	module.exports = "<li class=\"app-gallery-item\">\n  <img ng-src=\"{{imgSrc}}\">\n  <h2>{{title}}</h2>\n  <p>{{desc}}</p>\n</li>\n";
+	module.exports = "<li class=\"app-text\">{{title}} || {{desc}} || <a ng-href=\"{{imgSrc}}\">{{imgSrc}}</a></li>\n";
 
 /***/ },
-/* 15 */
+/* 17 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 16 */,
-/* 17 */
+/* 18 */,
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(18);
 	__webpack_require__(20);
+	__webpack_require__(29);
 
 /***/ },
-/* 18 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var angular = __webpack_require__(2);
+	var angular = __webpack_require__(7);
 
-	angular.module('galleryApp').directive('appMain', function () {
+	angular.module('galleryApp').controller('AppGalleryItemController', [AppGalleryItemController]);
+
+	function AppGalleryItemController() {
+	  this.galleryImage = {
+	    title: '',
+	    desc: '',
+	    imgSrc: ''
+	  };
+
+	  this.images = [{
+	    title: 'cave1',
+	    desc: 'entrance',
+	    imgSrc: __webpack_require__(21)
+	  }, {
+	    title: 'cave2',
+	    desc: 'the Hall',
+	    imgSrc: __webpack_require__(22)
+	  }, {
+	    title: 'cave3',
+	    desc: 'The Hole',
+	    imgSrc: __webpack_require__(23)
+	  }, {
+	    title: 'cave4',
+	    desc: 'Low Bridge',
+	    imgSrc: __webpack_require__(24)
+	  }, {
+	    title: 'cave5',
+	    desc: 'still waters',
+	    imgSrc: __webpack_require__(25)
+	  }, {
+	    title: 'cave6',
+	    desc: 'the door within',
+	    imgSrc: __webpack_require__(26)
+	  }, {
+	    title: 'cave7',
+	    desc: 'long high bridge',
+	    imgSrc: __webpack_require__(27)
+	  }, {
+	    title: 'cave8',
+	    desc: 'the Hole',
+	    imgSrc: __webpack_require__(23)
+	  }, {
+	    title: 'cave9',
+	    desc: 'the river',
+	    imgSrc: __webpack_require__(28)
+	  }];
+	}
+
+/***/ },
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "2a6159b8a582dd0f67c4aac93472c954.jpg";
+
+/***/ },
+/* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "27020bcee355b7325e5ade6d8b5d42df.jpg";
+
+/***/ },
+/* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "ca09252497b02088a04b77eb1d15dc79.jpg";
+
+/***/ },
+/* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "62f1726bbce2d9c4e365dfbf27cf7f86.jpg";
+
+/***/ },
+/* 25 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "b2cdaa235ecfcbfc7298253a1f2a0f82.jpg";
+
+/***/ },
+/* 26 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "2811c440b8033f4440f995d57b9977ee.jpg";
+
+/***/ },
+/* 27 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "26972a634845d2751bba737e18ade4a7.jpg";
+
+/***/ },
+/* 28 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "57d6714e2e41acc531e796af46aabb4c.jpg";
+
+/***/ },
+/* 29 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var angular = __webpack_require__(7);
+
+	angular.module('galleryApp').directive('appGalleryItem', function () {
 	  return {
 	    restrict: 'E',
 	    replace: true,
-	    template: __webpack_require__(19)
+	    scope: {},
+	    controller: 'AppGalleryItemController',
+	    controllerAs: 'appGalleryCtrl',
+	    bindToController: true,
+	    template: __webpack_require__(30)
 	  };
 	});
 
 /***/ },
-/* 19 */
+/* 30 */
 /***/ function(module, exports) {
 
-	module.exports = "<main class=\"app-main\">\n  <app-gallery-item img-src=\"http://vignette2.wikia.nocookie.net/beyondthestars/images/c/c6/Unicorn_cat.gif/revision/latest?cb=20120325024015\" title=\"unicorn cat\" desc=\"booya kitty cat numba1 #yolo #swag #hax\"> </app-gallery-item>\n  <app-gallery-item img-src=\"http://vignette2.wikia.nocookie.net/beyondthestars/images/c/c6/Unicorn_cat.gif/revision/latest?cb=20120325024015\" title=\"unicorn cat\" desc=\"booya kitty cat numba1 #yolo #swag #hax\"> </app-gallery-item>\n  <app-gallery-item img-src=\"http://vignette2.wikia.nocookie.net/beyondthestars/images/c/c6/Unicorn_cat.gif/revision/latest?cb=20120325024015\" title=\"unicorn cat\" desc=\"booya kitty cat numba1 #yolo #swag #hax\"> </app-gallery-item>\n  <app-gallery-item img-src=\"http://vignette2.wikia.nocookie.net/beyondthestars/images/c/c6/Unicorn_cat.gif/revision/latest?cb=20120325024015\" title=\"unicorn cat\" desc=\"booya kitty cat numba1 #yolo #swag #hax\"> </app-gallery-item>\n  <app-gallery-item img-src=\"http://vignette2.wikia.nocookie.net/beyondthestars/images/c/c6/Unicorn_cat.gif/revision/latest?cb=20120325024015\" title=\"unicorn cat\" desc=\"booya kitty cat numba1 #yolo #swag #hax\"> </app-gallery-item>\n</main>\n";
+	module.exports = "<section class=\"app-gallery-item\">\n  <ul>\n    <app-text ng-repeat=\"image in appGalleryCtrl.images\" title=\"{{image.title}}\" desc=\"{{image.desc}}\" imgSrc=\"{{image.imgSrc}}\">\n  </ul>\n  <ul>\n    <app-gallery-fullSize ng-repeat=\"image in appGalleryCtrl.images\" title=\"{{image.title}}\" desc=\"{{image.desc}}\" imgSrc=\"{{image.imgSrc}}\">\n  </ul>\n\n</section>\n";
 
 /***/ },
-/* 20 */
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(32);
+	__webpack_require__(34);
+
+/***/ },
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var angular = __webpack_require__(7);
+
+	angular.module('galleryApp').directive('appGalleryThumbnail', function () {
+	  return {
+	    restrict: 'E',
+	    replace: true,
+	    scope: {
+	      imgsrc: '@'
+	    },
+	    template: __webpack_require__(33)
+	  };
+	});
+
+/***/ },
+/* 33 */
+/***/ function(module, exports) {
+
+	module.exports = "<li class=\"app-gallery-thumbnail\">\n  <img ng-src=\"{{imgSrc}}\" width=\"100px\" height=\"100px\" />\n</li>\n";
+
+/***/ },
+/* 34 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 35 */,
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(37);
+	__webpack_require__(39);
+
+/***/ },
+/* 37 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	'use stict';
+
+	var angular = __webpack_require__(7);
+
+	angular.module('galleryApp').directive('appGalleryFullSize', function () {
+	  return {
+	    restrict: 'E',
+	    replace: true,
+	    scope: {
+	      imgSrc: '@',
+	      title: '@',
+	      desc: '@'
+	    },
+	    template: __webpack_require__(38)
+	  };
+	});
+
+/***/ },
+/* 38 */
+/***/ function(module, exports) {
+
+	module.exports = "<li class=\"app-gallery-fullSize\">\n  <img ng-src=\"{{imgSrc}}\">\n  <h2>{{title}}</h2>\n  <p>{{desc}}</p>\n</li>\n";
+
+/***/ },
+/* 39 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
