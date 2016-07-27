@@ -420,13 +420,27 @@ textarea {
 body {
   background-color: #ff7a7a; }
 
-.app-main h1 {
-  text-align: center;
-  text-decoration: overline;
-  text-decoration: underline; }
+h1, h2, h3 {
+  color: #6F63FF; }
+
+p {
+  color: #790AE8; }
+
+ul {
+  margin-top: 0; }
+
+.app-gallery {
+  background-color: white; }
 .app-gallery-item {
   display: inline-block; }
 .app-gallery-text {
-  background-color: #FF604C; }
-.app-main {
-  background-color: white; }
+  list-style-type: none; }
+.app-gallery-thumbnail {
+  list-style-type: none; }
+.heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  text-align: center;
+  border-bottom: thin solid #1BFFDA; }

@@ -59,10 +59,10 @@
 
 	//angular extentsions
 	__webpack_require__(9);
-	__webpack_require__(19);
-	__webpack_require__(24);
-	//require('./component/app-gallery-thumbnail');
-	__webpack_require__(29);
+	__webpack_require__(25);
+	__webpack_require__(30);
+	__webpack_require__(35);
+	__webpack_require__(40);
 
 /***/ },
 /* 1 */
@@ -31599,7 +31599,7 @@
 /* 11 */
 /***/ function(module, exports) {
 
-	module.exports = "<section class=\"app-gallery\">\n  <ul>\n    <app-gallery-text ng-repeat=\"item in appGalleryCtrl.images\" title=\"{{item.title}}\" desc=\"{{item.desc}}\" link=\"{{item.link}}\"></app-gallery-text>\n    <app-gallery-item ng-repeat=\"item in appGalleryCtrl.images\" title=\"{{item.title}}\" desc=\"{{item.desc}}\" img-src=\"{{item.imgSrc}}\"></app-gallery-item>\n  </ul>\n</section>\n";
+	module.exports = "<section class=\"app-gallery\">\n  <ul>\n    <app-gallery-text ng-repeat=\"item in appGalleryCtrl.images\" title=\"{{item.title}}\" desc=\"{{item.desc}}\" link=\"{{item.link}}\"></app-gallery-text>\n    <app-gallery-thumbnail ng-repeat=\"item in appGalleryCtrl.images\" thumb-src=\"{{item.thumbSrc}}\"></app-gallery-thumbnail>\n    <app-gallery-item ng-repeat=\"item in appGalleryCtrl.images\" title=\"{{item.title}}\" desc=\"{{item.desc}}\" img-src=\"{{item.imgSrc}}\"></app-gallery-item>\n  </ul>\n</section>\n";
 
 /***/ },
 /* 12 */
@@ -31615,38 +31615,46 @@
 	  this.galleryItem = {
 	    title: '',
 	    desc: '',
-	    imgSrc: ''
+	    thumbSrc: '',
+	    imgSrc: '',
+	    link: ''
 	  };
 
 	  this.images = [{
 	    title: ' Fractal Image 1',
 	    desc: 'Cool perspective image with icy blueness and straight geometric shapes',
-	    imgSrc: __webpack_require__(13),
+	    thumbSrc: __webpack_require__(13),
+	    imgSrc: __webpack_require__(14),
 	    link: 'https://www.flickr.com/photos/tommietheturtle1/16970363600/in/photolist-rRBxRS-hUkYwy-owXpcD-qm6gnP-qAecCy-aHJ9WR-cJsHZd-rcGwic-rQ4Y46-rSdrcC-ekEFVA-rcZXER-qo1T2q-ocTNQZ-rcUaXi-qkWKH6-owiFQy-otsMWe-qkNkZG-s9erC2-qSCErv-qUYqKk-rS3Ryz-nHt4xg-odY5UN-rRWCqx-rpBhrR-rdz3Yb-ove8oL-9ZgQ5b-dgLW7V-ounchW-odbDQE-saxE58-i7Zkbc-owiSB5-o5ay1Z-qjjr6D-od9jsA-dJHumU-qzsqoW-ouWKd6-owrJxp-oeUDqJ-s9t73T-s7hLrA-otUYUp-pSfpzN-rcLx9H-s9EyzZ'
 	  }, {
 	    title: 'Fractal Image 2',
 	    desc: 'Repeating rainbow negative image',
-	    imgSrc: __webpack_require__(14),
+	    thumbSrc: __webpack_require__(15),
+	    imgSrc: __webpack_require__(16),
 	    link: 'https://www.flickr.com/photos/tommietheturtle1/17140313646/in/photolist-s7CA65-ouzdZ9-w2aiPj-qb1fwW-x2FtCj-ovv2j7-od5ECV-odYAqx-oeUDoj-gtmhGS-otEqFv-ovJ8gx-oeUHVn-emppon-oeZ31n-oeYnoy-ocAxJZ-oeTurF-odKkKC-xG7Djx-9gD6iz-oyftKr-ox5hCx-odmxvq-owvUvc-oeQMsG-odJwF4-qC5PDo-qMm6hm-ousMrG-ou5bMz-odaqjz-odertv-pUbGZi-mRx6gD-ouSuyV-xewTnP-ouTmnn-bdiyhc-rvKpCn-9q9RQX-ouqem1-osAXhE-qkUBpe-qrXybf-owaCAf-os7mHq-qEyTgf-od9xrG-odcugD'
 	  }, {
 	    title: 'Fractal Image 3',
 	    desc: 'Super sweet dark box shapes a la tetris',
-	    imgSrc: __webpack_require__(15),
+	    thumbSrc: __webpack_require__(17),
+	    imgSrc: __webpack_require__(18),
 	    link: 'https://www.flickr.com/photos/tommietheturtle1/14280363550/in/photolist-nKUAyE-rRVqKQ-odFxef-odmzEA-qkLg8R-rPLPdz-rdCrkQ-rcy2sH-dLTqtf-ou7SdR-s9aDGR-pFjV83-8xQE8E-oeYTWt-s7fwZ9-rdtxDu-ioamQL-ounS97-rd2cwX-odaegk-t9o8Ee-oCVJXy-osWT6d-8Bn3J7-otJeN3-ocafHL-oyaMxF-ouyPCZ-odE6oQ-owt8PH-dZvkaZ-hUxecV-owgLg3-quz2GL-qkXBAU-orzSKG-ouqqru-fAzfj7-ocvvtZ-rRBxRS-hUkYwy-owXpcD-qm6gnP-qAecCy-aHJ9WR-cJsHZd-rcGwic-rQ4Y46-rSdrcC-ekEFVA'
 	  }, {
 	    title: 'Fractal Image 4',
 	    desc: 'A fan of warm blue and red lights',
-	    imgSrc: __webpack_require__(16),
+	    thumbSrc: __webpack_require__(19),
+	    imgSrc: __webpack_require__(20),
 	    link: 'https://www.flickr.com/photos/tommietheturtle1/16676069701/in/photolist-rpBdx8-ioae1j-oe2n1D-odmmCA-ovrhgu-inXEkF-dLTzQU-s9xLhK-qEwdUr-i4df75-ou12in-spP2VH-rT8BFD-s8gQ6f-nKUAyE-rRVqKQ-odFxef-odmzEA-qkLg8R-rPLPdz-rdCrkQ-rcy2sH-dLTqtf-ou7SdR-s9aDGR-pFjV83-8xQE8E-oeYTWt-s7fwZ9-rdtxDu-ioamQL-ounS97-rd2cwX-odaegk-t9o8Ee-oCVJXy-osWT6d-8Bn3J7-otJeN3-ocafHL-oyaMxF-ouyPCZ-odE6oQ-owt8PH-dZvkaZ-hUxecV-owgLg3-quz2GL-qkXBAU-orzSKG'
 	  }, {
 	    title: 'Fractal Image 5',
 	    desc: 'Dark blue and pink meet with liquid distortion',
-	    imgSrc: __webpack_require__(17),
+	    thumbSrc: __webpack_require__(21),
+	    imgSrc: __webpack_require__(22),
 	    link: 'https://www.flickr.com/photos/tommietheturtle1/16542090373/in/photolist-rcLx9H-s9EyzZ-owvDua-rKsSan-kahr5g-7bExRm-rQckHV-o9pXo4-bdhFTZ-qkL6Vw-s96W7r-qUTMvq-s7JyQ7-ocVULw-rRvYL1-odbkun-ow8mWF-s8XHKW-rdC8Jh-eEXuzQ-rdBkJb-t2mB7b-odvWzn-oy7SQv-of1tr2-of1wrv-ouZwuV-rg3F1j-ocJFSr-oeYU4n-qEDj99-o8AVxV-qCjpyb-oydkgg-dLMRba-otuVJq-rcCaSS-oeRvYL-ouswvC-ouYMdz-otUv4K-ou5bbw-qYyi7U-rmyHLs-otZ21v-oupHgo-qAExpL-dZB1fq-qkRo2E-poL5m9'
 	  }, {
 	    title: 'Fractal Image 6',
 	    desc: 'Here\'s the sixth fractal image',
-	    imgSrc: __webpack_require__(18),
+	    thumbSrc: __webpack_require__(23),
+	    imgSrc: __webpack_require__(24),
 	    link: 'https://www.flickr.com/photos/tommietheturtle1/16676082851/in/photolist-rpBhrR-rdz3Yb-ove8oL-9ZgQ5b-dgLW7V-ounchW-odbDQE-saxE58-i7Zkbc-owiSB5-o5ay1Z-qjjr6D-od9jsA-dJHumU-qzsqoW-ouWKd6-owrJxp-oeUDqJ-s9t73T-s7hLrA-otUYUp-pSfpzN-rcLx9H-s9EyzZ-owvDua-rKsSan-kahr5g-7bExRm-rQckHV-o9pXo4-bdhFTZ-qkL6Vw-s96W7r-qUTMvq-s7JyQ7-ocVULw-rRvYL1-odbkun-ow8mWF-s8XHKW-rdC8Jh-eEXuzQ-rdBkJb-t2mB7b-odvWzn-oy7SQv-of1tr2-of1wrv-ouZwuV-rg3F1j'
 	  }];
 	}
@@ -31655,49 +31663,85 @@
 /* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "e4624a4e38c94efa207c48cb884e0437.jpg";
+	module.exports = __webpack_require__.p + "6cdf9fe85f248a59a38380fd5041fbd6.jpg";
 
 /***/ },
 /* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "d4048d437eb72f35bc994aa18774e384.jpg";
+	module.exports = __webpack_require__.p + "e4624a4e38c94efa207c48cb884e0437.jpg";
 
 /***/ },
 /* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "30622387cb42ba31007347af47efdf76.jpg";
+	module.exports = __webpack_require__.p + "8ffb850e30238587d42bda33af944eda.jpg";
 
 /***/ },
 /* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "79d9449be3b7be6d5e5ef4e24c89ddf3.jpg";
+	module.exports = __webpack_require__.p + "d4048d437eb72f35bc994aa18774e384.jpg";
 
 /***/ },
 /* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "c64b0c897908f5f3f7cb2ef16914bfb7.jpg";
+	module.exports = __webpack_require__.p + "b4b0e92508b3ac9c9896da593119d2c8.jpg";
 
 /***/ },
 /* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "a62adaadf1ad5a3819a6fd5c9232ba82.jpg";
+	module.exports = __webpack_require__.p + "30622387cb42ba31007347af47efdf76.jpg";
 
 /***/ },
 /* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-
-	__webpack_require__(20);
-	__webpack_require__(22);
+	module.exports = __webpack_require__.p + "79736b5d1e7ed922a30e44f74fc20258.jpg";
 
 /***/ },
 /* 20 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "79d9449be3b7be6d5e5ef4e24c89ddf3.jpg";
+
+/***/ },
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "e4760a1b7f2dbd4324714513fe25b60a.jpg";
+
+/***/ },
+/* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "c64b0c897908f5f3f7cb2ef16914bfb7.jpg";
+
+/***/ },
+/* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "963365550fd7938f212ec0a31c1ad5d2.jpg";
+
+/***/ },
+/* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "a62adaadf1ad5a3819a6fd5c9232ba82.jpg";
+
+/***/ },
+/* 25 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(26);
+	__webpack_require__(28);
+
+/***/ },
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31713,34 +31757,34 @@
 	      title: '@',
 	      desc: '@'
 	    },
-	    template: __webpack_require__(21)
+	    template: __webpack_require__(27)
 	  };
 	});
 
 /***/ },
-/* 21 */
+/* 27 */
 /***/ function(module, exports) {
 
 	module.exports = "<li class=\"app-gallery-item\">\n  <img ng-src=\"{{imgSrc}}\">\n  <h2>{{title}}</h2>\n  <p>{{desc}}</p>\n</li>\n";
 
 /***/ },
-/* 22 */
+/* 28 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 23 */,
-/* 24 */
+/* 29 */,
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(25);
-	__webpack_require__(27);
+	__webpack_require__(31);
+	__webpack_require__(33);
 
 /***/ },
-/* 25 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31756,34 +31800,75 @@
 	      title: '@',
 	      desc: '@'
 	    },
-	    template: __webpack_require__(26)
+	    template: __webpack_require__(32)
 	  };
 	});
 
 /***/ },
-/* 26 */
+/* 32 */
 /***/ function(module, exports) {
 
-	module.exports = "<li class=\"app-gallery-text\">\n  <a ng-href=\"{{link}}\"> \n  <h2>{{title}}</h2>\n  <p>{{desc}}</p>\n</li>\n";
+	module.exports = "<li class=\"app-gallery-text\">\n  <h2>{{title}}</h2>\n  <p>{{desc}}</p>\n  <a ng-href=\"{{link}}\"> {{link}} </a>\n</li>\n";
 
 /***/ },
-/* 27 */
+/* 33 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 28 */,
-/* 29 */
+/* 34 */,
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(30);
-	__webpack_require__(32);
+	__webpack_require__(36);
+	__webpack_require__(38);
 
 /***/ },
-/* 30 */
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var angular = __webpack_require__(7);
+
+	angular.module('imageGallery').directive('appGalleryThumbnail', function () {
+	  return {
+	    restrict: 'E',
+	    replace: true,
+	    scope: {
+	      thumbSrc: '@'
+	    },
+	    template: __webpack_require__(37)
+	  };
+	});
+
+/***/ },
+/* 37 */
+/***/ function(module, exports) {
+
+	module.exports = "<li class=\"app-gallery-thumbnail\">\n  <img ng-src=\"{{thumbSrc}}\">\n</li>\n";
+
+/***/ },
+/* 38 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 39 */,
+/* 40 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(41);
+	__webpack_require__(43);
+
+/***/ },
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31794,18 +31879,18 @@
 	  return {
 	    restrict: 'E',
 	    replace: true,
-	    template: __webpack_require__(31)
+	    template: __webpack_require__(42)
 	  };
 	});
 
 /***/ },
-/* 31 */
+/* 42 */
 /***/ function(module, exports) {
 
-	module.exports = "<main class=\"app-main\">\n  <h1>Gallery of Images!</h1>\n  <app-gallery></app-gallery>\n</main>\n";
+	module.exports = "<main class=\"app-main\">\n  <div class=\"heading\">\n    <button type=\"button\">Image list</button>\n    <h1>Gallery of Images!</h1>\n    <!-- button for gallery -->\n    <button type=\"button\">Gallery</button>\n  </div>\n  <app-gallery></app-gallery>\n</main>\n";
 
 /***/ },
-/* 32 */
+/* 43 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
