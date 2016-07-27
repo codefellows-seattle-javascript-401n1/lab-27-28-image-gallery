@@ -10,6 +10,6 @@ const angular = require('angular');
 // app modules
 
 // create angular module
-angular.module('galleryApp', []);
+// angular.module('galleryApp', []);
 
 // angular module extensions
