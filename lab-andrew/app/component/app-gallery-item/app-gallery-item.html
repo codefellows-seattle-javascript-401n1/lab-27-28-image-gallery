@@ -1,9 +1,11 @@
 <section class="app-gallery-item">
   <ul>
-    <app-text ng-repeat="image in appGalleryCtrl.images" title="{{image.title}}" desc="{{image.desc}}" imgSrc="{{image.imgSrc}}">
+    <app-text ng-repeat="image in appGalleryCtrl.images" title="{{image.title}}" desc="{{image.desc}}" img-src="{{image.imgSrc}}">
   </ul>
   <ul>
-    <app-gallery-fullSize ng-repeat="image in appGalleryCtrl.images" title="{{image.title}}" desc="{{image.desc}}" imgSrc="{{image.imgSrc}}">
+    <app-gallery-fullSize ng-repeat="image in appGalleryCtrl.images" title="{{image.title}}" desc="{{image.desc}}" img-src="{{image.imgSrc}}">
   </ul>
-
+  <ul>
+    <app-gallery-thumbnail ng-repeat="image in appGalleryCtrl.images" img-src="{{image.imgSrc}}">
+  </ul>
 </section>

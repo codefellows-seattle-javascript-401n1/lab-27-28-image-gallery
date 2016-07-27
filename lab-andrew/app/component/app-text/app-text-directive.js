@@ -9,7 +9,7 @@ angular.module('galleryApp').directive('appText', function(){
     scope: {
       imgSrc:'@',
       title: '@',
-      desc: '@'
+      desc: '@',
     },
     template: require('./app-text.html')
   };

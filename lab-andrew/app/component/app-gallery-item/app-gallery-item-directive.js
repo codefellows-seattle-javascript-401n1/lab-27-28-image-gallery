@@ -6,7 +6,11 @@ angular.module('galleryApp').directive('appGalleryItem', function () {
   return {
     restrict: 'E',
     replace: true,
-    scope: {},
+    scope: {
+      title: '@',
+      desc: '@',
+      imgSrc: '@',
+    },
     controller: 'AppGalleryItemController',
     controllerAs: 'appGalleryCtrl',
     bindToController: true,

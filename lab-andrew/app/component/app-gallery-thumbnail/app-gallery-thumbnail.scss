@@ -1,5 +1,9 @@
 @import "../../scss/_theme.scss";
 
+.app-gallery-thumbnail {
+  display: inline-block;
+}
+
 .app-gallery-thumbnail > img:hover {
   border-style: solid;
   border-color: $app_yellow;
