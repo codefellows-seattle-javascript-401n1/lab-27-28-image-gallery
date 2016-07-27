@@ -21,6 +21,9 @@ angular.module('galleryApp').directive('displayImgDescription', function(){
       desc: '@',
     },
 
+    /**
+     * when adding a controller name, it must be a controller that was built on the angular.module listed on line 5 above.    
+     */
     // controller: 'DisplayImgDescriptionController',
     // controllerAs: 'displayImgDescCtrl',
 
