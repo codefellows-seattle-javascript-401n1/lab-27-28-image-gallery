@@ -8,7 +8,7 @@ module.exports = {
     path: 'build',
     filename: 'bundle.js'
   },
-  plugin: [
+  plugins: [
     new ExtractText('bundle.css')
   ],
   module: {

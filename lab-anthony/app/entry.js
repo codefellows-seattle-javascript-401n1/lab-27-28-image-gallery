@@ -5,7 +5,7 @@ require('!!file?name=[name].[ext]!./html/index.html');
 require('./sass/base.scss');
 
 // npm modules
-const angular = require('angular');
+// const angular = require('angular');
 
 // app modules
 
