@@ -21,11 +21,15 @@ module.exports = {
         query: {
           presets: ['es2015']
         }
+      },
+      {
+        test: /\.html$/,
+        loader: 'html',
+      },
+      {
+        test: /\.(jpg|gif|png)$/,
+        loader: 'file',
       }
-      // {
-      //   test: /\.html$/,
-      //   loader: 'file?name=[hash].[ext]',
-      // }
     ]
   },
   plugins: [
