@@ -9,3 +9,6 @@ const angular = require('angular')
 angular.module('galleryApp', [])
 // angular mod exts
 require('./component/app-image-link')
+require('./component/app-image-full')
+require('./component/app-image-thumb')
+require('./component/app-gallery')
