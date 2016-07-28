@@ -7,6 +7,7 @@
     <input type="text" name="desc" ng-model="appGalleryCtrl.galleryitem.desc">
     <label for="imgSrc">image source: </label>
     <input type="text" name="imgSrc" ng-model="appGalleryCtrl.galleryItem.imgSrc">
+    <input type="submit" value="create item">
   </form>
   <ul>
     <app-gallery-item ng-repeat="item in appGalleryCtrl.images" title="{{item.title}}" desc="{{item.desc}}" img-src="{{item.imgSrc}}"> </app-gallery-item>

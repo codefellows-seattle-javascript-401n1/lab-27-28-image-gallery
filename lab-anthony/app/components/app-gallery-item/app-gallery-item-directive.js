@@ -3,7 +3,7 @@
 const angular = require('angular');
 
 angular.module('galleryApp')
-.directive('app-gallery-item', function(){
+.directive('appGalleryItem', function(){
   return {
     restrict: 'E',
     replace: true,

@@ -8,7 +8,7 @@ angular.module('galleryApp')
     restrict: 'E',
     replace: true,
     scope: {},
-    controller: 'appGalleryController',
+    controller: 'AppGalleryController',
     controllerAs: 'appGalleryCtrl',
     bindToController: true,
     template: require('./app-gallery.html')

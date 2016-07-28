@@ -22,6 +22,11 @@ function AppGalleryController() {
       title: 'Mountain One',
       desc: 'This is a beautiful mountain!',
       imgSrc: require('../../assets/images/mountains/mtn-1.jpg')
+    },
+    {
+      title: 'Mountain One',
+      desc: 'This is a beautiful mountain!',
+      imgSrc: require('../../assets/images/mountains/mtn-1.jpg')
     }
   ];
 
