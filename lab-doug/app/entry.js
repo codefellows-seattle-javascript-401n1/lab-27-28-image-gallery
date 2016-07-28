@@ -23,3 +23,4 @@ angular.module('galleryApp', []);
  */
 require('./component/display-img-description');
 require('./component/app-main');
+require('./component/app-gallery');
