@@ -3,7 +3,7 @@
 const angular = require('angular');
 
 angular.module('demoApp')
-.directive('appGalleryItem', function(){
+.directive('appHello', function(){
   return {
     restrict: 'E',
     replace: true,
@@ -12,9 +12,6 @@ angular.module('demoApp')
       title: '@',
       desc: '@'
     },
-    controller: 'AppGalleryItemController',
-    controllerAs: 'appGalleryCtrl',
-    bindToController: true,
-    template: require('./app-gallery-item.html')
+    template: require('./app-hello.html')
   };
 });

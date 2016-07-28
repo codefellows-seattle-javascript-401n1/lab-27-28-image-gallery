@@ -1,0 +1,13 @@
+<li class="app-gallery-item">
+  <ol>
+    <li ng-repeat="image in appGalleryCtrl.images">
+      <app-hello title="{{image.name}}" desc="{{image.description}}" img-src="{{image.link}}"></app-hello>
+      <app-thumbnail ng-click="appGalleryCtrl.showToggle()"
+      ng-show="!appGalleryCtrl.showValue" img-src="{{image.link}}">
+       </app-thumbnail>
+      <app-fullsize
+      ng-click="appGalleryCtrl.showToggle()" ng-show="appGalleryCtrl.showValue" img-src="{{image.link}}">
+      </app-fullsize>
+    </li>
+  </ol>
+</li>

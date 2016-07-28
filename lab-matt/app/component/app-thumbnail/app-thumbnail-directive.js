@@ -3,10 +3,13 @@
 const angular = require('angular');
 
 angular.module('demoApp')
-.directive('appMain', function() {
+.directive('appThumbnail', function(){
   return {
     restrict: 'E',
     replace: true,
-    template: require('./app-main.html')
+    scope: {
+      imgSrc: '@'
+    },
+    template: require('./app-thumbnail.html')
   };
 });
