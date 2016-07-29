@@ -13,7 +13,7 @@
     </display-thumbnail>
   </ul>
   <ul class="app-gallery-li">
-    <display-img-description  ng-repeat="item in appGalleryCtrl.images" title={{item.title}} desc={{item.desc}}  ng-show="appGalleryCtrl.directiveToShow ==='list'">
-    </display-img-description>
+    <display-list  ng-repeat="item in appGalleryCtrl.images" title={{item.title}} desc={{item.desc}}  ng-show="appGalleryCtrl.directiveToShow ==='list'">
+    </display-list>
   </ul>
 </section>
