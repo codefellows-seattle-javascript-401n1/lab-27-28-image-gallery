@@ -1,6 +1,19 @@
 <section class="app-gallery">
+  <nav>
+    <button type="button" ng-click="appGalleryCtrl.selectDirectiveToShow('desc')">Desc</button>
+    <button type="button" ng-click="appGalleryCtrl.selectDirectiveToShow('thumbnail')">Thumbnail</button>
+    <button type="button" ng-click="appGalleryCtrl.selectDirectiveToShow('list')">List</button>
+  </nav>
   <ul class="app-gallery-li">
-    <display-img-description  ng-repeat="item in appGalleryCtrl.images" title={{item.title}} desc={{item.desc}} img-src={{item.imgSrc}}>
+    <display-img-description  ng-repeat="item in appGalleryCtrl.images" title={{item.title}} desc={{item.desc}} img-src={{item.imgSrc}} ng-show="appGalleryCtrl.directiveToShow ==='desc'">
+    </display-img-description>
+  </ul>
+  <ul class="app-gallery-li">
+    <display-img-description  ng-repeat="item in appGalleryCtrl.images" title={{item.title}} img-src={{item.thumbnailSrc}} ng-show="appGalleryCtrl.directiveToShow ==='thumbnail'">
+    </display-img-description>
+  </ul>
+  <ul class="app-gallery-li">
+    <display-img-description  ng-repeat="item in appGalleryCtrl.images" title={{item.title}} desc={{item.desc}}  ng-show="appGalleryCtrl.directiveToShow ==='list'">
     </display-img-description>
   </ul>
 </section>
