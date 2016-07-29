@@ -11,7 +11,8 @@ function AppGalleryController(){
   this.selectDirectiveToShow = function selectDirectiveToShow(directiveName){
     console.log('selectDirectiveTopSHow called');
     this.directiveToShow = directiveName;
-  }
+  };
+  
   this.images = [
     {
       title: 'Jaguar Concept',
