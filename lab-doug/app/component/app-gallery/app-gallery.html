@@ -9,8 +9,8 @@
     </display-img-description>
   </ul>
   <ul class="app-gallery-li">
-    <display-img-description  ng-repeat="item in appGalleryCtrl.images" title={{item.title}} img-src={{item.thumbnailSrc}} ng-show="appGalleryCtrl.directiveToShow ==='thumbnail'">
-    </display-img-description>
+    <display-thumbnail  ng-repeat="item in appGalleryCtrl.images" title={{item.title}} img-src={{item.thumbnailSrc}} ng-show="appGalleryCtrl.directiveToShow ==='thumbnail'">
+    </display-thumbnail>
   </ul>
   <ul class="app-gallery-li">
     <display-img-description  ng-repeat="item in appGalleryCtrl.images" title={{item.title}} desc={{item.desc}}  ng-show="appGalleryCtrl.directiveToShow ==='list'">

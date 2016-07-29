@@ -8,7 +8,7 @@ angular.module('galleryApp').directive('displayThumbnail', function(){
     replace: true,
     template: require('./display-thumbnail.html'),
     scope: {
-      thumbnailSrc: '@',
+      imgSrc: '@',
       title: '@'
     }
   };
