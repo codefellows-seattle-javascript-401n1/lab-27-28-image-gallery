@@ -37,21 +37,21 @@ function AppGalleryController(){
     {
       title: 'Jaguar 2015',
       desc: 'black beauty',
-      imgSrc: require('../../asset/image/med-res/jaguar-300x200.jpg'),
+      imgSrc: require('../../asset/image/med-res/jaguar-300x170.jpg'),
       thumbnailSrc: require('../../asset/image/thumbnail/jaguar-100x67.jpg')
     },
 
     {
       title: 'Mercedes SL 650',
       desc: 'McClaren version made from carbon fiber',
-      imgSrc: require('../../asset/image/med-res/mercedes-amg-300x200.jpg'),
+      imgSrc: require('../../asset/image/med-res/mercedes-amg-300x168.jpg'),
       thumbnailSrc: require('../../asset/image/thumbnail/mercedes-100x67.jpg')
     },
 
     {
       title: '1977 Corvette',
       desc: 'Clean white lines against the green grass',
-      imgSrc: require('../../asset/image/med-res/corvette-300x206.jpg'),
+      imgSrc: require('../../asset/image/med-res/corvette-300x168.jpg'),
       thumbnailSrc: require('../../asset/image/thumbnail/corvette-100x69.jpg')
     }
 
