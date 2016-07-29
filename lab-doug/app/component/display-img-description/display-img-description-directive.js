@@ -13,7 +13,7 @@ angular.module('galleryApp').directive('displayImgDescription', function(){
     replace: true,
 
     /**
-     * This is islet scope.  It is a scope that only exists within this directive.  It does not inherit visibility into its parents.  You cannot directly add properties to the islet scope.  If you want the directive to inherit scope froom its parent, you would replace the scope statement below with "scope: true,"
+     * This is isolate scope.  It is a scope that only exists within this directive.  It does not inherit visibility into its parents.  You cannot directly add properties to the isolate scope.  If you want the directive to inherit scope froom its parent, you would replace the scope statement below with "scope: true,"
      */
     scope: {
       imgSrc: '@',
@@ -22,7 +22,7 @@ angular.module('galleryApp').directive('displayImgDescription', function(){
     },
 
     /**
-     * when adding a controller name, it must be a controller that was built on the angular.module listed on line 5 above.    
+     * when adding a controller name, it must be a controller that was built on the angular.module listed on line 5 above.
      */
     // controller: 'DisplayImgDescriptionController',
     // controllerAs: 'displayImgDescCtrl',
