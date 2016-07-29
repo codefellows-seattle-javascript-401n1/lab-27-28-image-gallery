@@ -1,7 +1,14 @@
 <section class="app-gallery">
   <ul>
     <app-gallery-text ng-show="appMainCtrl.list" ng-repeat="item in appGalleryCtrl.images" title="{{item.title}}" desc="{{item.desc}}" link="{{item.link}}"></app-gallery-text>
-    <app-gallery-thumbnail  ng-show="appMainCtrl.gallery" ng-repeat="item in appGalleryCtrl.images" thumb-src="{{item.thumbSrc}}"></app-gallery-thumbnail>
-    <app-gallery-item ng-show="appMainCtrl.gallery" ng-repeat="item in appGalleryCtrl.images" title="{{item.title}}" desc="{{item.desc}}" img-src="{{item.imgSrc}}"></app-gallery-item>
+
+    <div class="thumb" ng-show="appMainCtrl.gallery && appGalleryCtrl.thumb">
+      <app-gallery-thumbnail ng-click="appGalleryCtrl.showFull()" ng-repeat="item in appGalleryCtrl.images" thumb-src="{{item.thumbSrc}}"></app-gallery-thumbnail>
+    </div>
+    <div class="full" ng-show="appMainCtrl.gallery && appGalleryCtrl.full">
+      <button type="button" ng-click="appGalleryCtrl.showThumb()">Back to Thumbnails</button>
+      <app-gallery-item ng-repeat="item in appGalleryCtrl.images" title="{{item.title}}" desc="{{item.desc}}" img-src="{{item.imgSrc}}"></app-gallery-item>
+    </div>
+
   </ul>
 </section>

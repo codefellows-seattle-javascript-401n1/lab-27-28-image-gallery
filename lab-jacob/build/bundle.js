@@ -59,10 +59,10 @@
 
 	//angular extentsions
 	__webpack_require__(9);
-	__webpack_require__(25);
-	__webpack_require__(30);
-	__webpack_require__(35);
-	__webpack_require__(40);
+	__webpack_require__(27);
+	__webpack_require__(32);
+	__webpack_require__(37);
+	__webpack_require__(42);
 
 /***/ },
 /* 1 */
@@ -31574,6 +31574,7 @@
 
 	__webpack_require__(10);
 	__webpack_require__(12);
+	__webpack_require__(25);
 
 /***/ },
 /* 10 */
@@ -31599,7 +31600,7 @@
 /* 11 */
 /***/ function(module, exports) {
 
-	module.exports = "<section class=\"app-gallery\">\n  <ul>\n    <app-gallery-text ng-show=\"appMainCtrl.list\" ng-repeat=\"item in appGalleryCtrl.images\" title=\"{{item.title}}\" desc=\"{{item.desc}}\" link=\"{{item.link}}\"></app-gallery-text>\n    <app-gallery-thumbnail  ng-show=\"appMainCtrl.gallery\" ng-repeat=\"item in appGalleryCtrl.images\" thumb-src=\"{{item.thumbSrc}}\"></app-gallery-thumbnail>\n    <app-gallery-item ng-show=\"appMainCtrl.gallery\" ng-repeat=\"item in appGalleryCtrl.images\" title=\"{{item.title}}\" desc=\"{{item.desc}}\" img-src=\"{{item.imgSrc}}\"></app-gallery-item>\n  </ul>\n</section>\n";
+	module.exports = "<section class=\"app-gallery\">\n  <ul>\n    <app-gallery-text ng-show=\"appMainCtrl.list\" ng-repeat=\"item in appGalleryCtrl.images\" title=\"{{item.title}}\" desc=\"{{item.desc}}\" link=\"{{item.link}}\"></app-gallery-text>\n\n    <div class=\"thumb\" ng-show=\"appMainCtrl.gallery && appGalleryCtrl.thumb\">\n      <app-gallery-thumbnail ng-click=\"appGalleryCtrl.showFull()\" ng-repeat=\"item in appGalleryCtrl.images\" thumb-src=\"{{item.thumbSrc}}\"></app-gallery-thumbnail>\n    </div>\n    <div class=\"full\" ng-show=\"appMainCtrl.gallery && appGalleryCtrl.full\">\n      <button type=\"button\" ng-click=\"appGalleryCtrl.showThumb()\">Back to Thumbnails</button>\n      <app-gallery-item ng-repeat=\"item in appGalleryCtrl.images\" title=\"{{item.title}}\" desc=\"{{item.desc}}\" img-src=\"{{item.imgSrc}}\"></app-gallery-item>\n    </div>\n\n  </ul>\n</section>\n";
 
 /***/ },
 /* 12 */
@@ -31612,12 +31613,24 @@
 	angular.module('imageGallery').controller('AppGalleryController', [AppGalleryController]);
 
 	function AppGalleryController() {
+	  this.thumb = true;
+	  this.full = false;
 	  this.galleryItem = {
 	    title: '',
 	    desc: '',
 	    thumbSrc: '',
 	    imgSrc: '',
 	    link: ''
+	  };
+
+	  this.showFull = function () {
+	    if (this.thumb === true) this.thumb = false;
+	    if (this.full === false) this.full = true;
+	  };
+
+	  this.showThumb = function () {
+	    if (this.thumb === false) this.thumb = true;
+	    if (this.full === true) this.full = false;
 	  };
 
 	  this.images = [{
@@ -31733,15 +31746,22 @@
 
 /***/ },
 /* 25 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 26 */,
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(26);
 	__webpack_require__(28);
+	__webpack_require__(30);
 
 /***/ },
-/* 26 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31757,34 +31777,34 @@
 	      title: '@',
 	      desc: '@'
 	    },
-	    template: __webpack_require__(27)
+	    template: __webpack_require__(29)
 	  };
 	});
 
 /***/ },
-/* 27 */
+/* 29 */
 /***/ function(module, exports) {
 
 	module.exports = "<li class=\"app-gallery-item\">\n  <img ng-src=\"{{imgSrc}}\">\n  <h2>{{title}}</h2>\n  <p>{{desc}}</p>\n</li>\n";
 
 /***/ },
-/* 28 */
+/* 30 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 29 */,
-/* 30 */
+/* 31 */,
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(31);
 	__webpack_require__(33);
+	__webpack_require__(35);
 
 /***/ },
-/* 31 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31800,34 +31820,34 @@
 	      title: '@',
 	      desc: '@'
 	    },
-	    template: __webpack_require__(32)
+	    template: __webpack_require__(34)
 	  };
 	});
 
 /***/ },
-/* 32 */
+/* 34 */
 /***/ function(module, exports) {
 
 	module.exports = "<li class=\"app-gallery-text\">\n  <h2>{{title}}</h2>\n  <p>{{desc}}</p>\n  <a ng-href=\"{{link}}\"> {{link}} </a>\n</li>\n";
 
 /***/ },
-/* 33 */
+/* 35 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 34 */,
-/* 35 */
+/* 36 */,
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(36);
 	__webpack_require__(38);
+	__webpack_require__(40);
 
 /***/ },
-/* 36 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31841,35 +31861,35 @@
 	    scope: {
 	      thumbSrc: '@'
 	    },
-	    template: __webpack_require__(37)
+	    template: __webpack_require__(39)
 	  };
 	});
 
 /***/ },
-/* 37 */
+/* 39 */
 /***/ function(module, exports) {
 
 	module.exports = "<li class=\"app-gallery-thumbnail\">\n  <img ng-src=\"{{thumbSrc}}\">\n</li>\n";
 
 /***/ },
-/* 38 */
+/* 40 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 39 */,
-/* 40 */
+/* 41 */,
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(41);
 	__webpack_require__(43);
-	__webpack_require__(44);
+	__webpack_require__(45);
+	__webpack_require__(46);
 
 /***/ },
-/* 41 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31882,19 +31902,19 @@
 	    replace: true,
 	    controller: 'AppMainController',
 	    controllerAs: 'appMainCtrl',
-	    template: __webpack_require__(42),
+	    template: __webpack_require__(44),
 	    scope: {}
 	  };
 	});
 
 /***/ },
-/* 42 */
+/* 44 */
 /***/ function(module, exports) {
 
 	module.exports = "<main class=\"app-main\">\n  <div class=\"heading\">\n    <button type=\"button\" ng-click=\"appMainCtrl.showList()\">Image list</button>\n    <h1>Gallery of Images!</h1>\n    <button type=\"button\" ng-click=\"appMainCtrl.showGallery()\">Gallery</button>\n  </div>\n  <app-gallery></app-gallery>\n</main>\n";
 
 /***/ },
-/* 43 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31908,20 +31928,18 @@
 	  this.gallery = false;
 
 	  this.showList = function () {
-	    console.log(this.list);
 	    if (this.list === false) this.list = true;
 	    if (this.gallery === true) this.gallery = false;
 	  };
 
 	  this.showGallery = function () {
-	    console.log(this.gallery);
 	    if (this.list === true) this.list = false;
 	    if (this.gallery === false) this.gallery = true;
 	  };
 	}
 
 /***/ },
-/* 44 */
+/* 46 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

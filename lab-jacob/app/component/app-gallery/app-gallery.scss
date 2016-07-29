@@ -1,0 +1,19 @@
+.thumb {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20px 0 50px 0;
+  padding: 30px 0 50px 0;;
+}
+
+.full {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+button {
+  margin: 0 auto;
+}

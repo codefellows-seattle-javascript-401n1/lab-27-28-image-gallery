@@ -431,12 +431,40 @@ ul {
 
 .app-gallery {
   background-color: white; }
+.thumb {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20px 0 50px 0;
+  padding: 30px 0 50px 0; }
+
+.full {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+
+button {
+  margin: 0 auto; }
 .app-gallery-item {
-  display: inline-block; }
+  display: inline-block;
+  margin: 20px 0 20px 0;
+  border: solid thick #957AFF;
+  background-color: #C2C1BD; }
+
+.app-gallery-item h2, .app-gallery-item p {
+  text-align: center; }
+
+.app-gallery-item p {
+  padding: 0 5px 0 5px; }
 .app-gallery-text {
   list-style-type: none; }
 .app-gallery-thumbnail {
   list-style-type: none; }
+
+.app-gallery-thumbnail img:hover {
+  box-shadow: 10px 10px 5px #888888; }
 .heading {
   display: flex;
   flex-direction: row;

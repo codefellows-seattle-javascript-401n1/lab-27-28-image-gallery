@@ -5,12 +5,24 @@ const angular = require('angular');
 angular.module('imageGallery').controller('AppGalleryController', [AppGalleryController]);
 
 function AppGalleryController(){
+  this.thumb = true;
+  this.full = false;
   this.galleryItem = {
     title: '',
     desc: '',
     thumbSrc: '',
     imgSrc: '',
     link: ''
+  };
+
+  this.showFull = function(){
+    if (this.thumb === true) this.thumb = false;
+    if (this.full === false) this.full = true;
+  };
+
+  this.showThumb = function(){
+    if (this.thumb === false) this.thumb = true;
+    if (this.full === true) this.full = false;
   };
 
   this.images = [
