@@ -31587,7 +31587,7 @@
 	  return {
 	    restrict: 'E',
 	    replace: true,
-	    scope: {},
+	    scope: true,
 	    controller: 'AppGalleryController',
 	    controllerAs: 'appGalleryCtrl',
 	    bindToController: true,
@@ -31599,7 +31599,7 @@
 /* 11 */
 /***/ function(module, exports) {
 
-	module.exports = "<section class=\"app-gallery\">\n  <ul>\n    <app-gallery-text ng-repeat=\"item in appGalleryCtrl.images\" title=\"{{item.title}}\" desc=\"{{item.desc}}\" link=\"{{item.link}}\"></app-gallery-text>\n    <app-gallery-thumbnail ng-repeat=\"item in appGalleryCtrl.images\" thumb-src=\"{{item.thumbSrc}}\"></app-gallery-thumbnail>\n    <app-gallery-item ng-repeat=\"item in appGalleryCtrl.images\" title=\"{{item.title}}\" desc=\"{{item.desc}}\" img-src=\"{{item.imgSrc}}\"></app-gallery-item>\n  </ul>\n</section>\n";
+	module.exports = "<section class=\"app-gallery\">\n  <ul>\n    <app-gallery-text ng-show=\"appMainCtrl.list\" ng-repeat=\"item in appGalleryCtrl.images\" title=\"{{item.title}}\" desc=\"{{item.desc}}\" link=\"{{item.link}}\"></app-gallery-text>\n    <app-gallery-thumbnail  ng-show=\"appMainCtrl.gallery\" ng-repeat=\"item in appGalleryCtrl.images\" thumb-src=\"{{item.thumbSrc}}\"></app-gallery-thumbnail>\n    <app-gallery-item ng-show=\"appMainCtrl.gallery\" ng-repeat=\"item in appGalleryCtrl.images\" title=\"{{item.title}}\" desc=\"{{item.desc}}\" img-src=\"{{item.imgSrc}}\"></app-gallery-item>\n  </ul>\n</section>\n";
 
 /***/ },
 /* 12 */
@@ -31866,6 +31866,7 @@
 
 	__webpack_require__(41);
 	__webpack_require__(43);
+	__webpack_require__(44);
 
 /***/ },
 /* 41 */
@@ -31879,7 +31880,10 @@
 	  return {
 	    restrict: 'E',
 	    replace: true,
-	    template: __webpack_require__(42)
+	    controller: 'AppMainController',
+	    controllerAs: 'appMainCtrl',
+	    template: __webpack_require__(42),
+	    scope: {}
 	  };
 	});
 
@@ -31887,10 +31891,37 @@
 /* 42 */
 /***/ function(module, exports) {
 
-	module.exports = "<main class=\"app-main\">\n  <div class=\"heading\">\n    <button type=\"button\">Image list</button>\n    <h1>Gallery of Images!</h1>\n    <!-- button for gallery -->\n    <button type=\"button\">Gallery</button>\n  </div>\n  <app-gallery></app-gallery>\n</main>\n";
+	module.exports = "<main class=\"app-main\">\n  <div class=\"heading\">\n    <button type=\"button\" ng-click=\"appMainCtrl.showList()\">Image list</button>\n    <h1>Gallery of Images!</h1>\n    <button type=\"button\" ng-click=\"appMainCtrl.showGallery()\">Gallery</button>\n  </div>\n  <app-gallery></app-gallery>\n</main>\n";
 
 /***/ },
 /* 43 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var angular = __webpack_require__(7);
+
+	angular.module('imageGallery').controller('AppMainController', [AppMainController]);
+
+	function AppMainController() {
+	  this.list = true;
+	  this.gallery = false;
+
+	  this.showList = function () {
+	    console.log(this.list);
+	    if (this.list === false) this.list = true;
+	    if (this.gallery === true) this.gallery = false;
+	  };
+
+	  this.showGallery = function () {
+	    console.log(this.gallery);
+	    if (this.list === true) this.list = false;
+	    if (this.gallery === false) this.gallery = true;
+	  };
+	}
+
+/***/ },
+/* 44 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

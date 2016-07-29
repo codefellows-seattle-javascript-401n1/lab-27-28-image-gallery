@@ -1,6 +1,7 @@
 
 # Created by https://www.gitignore.io/api/vim,linux,osx,node
 
+### directories not specified ###
 db
 build
 

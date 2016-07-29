@@ -1,7 +1,7 @@
 <section class="app-gallery">
   <ul>
-    <app-gallery-text ng-repeat="item in appGalleryCtrl.images" title="{{item.title}}" desc="{{item.desc}}" link="{{item.link}}"></app-gallery-text>
-    <app-gallery-thumbnail ng-repeat="item in appGalleryCtrl.images" thumb-src="{{item.thumbSrc}}"></app-gallery-thumbnail>
-    <app-gallery-item ng-repeat="item in appGalleryCtrl.images" title="{{item.title}}" desc="{{item.desc}}" img-src="{{item.imgSrc}}"></app-gallery-item>
+    <app-gallery-text ng-show="appMainCtrl.list" ng-repeat="item in appGalleryCtrl.images" title="{{item.title}}" desc="{{item.desc}}" link="{{item.link}}"></app-gallery-text>
+    <app-gallery-thumbnail  ng-show="appMainCtrl.gallery" ng-repeat="item in appGalleryCtrl.images" thumb-src="{{item.thumbSrc}}"></app-gallery-thumbnail>
+    <app-gallery-item ng-show="appMainCtrl.gallery" ng-repeat="item in appGalleryCtrl.images" title="{{item.title}}" desc="{{item.desc}}" img-src="{{item.imgSrc}}"></app-gallery-item>
   </ul>
 </section>

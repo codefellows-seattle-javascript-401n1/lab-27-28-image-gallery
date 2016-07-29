@@ -7,6 +7,9 @@ angular.module('imageGallery')
   return {
     restrict: 'E',
     replace: true,
-    template: require('./app-main.html')
+    controller: 'AppMainController',
+    controllerAs: 'appMainCtrl',
+    template: require('./app-main.html'),
+    scope: {}
   };
 });
