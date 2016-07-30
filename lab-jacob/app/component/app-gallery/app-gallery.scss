@@ -1,6 +1,7 @@
 .app-gallery {
   margin: 10px 0 10px 0;
   border-top: thick solid #1BFFDA;
+  border-bottom: thick solid #1BFFDA;
 }
 
 .thumb {
@@ -21,4 +22,9 @@
 
 button {
   margin: 0 auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }

@@ -9,6 +9,7 @@ angular.module('imageGallery')
     replace: true,
     controller: 'AppMainController',
     controllerAs: 'appMainCtrl',
+    bindToController: true,
     template: require('./app-main.html'),
     scope: {}
   };

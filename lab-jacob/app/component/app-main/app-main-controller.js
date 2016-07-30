@@ -17,4 +17,9 @@ function AppMainController(){
     if(this.list === true) this.list = false;
     if (this.gallery === false) this.gallery = true;
   };
+
+  this.icon = {
+    galleryIcon: require('../../asset/button/gallery-icon.png'),
+    listIcon: require('../../asset/button/list-icon.png')
+  };
 }

@@ -1,9 +1,29 @@
 .app-gallery-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content:flex-start;
   list-style-type: none;
   width: 75%;
   margin: 20px auto 20px auto;
+  border-radius: 20px 20px 20px 20px;
   border: solid thin #4332B2;
+
+  .info {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  p, h2, a {
+    padding: 10px 10px 10px 10px;
+  }
+
+  h2 {
+    border-bottom: solid thin #9141CC;
+  }
+
+  a:hover {
+    color: #1BFFDA;
+  }
 }
