@@ -63,7 +63,7 @@ function AppGalleryController(){
     },
     {
       title: 'Fractal Image 6',
-      desc: 'Here\'s the sixth fractal image',
+      desc: 'Badass neon pink lines with stip of negative circles down verticle center',
       thumbSrc: require('../../asset/image/Fractal-Thumbnail5.jpg'),
       imgSrc: require('../../asset/image/Fractal-Full5.jpg'),
       link: 'https://www.flickr.com/photos/tommietheturtle1/16676082851/in/photolist-rpBhrR-rdz3Yb-ove8oL-9ZgQ5b-dgLW7V-ounchW-odbDQE-saxE58-i7Zkbc-owiSB5-o5ay1Z-qjjr6D-od9jsA-dJHumU-qzsqoW-ouWKd6-owrJxp-oeUDqJ-s9t73T-s7hLrA-otUYUp-pSfpzN-rcLx9H-s9EyzZ-owvDua-rKsSan-kahr5g-7bExRm-rQckHV-o9pXo4-bdhFTZ-qkL6Vw-s96W7r-qUTMvq-s7JyQ7-ocVULw-rRvYL1-odbkun-ow8mWF-s8XHKW-rdC8Jh-eEXuzQ-rdBkJb-t2mB7b-odvWzn-oy7SQv-of1tr2-of1wrv-ouZwuV-rg3F1j'

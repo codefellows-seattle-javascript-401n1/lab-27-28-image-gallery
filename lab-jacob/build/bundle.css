@@ -459,7 +459,11 @@ button {
 .app-gallery-item p {
   padding: 0 5px 0 5px; }
 .app-gallery-text {
-  list-style-type: none; }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style-type: none;
+  border: solid thin #4332B2; }
 .app-gallery-thumbnail {
   list-style-type: none; }
 
