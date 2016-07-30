@@ -1,7 +1,9 @@
+@import "../../scss/_theme.scss";
+
 .app-gallery {
   margin: 10px 0 10px 0;
-  border-top: thick solid #1BFFDA;
-  border-bottom: thick solid #1BFFDA;
+  border-top: thick solid $app-borderMain;
+  border-bottom: thick solid $app-borderMain;
 }
 
 .thumb {

@@ -1,8 +1,10 @@
+@import "../../scss/_theme.scss";
+
 .app-gallery-item {
   display: inline-block;
   margin: 20px 0 20px 0;
-  border: solid thick #957AFF;
-  background-color: #C2C1BD;
+  border: solid thick $app-itemborder;
+  background-color: $app-itembackground;
 }
 
 .app-gallery-item h2, .app-gallery-item p {

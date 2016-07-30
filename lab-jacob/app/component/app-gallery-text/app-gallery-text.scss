@@ -1,3 +1,5 @@
+@import "../../scss/_theme.scss";
+
 .app-gallery-text {
   display: flex;
   flex-direction: column;
@@ -6,7 +8,7 @@
   width: 75%;
   margin: 20px auto 20px auto;
   border-radius: 20px 20px 20px 20px;
-  border: solid thin #4332B2;
+  border: solid thin $app-textBorder;
 
   .info {
     display: flex;
@@ -20,7 +22,7 @@
   }
 
   h2 {
-    border-bottom: solid thin #9141CC;
+    border-bottom: solid thin $app-borderMain;
   }
 
   a:hover {
