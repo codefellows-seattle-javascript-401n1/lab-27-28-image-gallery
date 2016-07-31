@@ -6,6 +6,16 @@ angular.module = ('demoApp')
 .controller('AppGalleryController', [AppGalleryController]);
 
 function AppGalleryController(){
+  this.galleryItem = {
+    title: '',
+    desc: '',
+    imgSrc: ''
+  };
+
+  this.addGalleryItem = function(){
+    this.images.push(angular.copy(this.galleryItem));
+    this.galleryItem = {title: '', desc: '', imgSrc: ''};
+  };
   this.images = [
     {
       title: 'Flower One',

@@ -9,8 +9,9 @@ const angular = require('angular');
 // create angular module
 angular.module('demoApp', []);
 // angular module extensions
-require('./component/app-hello');
-require('./component/app-gallery-item');
 require('./component/app-main');
+require('./component/app-hello');
 require('./component/app-gallery');
+require('./component/app-gallery-item');
+require('./component/app-edit-gallery-item-form');
 //require('./controller/example-parrent.js')

@@ -419,10 +419,10 @@ textarea {
 }
 body {
   background-color: green; }
+.app-main {
+  background-color: white; }
 .app-hello {
   background-color: white; }
 .app-gallery-item {
   display: inline-block;
   background-color: #aaff7a; }
-.app-main {
-  background-color: white; }

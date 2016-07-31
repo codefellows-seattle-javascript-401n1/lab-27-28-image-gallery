@@ -57,9 +57,10 @@
 	angular.module('demoApp', []);
 	// angular module extensions
 	__webpack_require__(9);
-	__webpack_require__(15);
+	__webpack_require__(14);
 	__webpack_require__(20);
-	__webpack_require__(25);
+	__webpack_require__(27);
+	__webpack_require__(32);
 	//require('./controller/example-parrent.js')
 
 /***/ },
@@ -31572,10 +31573,48 @@
 
 	__webpack_require__(10);
 	__webpack_require__(12);
-	__webpack_require__(13);
 
 /***/ },
 /* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var angular = __webpack_require__(7);
+
+	angular.module('demoApp').directive('appMain', function () {
+	  return {
+	    restrict: 'E',
+	    replace: true,
+	    template: __webpack_require__(11)
+	  };
+	});
+
+/***/ },
+/* 11 */
+/***/ function(module, exports) {
+
+	module.exports = "<main class=\"app-main\">\n  <app-gallery> </app-gallery>\n</main>\n";
+
+/***/ },
+/* 12 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 13 */,
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(15);
+	__webpack_require__(17);
+	__webpack_require__(18);
+
+/***/ },
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31591,18 +31630,18 @@
 	    controller: 'AppHelloController',
 	    controllerAs: 'appHelloCtrl',
 	    bindToController: true,
-	    template: __webpack_require__(11)
+	    template: __webpack_require__(16)
 	  };
 	});
 
 /***/ },
-/* 11 */
+/* 16 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"app-hello\">\n  <h1>told ya so</h1>\n  <p>{{AppHelloCtrl.example}}</p>\n  <p>{{appHelloCtrl.name}}</p>\n</div>\n";
 
 /***/ },
-/* 12 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31614,48 +31653,6 @@
 	function AppHelloController() {
 	  this.name = 'content should show this string';
 	}
-
-/***/ },
-/* 13 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 14 */,
-/* 15 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(16);
-	__webpack_require__(18);
-
-/***/ },
-/* 16 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var angular = __webpack_require__(7);
-	angular.module('demoApp').directive('appGalleryItem', function () {
-	  return {
-	    restrict: 'E',
-	    replace: true,
-	    scope: {
-	      imgSrc: '@',
-	      title: '@',
-	      desc: '@'
-	    },
-	    template: __webpack_require__(17)
-	  };
-	});
-
-/***/ },
-/* 17 */
-/***/ function(module, exports) {
-
-	module.exports = "<li class=\"app-gallery-item\"> </li>\n  <img ng-src=\"{{imgSrc}}\">\n  <h2>{{title}}</h2>\n  <p>{{desc}}</p>\n</li>\n";
 
 /***/ },
 /* 18 */
@@ -31672,48 +31669,10 @@
 
 	__webpack_require__(21);
 	__webpack_require__(23);
+	// require('./app-gallery.scss');
 
 /***/ },
 /* 21 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var angular = __webpack_require__(7);
-
-	angular.module('demoApp').directive('appMain', function () {
-	  return {
-	    restrict: 'E',
-	    replace: true,
-	    template: __webpack_require__(22)
-	  };
-	});
-
-/***/ },
-/* 22 */
-/***/ function(module, exports) {
-
-	module.exports = "<main class=\"app-main\">\n  <app-gallery-item img-src=\"http://vignette2.wikia.nocookie.net/beyondthestars/images/c/c6/Unicorn_cat.gif/revision/latest?cb=20120325024015\" title=\"unicorn cat\" desc=\"booya kitty cat numba1 #yolo #swag #hax\"> </app-gallery-item>\n  <app-gallery-item img-src=\"http://vignette2.wikia.nocookie.net/beyondthestars/images/c/c6/Unicorn_cat.gif/revision/latest?cb=20120325024015\" title=\"unicorn cat\" desc=\"booya kitty cat numba1 #yolo #swag #hax\"> </app-gallery-item>\n  <app-gallery-item img-src=\"http://vignette2.wikia.nocookie.net/beyondthestars/images/c/c6/Unicorn_cat.gif/revision/latest?cb=20120325024015\" title=\"unicorn cat\" desc=\"booya kitty cat numba1 #yolo #swag #hax\"> </app-gallery-item>\n  <app-gallery-item img-src=\"http://vignette2.wikia.nocookie.net/beyondthestars/images/c/c6/Unicorn_cat.gif/revision/latest?cb=20120325024015\" title=\"unicorn cat\" desc=\"booya kitty cat numba1 #yolo #swag #hax\"> </app-gallery-item>\n  <app-gallery-item img-src=\"http://vignette2.wikia.nocookie.net/beyondthestars/images/c/c6/Unicorn_cat.gif/revision/latest?cb=20120325024015\" title=\"unicorn cat\" desc=\"booya kitty cat numba1 #yolo #swag #hax\"> </app-gallery-item>\n</main>\n";
-
-/***/ },
-/* 23 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 24 */,
-/* 25 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(26);
-	// require('./app-gallery-controller.js');
-	__webpack_require__(28);
-
-/***/ },
-/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31728,21 +31687,144 @@
 	    controller: 'AppGalleryController',
 	    controllerAs: 'appGalleryCtrl',
 	    bindToController: true,
-	    template: __webpack_require__(27)
+	    template: __webpack_require__(22)
 	  };
 	});
 
 /***/ },
-/* 27 */
+/* 22 */
 /***/ function(module, exports) {
 
-	module.exports = "<section class=\"app-gallery\">\n  <ul>\n    <app-gallery-item ng-repeat=\"item in images\" title=\"item.title\" desc=\"item.desc\"\n      img-src=\"item.imgSrc\"></app-gallery-item>\n  </ul>\n</section>\n";
+	module.exports = "<section class=\"app-gallery\">\n\n  <form novalidate ng-submit=\"appGalleryCtrl.addGalleryItem()\">\n    <label for=\"title\">title: </label>\n    <input name=\"title\" type=\"text\" ng-model=\"appGalleryCtrl.galleryItem.title\">\n    <label for=\"desc\">desc: </label>\n    <input type=\"text\" ng-model=\"appGalleryCtrl.galleryItem.desc\">\n    <label for=\"imgSrc\">image source:</label>\n    <input type=\"text\" ng-model=\"appGalleryCtrl.galleryItem.imgSrc\">\n    <input type=\"submit\" value=\"create item\">\n  </form>\n  <ul>\n    <!-- create a app-gallery-item for each image in the controllers images array -->\n\n    <app-gallery-item ng-repeat=\"item in appGalleryCtrl.images\" title=\"{{item.title}}\" desc=\"{{item.desc}}\" img-src=\"{{item.imgSrc}}\"> </app-gallery-item>\n  </ul>\n</section>\n";
+
+/***/ },
+/* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var angular = __webpack_require__(7);
+
+	angular.module = 'demoApp'.controller('AppGalleryController', [AppGalleryController]);
+
+	function AppGalleryController() {
+	  this.galleryItem = {
+	    title: '',
+	    desc: '',
+	    imgSrc: ''
+	  };
+
+	  this.addGalleryItem = function () {
+	    this.images.push(angular.copy(this.galleryItem));
+	    this.galleryItem = { title: '', desc: '', imgSrc: '' };
+	  };
+	  this.images = [{
+	    title: 'Flower One',
+	    desc: 'this is the type of flower power that is going to make birds happy',
+	    imgSrc: __webpack_require__(24)
+	  }, {
+	    title: 'Flower Two',
+	    desc: 'this is the type of flower power that is going to make birds happy',
+	    imgSrc: __webpack_require__(25)
+	  }, {
+	    title: 'Flower Three',
+	    desc: 'this is the type of flower power that is going to make birds happy',
+	    imgSrc: __webpack_require__(26)
+	  }];
+	}
+
+/***/ },
+/* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "img/flower-0-e06c1805d6fb4b63218e60cf8d1d3d53.jpg";
+
+/***/ },
+/* 25 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "img/flower-1-a667f2dd102ae25420198bb25dbe4401.jpg";
+
+/***/ },
+/* 26 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "img/flower-2-f9cb00d9c3a18ca8fba2a66b21348834.jpg";
+
+/***/ },
+/* 27 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(28);
+	__webpack_require__(30);
 
 /***/ },
 /* 28 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var angular = __webpack_require__(7);
+	angular.module('demoApp').directive('appGalleryItem', function () {
+	  return {
+	    restrict: 'E',
+	    replace: true,
+	    scope: {
+	      imgSrc: '@',
+	      title: '@',
+	      desc: '@'
+	    },
+	    template: __webpack_require__(29)
+	  };
+	});
+
+/***/ },
+/* 29 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<li class=\"app-gallery-item\">\n  <img ng-src=\"{{imgSrc}}\">\n  <h2> {{ title }} </h2>\n  <p> {{ desc }} </p>\n  <app-edit-gallery-item-form title=\"title\" desc=\"desc\"></app-edit-gallery-item-form>\n</li>\n";
+
+/***/ },
+/* 30 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 31 */,
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(33);
+
+/***/ },
+/* 33 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var angular = __webpack_require__(7);
+	angular.module('demoApp').directive('appEditGalleryItemForm', function () {
+	  return {
+	    restrict: 'E',
+	    replace: true,
+	    scope: {
+	      title: '=',
+	      desc: '='
+	    },
+	    template: __webpack_require__(34)
+	  };
+	});
+
+/***/ },
+/* 34 */
+/***/ function(module, exports) {
+
+	module.exports = "<form nonvalidate class=\"app-edit-gallery-item-form\">\n  <label for=\"title\">Title</label>\n  <input name=\"title\" type=\"text\" ng-model:\"title\">\n  <label for=\"desc\">Description</label>\n  <input name=\"desc\" type:\"text\" ng-model=\"desc\">\n</form>\n";
 
 /***/ }
 /******/ ]);
