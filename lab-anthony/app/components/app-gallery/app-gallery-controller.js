@@ -24,9 +24,34 @@ function AppGalleryController() {
       imgSrc: require('../../assets/images/mountains/mtn-1.jpg')
     },
     {
-      title: 'Mountain One',
+      title: 'Mountain Two',
       desc: 'This is a beautiful mountain!',
-      imgSrc: require('../../assets/images/mountains/mtn-1.jpg')
+      imgSrc: require('../../assets/images/mountains/mtn-2.jpg')
+    },
+    {
+      title: 'Mountain Three',
+      desc: 'This is a beautiful mountain!',
+      imgSrc: require('../../assets/images/mountains/mtn-3.jpg')
+    },
+    {
+      title: 'Mountain Four',
+      desc: 'This is a beautiful mountain!',
+      imgSrc: require('../../assets/images/mountains/mtn-4.jpg')
+    },
+    {
+      title: 'Mountain Five',
+      desc: 'This is a beautiful mountain!',
+      imgSrc: require('../../assets/images/mountains/mtn-5.jpg')
+    },
+    {
+      title: 'Mountain Six',
+      desc: 'This is a beautiful mountain!',
+      imgSrc: require('../../assets/images/mountains/mtn-6.jpg')
+    },
+    {
+      title: 'Mountain Seven',
+      desc: 'This is a beautiful mountain!',
+      imgSrc: require('../../assets/images/mountains/mtn-7.jpg')
     }
   ];
 
