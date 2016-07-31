@@ -1,5 +1,11 @@
 @import "vendor/normalize.css";
+@import "_theme.scss";
 
 body {
-  background-color: #4AA9CF;
+  background-color: $app-main;
+}
+
+img {
+  border-radius: 3px;
+  border-color: $app-dark;
 }

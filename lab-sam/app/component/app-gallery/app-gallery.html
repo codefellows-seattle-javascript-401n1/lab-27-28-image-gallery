@@ -1,4 +1,5 @@
 <section class="app-gallery">
+  <button ng-click="appGalleryCtrl.activateLinkView()"> Links </button> <button ng-click="appGalleryCtrl.activateThumbView()"> Thumbnails </button>   <button ng-click="appGalleryCtrl.activateFullView()"> Full View </button>
 
   <form novalidate ng-submit="appGalleryCtrl.addImageFull()">
     <label for="title">title: </label>
@@ -9,13 +10,13 @@
     <input type="text" ng-model="appGalleryCtrl.ImageFull.imgSrc">
     <input type="submit" value="create item">
   </form>
-  <ul>
-    <app-image-link ng-repeat="image in appGalleryCtrl.images" title="{{image.title}}" a-href="{{imgLinkUrl}}"> </app-image-link>
+  <ul ng-show="appGalleryCtrl.linkView">
+    <app-image-link ng-repeat="image in appGalleryCtrl.images" title="{{image.title}}" img-link-url="{{image.link}}" description="{{image.description}}"> </app-image-link>
   </ul>
-  <ul>
+  <ul ng-show="appGalleryCtrl.thumbView">
     <app-image-thumb ng-repeat="image in appGalleryCtrl.images" img-thumb-src="{{image.imgThumbSrc}}"> </app-image-thumb>
   </ul>
-  <ul>
+  <ul ng-show="appGalleryCtrl.fullView">
     <app-image-full ng-repeat="image in appGalleryCtrl.images" title="{{image.title}}" description="{{image.description}}" img-src="{{image.imgSrc}}"> </app-image-full>
   </ul>
 </section>
