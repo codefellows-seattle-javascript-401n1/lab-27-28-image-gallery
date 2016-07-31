@@ -11,6 +11,17 @@ function AppGalleryController() {
     imgSrc: ''
   };
 
+  this.galleryStyle = 'image';
+
+  this.selectGalleryStyle = function(style) {
+    console.log('selectGalleryStyle');
+    if (style === 'list' || style === 'thumb' || style === 'image') {
+      this.galleryStyle = style;
+    }
+
+    return this.galleryStyle;
+  };
+
   this.images = [
     {
       title: 'Slug Neo',

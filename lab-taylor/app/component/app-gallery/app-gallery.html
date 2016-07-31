@@ -1,14 +1,10 @@
 <section class="app-gallery">
-  <app-gallery-header></app-gallery-header>
-  <ul>
-    <app-gallery-item-text ng-repeat="item in appGalleryCtrl.images" title="{{item.title}}" desc="{{item.desc}}" img-src="{{item.imgSrc}}">
-  </ul>
-  <hr>
-  <ul>
-    <app-gallery-item-fullsize ng-repeat="item in appGalleryCtrl.images" title="{{item.title}}" desc="{{item.desc}}" img-src="{{item.imgSrc}}">
-  </ul>
-  <hr>
-  <ul>
-    <app-gallery-item-thumbnail ng-repeat="item in appGalleryCtrl.images" img-src="{{item.imgSrc}}">
-  </ul>
+  <app-gallery-header select-gallery-style="appGalleryCtrl.selectGalleryStyle(style)"></app-gallery-header>
+  <div class="gallery--item-container">
+    <ul>
+      <app-gallery-item-text ng-repeat="item in appGalleryCtrl.images" ng-show="appGalleryCtrl.galleryStyle === 'list'" title="{{item.title}}" desc="{{item.desc}}" img-src="{{item.imgSrc}}"></app-gallery-item-text>
+      <app-gallery-item-fullsize ng-repeat="item in appGalleryCtrl.images" ng-show="appGalleryCtrl.galleryStyle === 'image'" title="{{item.title}}" desc="{{item.desc}}" img-src="{{item.imgSrc}}"></app-gallery-item-fullsize>
+      <app-gallery-item-thumbnail ng-repeat="item in appGalleryCtrl.images" ng-show="appGalleryCtrl.galleryStyle === 'thumb'" img-src="{{item.imgSrc}}"></app-gallery-item-thumbnail>
+    </ul>
+  </div>
 </section>
