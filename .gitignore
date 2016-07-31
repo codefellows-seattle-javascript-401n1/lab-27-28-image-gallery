@@ -1,6 +1,11 @@
 # ignore db directorys
 db
 
+.DS_store
+
+build
+//build//
+
 # Created by https://www.gitignore.io/api/linux,node,osx,vim
 
 ### Linux ###
