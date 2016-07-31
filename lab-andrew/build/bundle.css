@@ -418,14 +418,44 @@ textarea {
   font: inherit; /* 2 */
 }
 body {
-  background-color: #5c92ac; }
+  background-color: #475a63; }
+
+#logo {
+  margin-left: 30%;
+  margin-top: 10%;
+  border-bottom: solid 2px black;
+  padding-left: .5em;
+  width: 8.5em;
+  box-shadow: inset 0 -15px 10px -10px rgba(0, 0, 0, 0.75); }
+
+#caveEl {
+  font-size: 2em; }
 .app-main {
-  background-color: #d05660; }
+  background-color: #475a63; }
+.app-gallery-item {
+  width: 80%;
+  margin-left: 12%;
+  margin-top: 10%; }
+
+.mainLiEl {
+  height: 130px;
+  display: inline-block; }
 .app-text {
-  background-color: #bee8ff; }
+  display: inline-block;
+  width: 100%;
+  height: 4em; }
+
+.app-text > a {
+  color: #475a63; }
+.app-gallery-thumbnail {
+  text-decoration: none;
+  display: inline-flex;
+  border: solid 2px white; }
+
 .app-gallery-thumbnail > img:hover {
-  border-style: solid;
-  border-color: #ff3456; }
+  box-shadow: 5px 5px 5px;
+  border: none;
+  border-color: #475a63; }
 .app-gallery-fullSize {
   display: inline-block;
-  background-color: #5586b8; }
+  background-color: #475a63; }

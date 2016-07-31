@@ -54,9 +54,9 @@
 
 	__webpack_require__(9);
 	__webpack_require__(14);
-	__webpack_require__(19);
-	__webpack_require__(31);
-	__webpack_require__(36);
+	__webpack_require__(28);
+	__webpack_require__(33);
+	__webpack_require__(38);
 
 /***/ },
 /* 1 */
@@ -31581,6 +31581,11 @@
 	  return {
 	    restrict: 'E',
 	    replace: true,
+	    scope: {
+	      imgSrc: '@',
+	      title: '@',
+	      desc: '@'
+	    },
 	    template: __webpack_require__(11)
 	  };
 	});
@@ -31605,53 +31610,11 @@
 	'use strict';
 
 	__webpack_require__(15);
-	__webpack_require__(17);
+	__webpack_require__(24);
+	__webpack_require__(26);
 
 /***/ },
 /* 15 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var angular = __webpack_require__(7);
-
-	angular.module('galleryApp').directive('appText', function () {
-	  return {
-	    restrict: 'E',
-	    replace: true,
-	    scope: {
-	      imgSrc: '@',
-	      title: '@',
-	      desc: '@'
-	    },
-	    template: __webpack_require__(16)
-	  };
-	});
-
-/***/ },
-/* 16 */
-/***/ function(module, exports) {
-
-	module.exports = "<li class=\"app-text\">{{title}} || {{desc}} || <a ng-href=\"{{imgSrc}}\">{{imgSrc}}</a></li>\n";
-
-/***/ },
-/* 17 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 18 */,
-/* 19 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(20);
-	__webpack_require__(29);
-
-/***/ },
-/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31670,92 +31633,92 @@
 	  this.images = [{
 	    title: 'cave1',
 	    desc: 'entrance',
-	    imgSrc: __webpack_require__(21)
+	    imgSrc: __webpack_require__(16)
 	  }, {
 	    title: 'cave2',
 	    desc: 'the Hall',
-	    imgSrc: __webpack_require__(22)
+	    imgSrc: __webpack_require__(17)
 	  }, {
 	    title: 'cave3',
 	    desc: 'The Hole',
-	    imgSrc: __webpack_require__(23)
+	    imgSrc: __webpack_require__(18)
 	  }, {
 	    title: 'cave4',
 	    desc: 'Low Bridge',
-	    imgSrc: __webpack_require__(24)
+	    imgSrc: __webpack_require__(19)
 	  }, {
 	    title: 'cave5',
 	    desc: 'still waters',
-	    imgSrc: __webpack_require__(25)
+	    imgSrc: __webpack_require__(20)
 	  }, {
 	    title: 'cave6',
 	    desc: 'the door within',
-	    imgSrc: __webpack_require__(26)
+	    imgSrc: __webpack_require__(21)
 	  }, {
 	    title: 'cave7',
 	    desc: 'long high bridge',
-	    imgSrc: __webpack_require__(27)
+	    imgSrc: __webpack_require__(22)
 	  }, {
 	    title: 'cave8',
 	    desc: 'the Hole',
-	    imgSrc: __webpack_require__(23)
+	    imgSrc: __webpack_require__(18)
 	  }, {
 	    title: 'cave9',
 	    desc: 'the river',
-	    imgSrc: __webpack_require__(28)
+	    imgSrc: __webpack_require__(23)
 	  }];
 	}
 
 /***/ },
-/* 21 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "2a6159b8a582dd0f67c4aac93472c954.jpg";
 
 /***/ },
-/* 22 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "27020bcee355b7325e5ade6d8b5d42df.jpg";
 
 /***/ },
-/* 23 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "ca09252497b02088a04b77eb1d15dc79.jpg";
 
 /***/ },
-/* 24 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "62f1726bbce2d9c4e365dfbf27cf7f86.jpg";
 
 /***/ },
-/* 25 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "b2cdaa235ecfcbfc7298253a1f2a0f82.jpg";
 
 /***/ },
-/* 26 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "2811c440b8033f4440f995d57b9977ee.jpg";
 
 /***/ },
-/* 27 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "26972a634845d2751bba737e18ade4a7.jpg";
 
 /***/ },
-/* 28 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "57d6714e2e41acc531e796af46aabb4c.jpg";
 
 /***/ },
-/* 29 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31766,10 +31729,57 @@
 	  return {
 	    restrict: 'E',
 	    replace: true,
-	    scope: {},
+	    scope: {
+	      title: '@',
+	      desc: '@',
+	      imgSrc: '@'
+	    },
 	    controller: 'AppGalleryItemController',
 	    controllerAs: 'appGalleryCtrl',
 	    bindToController: true,
+	    template: __webpack_require__(25)
+	  };
+	});
+
+/***/ },
+/* 25 */
+/***/ function(module, exports) {
+
+	module.exports = "<section class=\"app-gallery-item\">\n  <ul>\n\n    <li ng-repeat=\"image in appGalleryCtrl.images\" class=\"mainLiEl\">\n    <app-text  title=\"{{image.title}}\" desc=\"{{image.desc}}\" img-src=\"{{image.imgSrc}}\"></app-text>\n</li>\n\n<br>\n\n<li ng-repeat=\"image in appGalleryCtrl.images\" class=\"mainLiEl\">\n  <app-gallery-thumbnail img-src=\"{{image.imgSrc}}\"></app-gallery-thumbnail>\n</li>\n\n<br>\n\n    <li ng-repeat=\"image in appGalleryCtrl.images\" class=\"mainLiEl\">\n    <app-gallery-fullSize title=\"{{image.title}}\" desc=\"{{image.desc}}\" img-src=\"{{image.imgSrc}}\">hello world</app-gallery-fullSize>\n</li>\n  </ul>\n</section>\n";
+
+/***/ },
+/* 26 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 27 */,
+/* 28 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(29);
+	__webpack_require__(31);
+
+/***/ },
+/* 29 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var angular = __webpack_require__(7);
+
+	angular.module('galleryApp').directive('appText', function () {
+	  return {
+	    restrict: 'E',
+	    replace: true,
+	    scope: {
+	      imgSrc: '@',
+	      title: '@',
+	      desc: '@'
+	    },
 	    template: __webpack_require__(30)
 	  };
 	});
@@ -31778,19 +31788,26 @@
 /* 30 */
 /***/ function(module, exports) {
 
-	module.exports = "<section class=\"app-gallery-item\">\n  <ul>\n    <app-text ng-repeat=\"image in appGalleryCtrl.images\" title=\"{{image.title}}\" desc=\"{{image.desc}}\" imgSrc=\"{{image.imgSrc}}\">\n  </ul>\n  <ul>\n    <app-gallery-fullSize ng-repeat=\"image in appGalleryCtrl.images\" title=\"{{image.title}}\" desc=\"{{image.desc}}\" imgSrc=\"{{image.imgSrc}}\">\n  </ul>\n\n</section>\n";
+	module.exports = "<li class=\"app-text\">You are in: {{title}} -- {{desc}} --{{imgSrc}}</li>\n";
 
 /***/ },
 /* 31 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 32 */,
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(32);
 	__webpack_require__(34);
+	__webpack_require__(36);
 
 /***/ },
-/* 32 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31802,40 +31819,39 @@
 	    restrict: 'E',
 	    replace: true,
 	    scope: {
-	      imgsrc: '@'
+	      imgSrc: '@'
 	    },
-	    template: __webpack_require__(33)
+	    template: __webpack_require__(35)
 	  };
 	});
 
 /***/ },
-/* 33 */
+/* 35 */
 /***/ function(module, exports) {
 
-	module.exports = "<li class=\"app-gallery-thumbnail\">\n  <img ng-src=\"{{imgSrc}}\" width=\"100px\" height=\"100px\" />\n</li>\n";
+	module.exports = "<li class=\"app-gallery-thumbnail\">\n  <img width=\"100px\" height=\"100px\" ng-src=\"{{imgSrc}}\">\n</li>\n";
 
 /***/ },
-/* 34 */
+/* 36 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 35 */,
-/* 36 */
+/* 37 */,
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(37);
 	__webpack_require__(39);
+	__webpack_require__(41);
 
 /***/ },
-/* 37 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	'use stict';
 
 	var angular = __webpack_require__(7);
 
@@ -31848,18 +31864,18 @@
 	      title: '@',
 	      desc: '@'
 	    },
-	    template: __webpack_require__(38)
+	    template: __webpack_require__(40)
 	  };
 	});
 
 /***/ },
-/* 38 */
+/* 40 */
 /***/ function(module, exports) {
 
-	module.exports = "<li class=\"app-gallery-fullSize\">\n  <img ng-src=\"{{imgSrc}}\">\n  <h2>{{title}}</h2>\n  <p>{{desc}}</p>\n</li>\n";
+	module.exports = "<li class=\"app-gallery-fullSize\">\n  <img ng-src=\"{{imgSrc}}\">\n  <!-- <h2>{{title}}</h2>\n  <h3>{{desc}}</h3> -->\n</li>\n";
 
 /***/ },
-/* 39 */
+/* 41 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

@@ -1,4 +1,6 @@
-.app-gallery-fullSize > img {
+@import "../../scss/_theme.scss";
+
+.app-gallery-fullsize {
   display:inline-block;
-  background-color: #5586b8;
+  background-color: $app_grey;
 }

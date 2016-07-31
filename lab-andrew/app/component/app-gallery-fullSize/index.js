@@ -1,3 +1,4 @@
 'use strict';
-require('./app-gallery-fullSize-directive.js');
-require('./app-gallery-fullSize.scss');
+
+require('./app-gallery-fullsize-directive');
+require('./app-gallery-fullsize.scss');
