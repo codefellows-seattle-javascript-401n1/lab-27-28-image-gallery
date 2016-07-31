@@ -9,10 +9,10 @@ function AppGalleryController(){
   this.directiveToShow = 'desc';
 
   this.selectDirectiveToShow = function selectDirectiveToShow(directiveName){
-    console.log('selectDirectiveTopSHow called');
+    console.log('selectDirectiveToSHow called', directiveName);
     this.directiveToShow = directiveName;
   };
-  
+
   this.images = [
     {
       title: 'Jaguar Concept',
