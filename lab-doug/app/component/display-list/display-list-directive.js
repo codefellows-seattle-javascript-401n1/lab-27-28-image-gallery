@@ -9,7 +9,8 @@ angular.module('galleryApp').directive('displayList', function(){
     template: require('./display-list.html'),
     scope: {
       desc: '@',
-      title: '@'
+      title: '@',
+      imgSrc: '@'
     }
   };
 });

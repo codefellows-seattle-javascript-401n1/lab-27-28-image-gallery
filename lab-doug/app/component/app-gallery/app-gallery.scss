@@ -1,5 +1,8 @@
+@import "../../scss/_theme";
+
 .app-gallery-ul {
   border: medium solid black;
   border-radius: 10px;
+  background-color: $app-blue;
 
 }

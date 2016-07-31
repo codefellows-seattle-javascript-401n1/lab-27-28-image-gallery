@@ -19,10 +19,10 @@ const angular = require('angular');
 angular.module('galleryApp', []);
 
 /**
- * registering the directive.  In this case, there is an index.js file in this directory and requires the js, html, and scss files.  webpack will first look at the index.js and require in the rest of the files. webpack will then run the corresponding "test" for the file extension you defined with your regex in webpack.
+ * registering the directive.  In this case, there is an index.js file in these directories that requires the js and scss files as well as any controllers.  webpack will first look at the index.js and require in the rest of the files. webpack will then run the corresponding "test" for the file extension you defined with your regex in webpack. The result is that .js files get bundled into the bundle.js and the scss files get bundled into the bundle.css file.
  */
-require('./component/display-img-description');
 require('./component/app-main');
 require('./component/app-gallery');
+require('./component/display-img-description');
 require('./component/display-thumbnail');
 require('./component/display-list');
