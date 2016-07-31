@@ -13,3 +13,4 @@ require('./component/app-gallery-item');
 require('./component/app-main');
 require('./component/app-thumbnail');
 require('./component/app-fullsize');
+require('./component/app-modal-image');

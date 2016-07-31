@@ -31,6 +31,10 @@ module.exports = {
         loader: 'html'
       },
       {
+        test: /\.(eot|ttf|svg).*/,
+        loader: 'file?prefix=font/'
+      },
+      {
         test: /\.(jpg|gif|png)$/,
         loader: 'file?name=img/[hash].[ext]'
       },
