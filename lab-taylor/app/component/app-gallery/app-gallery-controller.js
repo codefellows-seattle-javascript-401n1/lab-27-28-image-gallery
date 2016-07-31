@@ -12,14 +12,23 @@ function AppGalleryController() {
   };
 
   this.galleryStyle = 'image';
+  this.displayModalImage = false;
 
   this.selectGalleryStyle = function(style) {
-    console.log('selectGalleryStyle');
     if (style === 'list' || style === 'thumb' || style === 'image') {
       this.galleryStyle = style;
     }
 
     return this.galleryStyle;
+  };
+
+  this.showModalImage = function(image) {
+    this.displayImageUrl = image;
+    this.displayModalImage = true;
+  };
+
+  this.hideModalImage = function() {
+    this.displayModalImage = false;
   };
 
   this.images = [
