@@ -1,16 +1,18 @@
 'use strict';
 
+//default for all directive below//
 const angular = require('angular');
-angular.module('galleryApp');
-.directive('appGalleryItem', function (){
+angular.module('galleryApp')
+
+.directive('appGalleryItem', function () {
   return {
     restrict: 'E',
     replace: true,
     scope: {
       imgSrc: '@',
       title: '@',
-      desc: '@',
+      desc: '@'
     },
-    template: require('.app-gallery-item.html')
-  }
-})
+    template: require('./app-gallery-item.html')
+  };
+});

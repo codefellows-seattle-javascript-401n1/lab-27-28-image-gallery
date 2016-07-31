@@ -18,7 +18,7 @@ module.exports = {
         loader: ExtractText.extract('style', 'css!sass!')
       },
       {
-        test: /\.js*/,
+        test: /\.js$/,
         loader: 'babel',
         exclude: /node_modules/,
         query: {
