@@ -31,6 +31,12 @@ function AppGalleryController() {
     this.displayModalImage = false;
   };
 
+  this.updateImage = function(image){
+    Object.keys(this.image).forEach((key) => {
+      if (image[key]) this.image[key] = image[key];
+    });
+  };
+  
   this.images = [
     {
       title: 'Slug Neo',
