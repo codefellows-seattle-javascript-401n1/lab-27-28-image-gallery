@@ -1,0 +1,20 @@
+<section class="app-gallery-item">
+  <ul>
+
+    <li ng-repeat="image in appGalleryCtrl.images" class="mainLiEl">
+    <app-text  title="{{image.title}}" desc="{{image.desc}}" img-src="{{image.imgSrc}}"></app-text>
+</li>
+
+<br>
+
+<li ng-repeat="image in appGalleryCtrl.images" class="mainLiEl">
+  <app-gallery-thumbnail img-src="{{image.imgSrc}}"></app-gallery-thumbnail>
+</li>
+
+<br>
+
+    <li ng-repeat="image in appGalleryCtrl.images" class="mainLiEl">
+    <app-gallery-fullSize title="{{image.title}}" desc="{{image.desc}}" img-src="{{image.imgSrc}}">hello world</app-gallery-fullSize>
+</li>
+  </ul>
+</section>
