@@ -3,9 +3,13 @@
 .heading {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: baseline;
   text-align: center;
+
+  input {
+    width: 40px;
+  }
 }
 
 img {

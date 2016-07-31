@@ -3,8 +3,8 @@
 .app-gallery-item {
   display: inline-block;
   margin: 20px 0 20px 0;
-  border: solid thick $app-itemborder;
-  background-color: $app-itembackground;
+  border: solid thick $app-itemBorder;
+  background-color: $app-itemBackground;
 }
 
 .app-gallery-item h2, .app-gallery-item p {
