@@ -7,6 +7,12 @@ angular.module('demoApp')
   return  {
     restrict: 'E',
     replace: true,
-    template: require('./app-main.html')
+    template: require('./app-main.html'),
+    controller: 'AppMainController',
+    controllerAs: 'appMainCtrl',
+    bindToController: true,
+    scope:{
+
+    }
   };
 });

@@ -2,7 +2,7 @@
 
 // webpack assets
 require('!!file?name=[name].[ext]!./html/index.html');
-require('./sass/base.scss');
+require('./scss/base.scss');
 // npm moudles
 const angular = require('angular');
 // app modules
@@ -10,8 +10,8 @@ const angular = require('angular');
 angular.module('demoApp', []);
 // angular module extensions
 require('./component/app-main');
-require('./component/app-hello');
-require('./component/app-gallery');
+require('./component/app-modal-image');
+require('./component/app-show-modal-form');
 require('./component/app-gallery-item');
 require('./component/app-edit-gallery-item-form');
 //require('./controller/example-parrent.js')

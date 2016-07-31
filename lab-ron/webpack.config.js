@@ -16,7 +16,7 @@ module.exports = {
     loaders: [
       {
         test: /\.scss$/,
-        loader: ExtractText.extract('style', 'css!sass')
+        loader: ExtractText.extract('style', 'css!postcss!sass!')
       },
       {
         test: /\.js$/,
@@ -43,5 +43,12 @@ module.exports = {
         loader: 'url?limit=10000'
       }
     ]
+  },
+  sassLoader: {
+    includePaths: [`${__dirname}/app/scss/lib`]
+  },
+  postcss: function(){
+    return[autoprefixer];
+
   }
 };

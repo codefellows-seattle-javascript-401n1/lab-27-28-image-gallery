@@ -57,10 +57,10 @@
 	angular.module('demoApp', []);
 	// angular module extensions
 	__webpack_require__(9);
-	__webpack_require__(14);
+	__webpack_require__(15);
 	__webpack_require__(20);
-	__webpack_require__(33);
-	__webpack_require__(38);
+	__webpack_require__(25);
+	__webpack_require__(31);
 	//require('./controller/example-parrent.js')
 
 /***/ },
@@ -31572,10 +31572,33 @@
 	'use strict';
 
 	__webpack_require__(10);
-	__webpack_require__(12);
+	__webpack_require__(11);
+	__webpack_require__(13);
 
 /***/ },
 /* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
+	var angular = __webpack_require__(7);
+
+	angular.module('demoApp').controller('AppMainController', [AppMainController]);
+
+	function AppMainController() {
+	  this.images = [];
+
+	  this.addImage = function (image) {
+	    if ((typeof image === 'undefined' ? 'undefined' : _typeof(image)) === 'object' && image.title && image.imageUrl) {
+	      this.images.push(image);
+	    }
+	  };
+	}
+
+/***/ },
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31586,73 +31609,60 @@
 	  return {
 	    restrict: 'E',
 	    replace: true,
-	    template: __webpack_require__(11)
+	    template: __webpack_require__(12),
+	    controller: 'AppMainController',
+	    controllerAs: 'appMainCtrl',
+	    bindToController: true,
+	    scope: {}
 	  };
 	});
-
-/***/ },
-/* 11 */
-/***/ function(module, exports) {
-
-	module.exports = "<main class=\"app-main\">\n  <app-gallery> </app-gallery>\n</main>\n";
 
 /***/ },
 /* 12 */
 /***/ function(module, exports) {
 
+	module.exports = "<main class=\"app-main\">\n  <app-gallery-item-form btn-title=\"Add Image\" submit=\"appMainCtrl.addImage(image)\">\n  </app-gallery-item-form>\n  <div class=\"app-gallery-container\">\n    <app-gallery-item ng-repeat=\"item in appMainCtrl.images\" image=\"item\"></app-gallery-item>\n  </div>\n\n</main>\n";
+
+/***/ },
+/* 13 */
+/***/ function(module, exports) {
+
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 13 */,
-/* 14 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(15);
-	__webpack_require__(17);
-	__webpack_require__(18);
-
-/***/ },
+/* 14 */,
 /* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var angular = __webpack_require__(7);
-	angular.module('demoApp').directive('appHello', function () {
-	  return {
-	    restrict: 'E',
-	    replace: true,
-	    scope: {
-	      example: '@'
-	    },
-	    controller: 'AppHelloController',
-	    controllerAs: 'appHelloCtrl',
-	    bindToController: true,
-	    template: __webpack_require__(16)
-	  };
-	});
+	__webpack_require__(16);
+	__webpack_require__(18);
 
 /***/ },
 /* 16 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"app-hello\">\n  <h1>told ya so</h1>\n  <p>{{AppHelloCtrl.example}}</p>\n  <p>{{appHelloCtrl.name}}</p>\n</div>\n";
-
-/***/ },
-/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var angular = __webpack_require__(7);
+	angular.module('demoApp').directive('appModalImage', function () {
+	  return {
+	    restrict: 'E',
+	    replace: true,
+	    template: __webpack_require__(17),
+	    scope: {
+	      imageUrl: '=',
+	      closeModal: '&'
+	    }
+	  };
+	});
 
-	angular.module('demoApp').controller('AppHelloController', [AppHelloController]);
+/***/ },
+/* 17 */
+/***/ function(module, exports) {
 
-	function AppHelloController() {
-	  this.name = 'content should show this string';
-	}
+	module.exports = "<div class=\"app-modal-image\">\n  <div ng-click=\"closeModal\">\n\n  </div>\n  <main>\n    <h1>Booya Modal View</h1>\n    <img ng-src=\"{{imageUrl}}\" alt=\"firehose\" width=\"300\">\n  </main>\n</div>\n";
 
 /***/ },
 /* 18 */
@@ -31669,7 +31679,6 @@
 
 	__webpack_require__(21);
 	__webpack_require__(23);
-	// require('./app-gallery.scss');
 
 /***/ },
 /* 21 */
@@ -31678,16 +31687,14 @@
 	'use strict';
 
 	var angular = __webpack_require__(7);
-
-	angular.module('demoApp').directive('appGallery', function () {
+	angular.module('demoApp').directive('appShowModalForm', function () {
 	  return {
 	    restrict: 'E',
 	    replace: true,
-	    scope: {},
-	    controller: 'AppGalleryController',
-	    controllerAs: 'appGalleryCtrl',
-	    bindToController: true,
-	    template: __webpack_require__(22)
+	    template: __webpack_require__(22),
+	    scope: {
+	      showImage: '&'
+	    }
 	  };
 	});
 
@@ -31695,133 +31702,33 @@
 /* 22 */
 /***/ function(module, exports) {
 
-	module.exports = "<section class=\"app-gallery\">\n\n  <form novalidate ng-submit=\"appGalleryCtrl.addGalleryItem()\">\n    <label for=\"title\">title: </label>\n    <input name=\"title\" type=\"text\" ng-model=\"appGalleryCtrl.galleryItem.title\">\n    <label for=\"desc\">desc: </label>\n    <input type=\"text\" ng-model=\"appGalleryCtrl.galleryItem.desc\">\n    <label for=\"imgSrc\">image source:</label>\n    <input type=\"text\" ng-model=\"appGalleryCtrl.galleryItem.imgSrc\">\n    <input type=\"submit\" value=\"create item\">\n  </form>\n  <ul>\n    <!-- create a app-gallery-item for each image in the controllers images array -->\n\n    <app-gallery-item ng-repeat=\"item in appGalleryCtrl.images\" title=\"{{item.title}}\" desc=\"{{item.desc}}\" img-src=\"{{item.imgSrc}}\"> </app-gallery-item>\n  </ul>\n</section>\n";
+	module.exports = "<form class=\"app-show-modal-form form-inline\" novalidate ng-submit=\"showImage({image: imageUrl})\">\n  <div class=\"form-group\">\n    <label for=\"imageUrl\">URL:</label>\n    <input type=\"text\" name=\"imageUrl\" ng-model=\"imageUrl\">\n  </div>\n  <button class=\"btn btn-primary\" type=\"submit\">Show Image</button>\n</form>\n";
 
 /***/ },
 /* 23 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	'use strict';
-
-	var angular = __webpack_require__(7);
-
-	angular.module = 'demoApp'.controller('AppGalleryController', [AppGalleryController]);
-
-	function AppGalleryController() {
-	  this.galleryItem = {
-	    title: '',
-	    desc: '',
-	    imgSrc: ''
-	  };
-
-	  this.addGalleryItem = function () {
-	    this.images.push(angular.copy(this.galleryItem));
-	    this.galleryItem = { title: '', desc: '', imgSrc: '' };
-	  };
-	  this.images = [{
-	    title: 'Flower One',
-	    desc: 'this is the type of flower power that is going to make birds happy',
-	    imgSrc: __webpack_require__(24)
-	  }, {
-	    title: 'Flower Two',
-	    desc: 'this is the type of flower power that is going to make birds happy',
-	    imgSrc: __webpack_require__(25)
-	  }, {
-	    title: 'Flower Three',
-	    desc: 'this is the type of flower power that is going to make birds happy',
-	    imgSrc: __webpack_require__(26)
-	  }, {
-	    title: 'Flower Four',
-	    desc: 'this is the type of flower power that is going to make birds happy',
-	    imgSrc: __webpack_require__(27)
-	  }, {
-	    title: 'Flower Five',
-	    desc: 'this is the type of flower power that is going to make birds happy',
-	    imgSrc: __webpack_require__(28)
-	  }, {
-	    title: 'Flower Six',
-	    desc: 'this is the type of flower power that is going to make birds happy',
-	    imgSrc: __webpack_require__(29)
-	  }, {
-	    title: 'Flower Seven',
-	    desc: 'this is the type of flower power that is going to make birds happy',
-	    imgSrc: __webpack_require__(30)
-	  }, {
-	    title: 'Flower Eight',
-	    desc: 'this is the type of flower power that is going to make birds happy',
-	    imgSrc: __webpack_require__(31)
-	  }, {
-	    title: 'Flower Nine',
-	    desc: 'this is the type of flower power that is going to make birds happy',
-	    imgSrc: __webpack_require__(32)
-	  }];
-	}
+	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 24 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "img/flower-0-e06c1805d6fb4b63218e60cf8d1d3d53.jpg";
-
-/***/ },
+/* 24 */,
 /* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "img/flower-1-a667f2dd102ae25420198bb25dbe4401.jpg";
+	'use strict';
+
+	__webpack_require__(26);
+	__webpack_require__(27);
+	__webpack_require__(29);
 
 /***/ },
 /* 26 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	module.exports = __webpack_require__.p + "img/flower-2-f9cb00d9c3a18ca8fba2a66b21348834.jpg";
+	"use strict";
 
 /***/ },
 /* 27 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "img/flower-3-e06c1805d6fb4b63218e60cf8d1d3d53.jpg";
-
-/***/ },
-/* 28 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "img/flower-4-e06c1805d6fb4b63218e60cf8d1d3d53.jpg";
-
-/***/ },
-/* 29 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "img/flower-5-e06c1805d6fb4b63218e60cf8d1d3d53.jpg";
-
-/***/ },
-/* 30 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "img/flower-6-e06c1805d6fb4b63218e60cf8d1d3d53.jpg";
-
-/***/ },
-/* 31 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "img/flower-7-e06c1805d6fb4b63218e60cf8d1d3d53.jpg";
-
-/***/ },
-/* 32 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "img/flower-8-e06c1805d6fb4b63218e60cf8d1d3d53.jpg";
-
-/***/ },
-/* 33 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(34);
-	__webpack_require__(36);
-
-/***/ },
-/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31836,33 +31743,34 @@
 	      title: '@',
 	      desc: '@'
 	    },
-	    template: __webpack_require__(35)
+	    template: __webpack_require__(28)
 	  };
 	});
 
 /***/ },
-/* 35 */
+/* 28 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<li class=\"app-gallery-item\">\n  <img ng-src=\"{{imgSrc}}\">\n  <h2> {{ title }} </h2>\n  <p> {{ desc }} </p>\n  <app-edit-gallery-item-form title=\"title\" desc=\"desc\"></app-edit-gallery-item-form>\n</li>\n";
+	module.exports = "<div class=\"app-gallery-item\">\n  <img ng-src=\"{{appGalleryItemCtrl.image.imageUrl}}\">\n  <h2> {{appGalleryItemCtrl.image.title}} </h2>\n\n  <app-gallery-item-form submit=\"appGalleryItemCtrl.updateImage(image)\"\n       btn-title=\"update image\"\n    > </app-gallery-item-form>\n</div>\n";
 
 /***/ },
-/* 36 */
+/* 29 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 37 */,
-/* 38 */
+/* 30 */,
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(39);
+	__webpack_require__(32);
+	__webpack_require__(34);
 
 /***/ },
-/* 39 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31873,18 +31781,24 @@
 	    restrict: 'E',
 	    replace: true,
 	    scope: {
-	      title: '=',
-	      desc: '='
+	      btnTitle: '@',
+	      desc: '&'
 	    },
-	    template: __webpack_require__(40)
+	    template: __webpack_require__(33)
 	  };
 	});
 
 /***/ },
-/* 40 */
+/* 33 */
 /***/ function(module, exports) {
 
-	module.exports = "<form nonvalidate class=\"app-edit-gallery-item-form\">\n  <label for=\"title\">Title</label>\n  <input name=\"title\" type=\"text\" ng-model:\"title\">\n  <label for=\"desc\">Description</label>\n  <input name=\"desc\" type:\"text\" ng-model=\"desc\">\n</form>\n";
+	module.exports = "<form ng-submit=\"submit ({image: {title: title, imageUrl: imageUrl}})\"\n  novalidate class=\"form-inline app-gallery-item-form\">\n  <div class=\"form-group\">\n    <label for=\"title\">Title:</label>\n    <input type=\"text\" name=\"title\" ng-model=\"title\">\n  </div>\n  <div class=\"form-group\">\n    <label for=\"imageUrl\">URL</label>\n    <input type=\"text\" name=\"imageUrl\" ng-model=\"imageUrl\">\n  </div>\n  <button class=\"btn btn-default\" type=\"submit\">{{ btnTitle }}</button>\n</form>\n";
+
+/***/ },
+/* 34 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);

@@ -7,8 +7,8 @@ angular.module('demoApp')
     restrict: 'E',
     replace: true,
     scope: {
-      title: '=',
-      desc: '='
+      btnTitle: '@',
+      desc: '&'
     },
     template: require('./app-edit-gallery-item-form.html')
   };
