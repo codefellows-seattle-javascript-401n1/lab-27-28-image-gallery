@@ -10,7 +10,8 @@ angular.module('demoApp')
     scope: {
       imgSrc: '@',
       title: '@',
-      desc: '@'
+      desc: '@',
+      image: '='
     },
     controller: 'AppGalleryItemController',
     controllerAs: 'appGalleryCtrl',

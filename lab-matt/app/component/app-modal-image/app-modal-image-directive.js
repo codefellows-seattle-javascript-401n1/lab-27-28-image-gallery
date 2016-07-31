@@ -9,6 +9,7 @@ angular.module('demoApp')
     replace: true,
     template: require('./app-modal-image.html'),
     scope: {
+      imageUrl: '@',
       closeModal: '&'
     }
   };

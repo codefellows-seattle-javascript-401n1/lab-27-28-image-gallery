@@ -1,15 +1,25 @@
-<li class="app-gallery-item">
-  <ol>
-    <li ng-repeat="image in appGalleryCtrl.images">
-      <app-hello title="{{image.name}}" desc="{{image.description}}" img-src="{{image.link}}"></app-hello>
-      <app-thumbnail
-      ng-click="appGalleryCtrl.showToggle()"
-      ng-show="!appGalleryCtrl.showValue" img-src="{{image.link}}">
-       </app-thumbnail>
-      <app-fullsize
-      ng-click="appGalleryCtrl.showToggle()"
-       ng-show="appGalleryCtrl.showValue" img-src="{{image.link}}">
-      </app-fullsize>
-    </li>
-  </ol>
-</li>
+
+<div class="app-gallery-item">
+  <app-nav show-thumb = "appGalleryCtrl.thumbFunc()" show-text = "appGalleryCtrl.textFunc()" show-full = "appGalleryCtrl.fullFunc()"></app-nav>
+  <li class="">
+    <ol>
+      <li ng-repeat="image in appGalleryCtrl.images">
+        <app-hello title="{{image.name}}" show-image="appGalleryCtrl.showModalImage(image)"
+        ng-show="appGalleryCtrl.showText" desc="{{image.description}}" img-src="{{image.link}}"></app-hello>
+        <app-thumbnail
+          show-image="appGalleryCtrl.showModalImage(image)" ng-show="appGalleryCtrl.showThumb"
+          img-src="{{image.link}}"
+        ></app-thumbnail>
+        <app-fullsize
+        show-image="appGalleryCtrl.showModalImage(image)" ng-show="appGalleryCtrl.showFull" img-src="{{image.link}}">
+        </app-fullsize>
+      </li>
+    </ol>
+  </li>
+  <app-modal-image
+  image-url="{{ appGalleryCtrl.displayImageUrl }}"
+  ng-show="appGalleryCtrl.displayModalImage"
+  close-modal="appGalleryCtrl.hideModalImage()"
+
+  ></app-modal-image>
+</div>

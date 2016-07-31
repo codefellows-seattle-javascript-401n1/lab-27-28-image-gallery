@@ -8,7 +8,8 @@ angular.module('demoApp')
     restrict: 'E',
     replace: true,
     scope: {
-      imgSrc: '@'
+      imgSrc: '@',
+      showImage: '&'
     },
     template: require('./app-fullsize.html')
   };

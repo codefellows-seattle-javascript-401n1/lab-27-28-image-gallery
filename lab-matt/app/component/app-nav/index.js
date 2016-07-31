@@ -2,4 +2,4 @@
 
 
 require('./app-nav-directive');
-require('./app-nav.scss');
+// require('./app-nav.scss');

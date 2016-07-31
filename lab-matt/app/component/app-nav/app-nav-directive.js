@@ -7,6 +7,11 @@ angular.module('demoApp')
   return {
     restrict: 'E',
     replace: true,
-    template: require('./app-nav.html')
+    template: require('./app-nav.html'),
+    scope: {
+      showFull: '&',
+      showText: '&',
+      showThumb: '&'
+    }
   };
 });

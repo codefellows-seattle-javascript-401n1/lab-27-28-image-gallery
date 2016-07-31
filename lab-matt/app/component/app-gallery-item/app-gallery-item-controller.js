@@ -6,6 +6,15 @@ angular.module('demoApp')
 .controller('AppGalleryItemController', [AppGalleryItemController]);
 
 function AppGalleryItemController() {
+  this.showThumb = false;
+  this.showText = false;
+  this.showFull = false;
+  this.displayModalImage = false;
+  this.defaultImage = 'http://static.nautil.us/7515_a3c36d0c741ddabbdb44b35a4fbebcb4.png'
+
+
+
+
   this.images = [
     {
       name: 'Dog Programmer',
@@ -29,14 +38,37 @@ function AppGalleryItemController() {
     }
 
   ],
-  this.showValue = false,
-  this.showToggle = function(){
-    if(this.showValue !== false){
-      this.showValue = false;
-      return;
-    } else {
-      this.showValue = true;
-      return;
-    }
+
+  this.thumbFunc = function() {
+    console.log('Hit thumbFunc');
+    this.showThumb = true;
+    this.showText = false;
+    this.showFull = false;
+  };
+  this.textFunc = function() {
+    console.log('Hit textFunc');
+    this.showThumb = false;
+    this.showText = true;
+    this.showFull = false;
+  };
+  this.fullFunc = function(){
+    console.log('Hit fullFunc');
+    this.showThumb = false;
+    this.showText = false;
+    this.showFull = true;
+  };
+
+
+  this.showModalImage = function(imageUrl){
+    console.log('Hit ShowModalImage, imageUrl:', imageUrl);
+    this.displayImageUrl = imageUrl || this.defaultImage;
+    console.log(this.displayImageUrl);
+    this.displayModalImage = true;
+    console.log(this.displayModalImage);
+  };
+
+  this.hideModalImage = function() {
+    console.log('hello from hideModalImage!');
+    this.displayModalImage = false;
   };
 }
