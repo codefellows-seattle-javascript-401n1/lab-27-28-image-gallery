@@ -1,0 +1,13 @@
+@import "_theme";
+
+.heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  text-align: center;
+}
+
+img {
+  border: solid thick $app-borderMain;
+}
