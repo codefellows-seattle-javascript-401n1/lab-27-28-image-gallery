@@ -1,0 +1,8 @@
+@import "../../scss/_theme.scss";
+
+.app-gallery-item-thumbnail > img:hover {
+  opacity: 50%;
+  border-style: solid;
+  border-width: thick;
+  border-color: $app_violet;
+}
