@@ -10,3 +10,4 @@ require('./component/app-gallery');
 require('./component/app-gallery-item-text');
 require('./component/app-gallery-item-fullsize');
 require('./component/app-gallery-item-thumbnail');
+require('./component/app-gallery-header');
