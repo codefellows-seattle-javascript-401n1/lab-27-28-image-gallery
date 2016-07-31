@@ -59,8 +59,8 @@
 	__webpack_require__(9);
 	__webpack_require__(14);
 	__webpack_require__(20);
-	__webpack_require__(27);
-	__webpack_require__(32);
+	__webpack_require__(33);
+	__webpack_require__(38);
 	//require('./controller/example-parrent.js')
 
 /***/ },
@@ -31730,6 +31730,30 @@
 	    title: 'Flower Three',
 	    desc: 'this is the type of flower power that is going to make birds happy',
 	    imgSrc: __webpack_require__(26)
+	  }, {
+	    title: 'Flower Four',
+	    desc: 'this is the type of flower power that is going to make birds happy',
+	    imgSrc: __webpack_require__(27)
+	  }, {
+	    title: 'Flower Five',
+	    desc: 'this is the type of flower power that is going to make birds happy',
+	    imgSrc: __webpack_require__(28)
+	  }, {
+	    title: 'Flower Six',
+	    desc: 'this is the type of flower power that is going to make birds happy',
+	    imgSrc: __webpack_require__(29)
+	  }, {
+	    title: 'Flower Seven',
+	    desc: 'this is the type of flower power that is going to make birds happy',
+	    imgSrc: __webpack_require__(30)
+	  }, {
+	    title: 'Flower Eight',
+	    desc: 'this is the type of flower power that is going to make birds happy',
+	    imgSrc: __webpack_require__(31)
+	  }, {
+	    title: 'Flower Nine',
+	    desc: 'this is the type of flower power that is going to make birds happy',
+	    imgSrc: __webpack_require__(32)
 	  }];
 	}
 
@@ -31755,13 +31779,49 @@
 /* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-
-	__webpack_require__(28);
-	__webpack_require__(30);
+	module.exports = __webpack_require__.p + "img/flower-3-e06c1805d6fb4b63218e60cf8d1d3d53.jpg";
 
 /***/ },
 /* 28 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "img/flower-4-e06c1805d6fb4b63218e60cf8d1d3d53.jpg";
+
+/***/ },
+/* 29 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "img/flower-5-e06c1805d6fb4b63218e60cf8d1d3d53.jpg";
+
+/***/ },
+/* 30 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "img/flower-6-e06c1805d6fb4b63218e60cf8d1d3d53.jpg";
+
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "img/flower-7-e06c1805d6fb4b63218e60cf8d1d3d53.jpg";
+
+/***/ },
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "img/flower-8-e06c1805d6fb4b63218e60cf8d1d3d53.jpg";
+
+/***/ },
+/* 33 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(34);
+	__webpack_require__(36);
+
+/***/ },
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31776,33 +31836,33 @@
 	      title: '@',
 	      desc: '@'
 	    },
-	    template: __webpack_require__(29)
+	    template: __webpack_require__(35)
 	  };
 	});
 
 /***/ },
-/* 29 */
+/* 35 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<li class=\"app-gallery-item\">\n  <img ng-src=\"{{imgSrc}}\">\n  <h2> {{ title }} </h2>\n  <p> {{ desc }} </p>\n  <app-edit-gallery-item-form title=\"title\" desc=\"desc\"></app-edit-gallery-item-form>\n</li>\n";
 
 /***/ },
-/* 30 */
+/* 36 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 31 */,
-/* 32 */
+/* 37 */,
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(33);
+	__webpack_require__(39);
 
 /***/ },
-/* 33 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31816,12 +31876,12 @@
 	      title: '=',
 	      desc: '='
 	    },
-	    template: __webpack_require__(34)
+	    template: __webpack_require__(40)
 	  };
 	});
 
 /***/ },
-/* 34 */
+/* 40 */
 /***/ function(module, exports) {
 
 	module.exports = "<form nonvalidate class=\"app-edit-gallery-item-form\">\n  <label for=\"title\">Title</label>\n  <input name=\"title\" type=\"text\" ng-model:\"title\">\n  <label for=\"desc\">Description</label>\n  <input name=\"desc\" type:\"text\" ng-model=\"desc\">\n</form>\n";

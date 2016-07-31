@@ -15,7 +15,7 @@ module.exports = {
     loaders: [
       {
         test: /\.scss$/,
-        loader: ExtractText.extract('style', 'css!sass!')
+        loader: ExtractText.extract('style', 'css!sass')
       },
       {
         test: /\.js$/,
@@ -30,7 +30,7 @@ module.exports = {
         loader: 'html'
       },
       {
-        test: /\.(jpg|gif|png)$/,
+        test: /\.(jpg|gif|png|jpeg)$/,
         loader: 'file?name=img/[name]-[hash].[ext]'
       }
     ]
