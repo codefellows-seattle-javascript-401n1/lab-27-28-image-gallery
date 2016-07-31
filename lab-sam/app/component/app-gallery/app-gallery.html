@@ -10,6 +10,12 @@
     <input type="submit" value="create item">
   </form>
   <ul>
+    <app-image-link ng-repeat="image in appGalleryCtrl.images" title="{{image.title}}" a-href="{{imgLinkUrl}}"> </app-image-link>
+  </ul>
+  <ul>
+    <app-image-thumb ng-repeat="image in appGalleryCtrl.images" img-thumb-src="{{image.imgThumbSrc}}"> </app-image-thumb>
+  </ul>
+  <ul>
     <app-image-full ng-repeat="image in appGalleryCtrl.images" title="{{image.title}}" description="{{image.description}}" img-src="{{image.imgSrc}}"> </app-image-full>
   </ul>
 </section>
