@@ -1,9 +1,10 @@
 <section class="app-gallery">
-  <div>
-    <ul>
-      <app-gallery-thumbnail class="app-gallery-thumbnail" ng-repeat="item in appGalleryCtrl.images" img-src="{{item.imgSrc}}"></app-gallery-thumbnail>
-    </ul>
-  </div>
+  <ul>
+    <app-gallery-text ng-repeat="item in appGalleryCtrl.images" title="{{ item.title }}" desc="{{ item.desc}}" img-src="{{ item.imgSrc }}" ></app-gallery-text>
+  </ul>
+  <ul>
+    <app-gallery-thumbnail ng-repeat="item in appGalleryCtrl.images" img-src="{{item.imgSrc}}"></app-gallery-thumbnail>
+  </ul>
   <ul>
     <app-gallery-item ng-repeat="item in appGalleryCtrl.images" title="{{item.title}}" desc="{{item.desc}}" img-src="{{item.imgSrc}}"> </app-gallery-item>
   </ul>

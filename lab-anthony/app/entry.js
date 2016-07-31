@@ -15,5 +15,5 @@ angular.module('galleryApp', []);
 require('./components/app-main');
 require('./components/app-gallery-item');
 require('./components/app-gallery-thumbnail');
-//require('./components/app-gallery-text');
+require('./components/app-gallery-text');
 require('./components/app-gallery');
