@@ -21,20 +21,20 @@ function AppGalleryController () {
 
     {
       title: 'Flower One',
-      desc: 'description 1',
+      desc: 'origanum vulgare',
       imgSrc: require('../../asset/img/flower/flower-0.jpg')
     },
 
     {
       title: 'Flower Two',
-      desc: 'description 2',
+      desc: 'salvia greggii',
       imgSrc: require('../../asset/img/flower/flower-1.jpg')
 
     },
 
     {
       title: 'Flower Three',
-      desc: 'description 3',
+      desc: 'jasminum azoricum',
       imgSrc: require('../../asset/img/flower/flower-2.jpg')
 
     },
@@ -42,49 +42,49 @@ function AppGalleryController () {
     {
 
       title: 'Flower Four',
-      desc: 'description 4',
+      desc: 'gentiana newberryi',
       imgSrc: require('../../asset/img/flower/flower-3.jpg')
 
     },
 
     {
       title: 'Flower Five',
-      desc: 'description 5',
+      desc: 'continus obovatus',
       imgSrc: require('../../asset/img/flower/flower-4.jpg')
 
     },
 
     {
       title: 'Flower Six',
-      desc: 'description 6',
+      desc: 'anemone cornoria',
       imgSrc: require('../../asset/img/flower/flower-5.jpg')
 
     },
 
     {
       title: 'Flower Seven',
-      desc: 'description 7',
+      desc: 'aster frikartii',
       imgSrc: require('../../asset/img/flower/flower-6.jpg')
 
     },
 
     {
       title: 'Flower Eight',
-      desc: 'description 8',
+      desc: 'achillea',
       imgSrc: require('../../asset/img/flower/flower-7.jpg')
 
     },
 
     {
       title: 'Flower Nine',
-      desc: 'description 9',
+      desc: 'cedrus atlantica',
       imgSrc: require('../../asset/img/flower/flower-8.jpg')
 
     },
 
     {
       title: 'Flower Ten',
-      desc: 'description 10',
+      desc: 'lantana',
       imgSrc: require('../../asset/img/flower/flower-9.jpg')
 
     }

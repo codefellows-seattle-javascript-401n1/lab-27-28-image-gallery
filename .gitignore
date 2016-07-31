@@ -1,6 +1,8 @@
 # ignore db directorys
 db
 
+.DS_store
+
 build
 //build//
 
