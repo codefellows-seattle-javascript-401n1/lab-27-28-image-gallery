@@ -1,5 +1,6 @@
 'use strict';
 
+const autoprefixer = require('autoprefixer');
 const ExtractText = require('extract-text-webpack-plugin');
 
 module.exports = {
@@ -32,6 +33,14 @@ module.exports = {
       {
         test: /\.(jpg|gif|png|jpeg)$/,
         loader: 'file?name=img/[name]-[hash].[ext]'
+      },
+      {
+        test: /\.(eot|ttf|svg).*/,
+        loader: 'file?prefix=font/'
+      },
+      {
+        test: /\.woff.*/,
+        loader: 'url?limit=10000'
       }
     ]
   }
