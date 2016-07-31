@@ -2,7 +2,7 @@
 
 const angular = require('angular');
 
-angular.module('appGallery')
+angular.module('galleryApp')
 .controller('AppHelloController', [AppHelloController]);
 
 function AppHelloController() {
