@@ -1,0 +1,20 @@
+<section class="app-gallery">
+  <div class="list-view">
+    <h2>List View</h2>
+    <ul>
+      <app-gallery-text ng-repeat="item in appGalleryCtrl.images" title="{{ item.title }}" desc="{{ item.desc}}" img-src="{{ item.imgSrc }}" ></app-gallery-text>
+    </ul>
+  </div>
+  <div class="thumbnail-view">
+    <h2>Preview</h2>
+    <ul>
+      <app-gallery-thumbnail ng-repeat="item in appGalleryCtrl.images" img-src="{{item.imgSrc}}"></app-gallery-thumbnail>
+    </ul>
+  </div>
+  <div class="gallery">
+    <h2>Full View</h2>
+    <ul>
+      <app-gallery-item ng-repeat="item in appGalleryCtrl.images" title="{{item.title}}" desc="{{item.desc}}" img-src="{{item.imgSrc}}"> </app-gallery-item>
+    </ul>
+  </div>
+</section>
