@@ -1,0 +1,16 @@
+@import "vendor/normalize.css";
+@import "vendor/bootstrap.css";
+@import "vendor/font-awesome/scss/font-awesome.scss";
+@import "lib/_theme.scss";
+
+// html, body {
+//   height: 100%;
+// }
+
+body {
+  background-color: rgba(#ee31d0, 0.34)
+}
+
+body {
+  background-color: $app-default;
+}

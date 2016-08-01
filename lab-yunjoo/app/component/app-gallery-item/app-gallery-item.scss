@@ -1,0 +1,13 @@
+@import "_theme";
+
+.app-gallery-item {
+  display: inline-block;
+  background-color: #aaff7a;
+  border: solid 4px black;
+  border-radius: 10px 0px 10px 0px;
+  padding: 5px;
+  margin: 5px;
+  img {
+    width: 200px;
+  }
+}
