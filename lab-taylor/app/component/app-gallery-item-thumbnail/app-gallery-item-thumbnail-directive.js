@@ -6,10 +6,12 @@ angular.module('galleryApp').directive('appGalleryItemThumbnail', function() {
     restrict: 'E',
     replace: true,
     scope: {
-      img: '=',
-      showModal: '&',
-      updateImage: '&'
+      image: '=',
+      showModal: '&'
     },
+    controller: 'AppGalleryThumbnailController',
+    controllerAs: 'appGalleryThumbCtrl',
+    bindToController: true,
     template: require('./app-gallery-item-thumbnail.html')
   };
 });

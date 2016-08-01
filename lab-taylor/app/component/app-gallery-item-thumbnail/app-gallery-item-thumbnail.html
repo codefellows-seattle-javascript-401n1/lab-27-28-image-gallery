@@ -1,4 +1,5 @@
 <li class="app-gallery-item-thumbnail">
-  <img width="100px" height="100px" ng-src="{{img.imgSrc}}" ng-click="showModal({image: img})">
-  <h2>Form should go here</h2>
+  <img width="100px" height="100px" ng-src="{{appGalleryThumbCtrl.image.imgSrc}}" ng-click="appGalleryThumbCtrl.showModal({image: appGalleryThumbCtrl.image})">
+  <h2>{{appGalleryThumbCtrl.image.title}} || {{appGalleryThumbCtrl.image.desc}} </h2>
+  <app-gallery-item-form btn-title="Update Slug" submit="appGalleryThumbCtrl.updateImage(image)"></app-gallery-item-form>
 </li>
