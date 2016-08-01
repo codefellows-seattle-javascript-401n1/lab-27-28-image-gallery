@@ -14,6 +14,7 @@ function AppGalleryController() {
   this.galleryStyle = 'image';
   this.displayModalImage = false;
 
+  //TODO -- refactor to use the entire image Object
   this.selectGalleryStyle = function(style) {
     if (style === 'list' || style === 'thumb' || style === 'image') {
       this.galleryStyle = style;
@@ -23,7 +24,7 @@ function AppGalleryController() {
   };
 
   this.showModalImage = function(image) {
-    this.displayImageUrl = image;
+    this.displayImageUrl = image.imgSrc;
     this.displayModalImage = true;
   };
 
@@ -32,11 +33,11 @@ function AppGalleryController() {
   };
 
   this.updateImage = function(image){
-    Object.keys(this.image).forEach((key) => {
+    Object.keys(this.images).forEach((key) => {
       if (image[key]) this.image[key] = image[key];
     });
   };
-  
+
   this.images = [
     {
       title: 'Slug Neo',

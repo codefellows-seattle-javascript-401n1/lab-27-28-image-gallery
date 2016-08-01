@@ -5,7 +5,7 @@
     <ul>
       <app-gallery-item-text ng-repeat="item in appGalleryCtrl.images" ng-show="appGalleryCtrl.galleryStyle === 'list'" title="{{item.title}}" desc="{{item.desc}}" img-src="{{item.imgSrc}}"></app-gallery-item-text>
       <app-gallery-item-fullsize ng-repeat="item in appGalleryCtrl.images" ng-show="appGalleryCtrl.galleryStyle === 'image'" title="{{item.title}}" desc="{{item.desc}}" img-src="{{item.imgSrc}}"></app-gallery-item-fullsize>
-      <app-gallery-item-thumbnail ng-repeat="item in appGalleryCtrl.images" ng-show="appGalleryCtrl.galleryStyle === 'thumb'" img-src="{{item.imgSrc}}" show-modal="appGalleryCtrl.showModalImage(image)"></app-gallery-item-thumbnail>
+      <app-gallery-item-thumbnail ng-repeat="item in appGalleryCtrl.images" ng-show="appGalleryCtrl.galleryStyle === 'thumb'" img="item" show-modal="appGalleryCtrl.showModalImage(image)" update-image="appGalleryCtrl.updateImage(image)"></app-gallery-item-thumbnail>
     </ul>
   </div>
 </section>
