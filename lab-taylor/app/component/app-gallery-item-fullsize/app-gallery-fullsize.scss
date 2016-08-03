@@ -1,7 +1,12 @@
 @import "../../scss/_theme.scss";
 
-.app-gallery-item-fullsize > img {
-  border-color: $app_electricPink;
-  border-style: solid;
-  border-width: thick;
+.app-gallery-item-fullsize {
+  list-style: none;
+  flex: auto;
+  flex-wrap: wrap;
+  img {
+    length: 200px;
+    width: 200px;
+    margin: 5px;
+  }
 }
