@@ -1,4 +1,10 @@
 <main class="app-main">
 
-<app-gallery></app-gallery>
+  <app-modal-image
+  image="appMainCtrl.images[0]"
+  ng-show="appMainCtrl.showModalImage()" ng-hide="appMainCtrl.hideModalImage()">
+  </app-modal-image>
+
+  <app-gallery class="app-gallery-container"></app-gallery>
+
 </main>
