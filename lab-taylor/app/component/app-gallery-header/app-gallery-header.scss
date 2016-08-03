@@ -1,5 +1,23 @@
 @import "_theme";
 
 .app-gallery-header {
-  background-color: $app_pine;
+  background-color: #333333;
+  padding: 5px;
+  button {
+    background-color: #333333;
+    border-style: solid;
+    border-radius: 3px;
+    border-color: #eeeeee;
+    color: #eeeeee
+  }
+
+  button:hover {
+    background-color: $app_electricPink;
+    border-color: $app_electricPink;
+    color: #eeeeee;
+  }
+
+  h1 {
+    color: #eeeeee;
+  }
 }
