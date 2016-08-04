@@ -18,3 +18,5 @@ require('./component/app-gallery-text');
 require('./component/app-gallery-thumbnail');
 require('./component/app-main');
 require('./component/app-modal-image');
+//require('./component/app-modal-edit-form');
+//require('./component/app-gallery-edit');

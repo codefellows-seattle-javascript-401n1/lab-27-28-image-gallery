@@ -1,6 +1,7 @@
 <section class="app-modal-image">
   <div ng-click="closeModal()"></div>
   <main>
+    <app-modal-edit-form show-image="appMainCtrl.showModalImage(imageUrl)"></app-modal-edit-form>
     <h2>Fractal Image:</h2>
     <img ng-src="{{imageUrl}}" alt="Fractal Image" width="800">
   </main>

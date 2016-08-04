@@ -3,13 +3,12 @@
     <app-gallery-text ng-show="appMainCtrl.list" ng-repeat="item in appGalleryCtrl.images" title="{{item.title}}" desc="{{item.desc}}" link="{{item.link}}"></app-gallery-text>
 
     <div class="thumb" ng-show="appMainCtrl.gallery && appGalleryCtrl.thumb">
-
       <div class="pics">
         <app-gallery-thumbnail ng-repeat="item in appGalleryCtrl.images" ng-click="appMainCtrl.showModalImage(item.imgSrc)" thumb-src="{{item.thumbSrc}}"></app-gallery-thumbnail>
       </div>
-
       <button type="button" ng-click="appGalleryCtrl.showFull()">View All</button>
     </div>
+
     <div class="full" ng-show="appMainCtrl.gallery && appGalleryCtrl.full">
       <button type="button" ng-click="appGalleryCtrl.showThumb()">Back to Thumbnails</button>
       <app-gallery-item ng-repeat="item in appGalleryCtrl.images" title="{{item.title}}" desc="{{item.desc}}" img-src="{{item.imgSrc}}"></app-gallery-item>

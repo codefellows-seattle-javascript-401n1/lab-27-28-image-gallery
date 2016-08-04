@@ -1,11 +1,12 @@
 <main class="app-main">
+
+  <app-modal-image image-url="appMainCtrl.modalImageUrl" ng-show="appMainCtrl.modalImage" close-modal="appMainCtrl.hideModalImage()"></app-modal-image>
+
   <div class="heading">
-    <!-- <button type="button" ng-click="appMainCtrl.showList()">Image list</button> -->
     <input type="image" ng-src="{{appMainCtrl.icon.listIcon}}" ng-click="appMainCtrl.showList()">
     <h1>Gallery of Images!</h1>
-    <!-- <button type="button" ng-click="appMainCtrl.showGallery()">Gallery</button> -->
     <input type="image" ng-src="{{appMainCtrl.icon.galleryIcon}}" ng-click="appMainCtrl.showGallery()">
   </div>
-  <app-modal-image image-url="appMainCtrl.modalImageUrl" ng-show="appMainCtrl.modalImage" close-modal="appMainCtrl.hideModalImage()"></app-modal-image>
+
   <app-gallery></app-gallery>
 </main>
