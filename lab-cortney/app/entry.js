@@ -9,6 +9,7 @@ angular.module('imageGallery', []);
 require('./service/image-service.js');
 
 require('./component/app-main');
+require('./component/app-header');
 require('./component/app-gallery');
 require('./component/app-gallery-list');
 require('./component/app-gallery-thumb');

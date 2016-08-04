@@ -2,7 +2,8 @@
 
 const angular = require('angular');
 
-angular.module('imageGallery').directive('AppHeader', function() {
+angular.module('imageGallery')
+.directive('appHeader', function() {
   return {
     restrict: 'E',
     replace: true,

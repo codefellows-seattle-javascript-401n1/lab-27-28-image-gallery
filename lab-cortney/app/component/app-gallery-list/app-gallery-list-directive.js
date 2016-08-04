@@ -2,7 +2,7 @@
 
 const angular = require('angular');
 
-angular.module('imageGallery').directive('AppGalleryList', function() {
+angular.module('imageGallery').directive('appGalleryList', function() {
   return {
     restrict: 'E',
     replace: true,

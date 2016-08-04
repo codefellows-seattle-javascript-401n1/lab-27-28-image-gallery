@@ -48,8 +48,8 @@ function AppGalleryController(imageService) {
     imgUrl: require('../../asset/image/cake/cake-5.jpg')
   });
 
-  console.log(imageService);
   this.images = imageService.images;
+  console.log('gallery', this.images);
   this.selectGalleryStyle = function(style) {
     if (style === 'text' || style === 'thumbnail' || style === 'image') {
       this.galleryStyle = style;
