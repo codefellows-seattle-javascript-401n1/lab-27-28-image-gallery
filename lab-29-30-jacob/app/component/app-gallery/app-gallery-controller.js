@@ -25,6 +25,12 @@ function AppGalleryController(){
     if (this.full === true) this.full = false;
   };
 
+  this.addImage = function(image){
+    if (typeof image === 'object' && image.title && image.imgSrc){
+      this.images.push(image);
+    }
+  };
+
   this.images = [
     {
       title:' Fractal Image 1',
