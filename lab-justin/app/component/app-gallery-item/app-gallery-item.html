@@ -1,0 +1,7 @@
+<div ng-init="clicked=false"  class="app-gallery-item">
+ <img class="thumb" ng-click="clicked=!clicked" ng-src="{{imgSrc}}"/>
+ <img ng-show="clicked" ng-src="{{imgSrc}}"/>
+ <a href="{{imgSrc}}">{{title}}</a>
+ <p> {{desc}} </p>
+ <app-edit-gallery-item-form title='title' desc='desc'></app-edit-gallery-item-form>
+</div>
