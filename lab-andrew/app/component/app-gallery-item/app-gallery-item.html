@@ -1,20 +1,25 @@
 <section class="app-gallery-item">
+  <button ng-click="appGalleryCtrl.showList()">List</button>
+  <button ng-click="appGalleryCtrl.showThumbnail()">Thumb</button>
+  <button ng-click="appGalleryCtrl.showFullsize()">Biggest</button>
+
+  <!-- <app-modal-view show-image="appMainCtrl.showModalImage(image)"></app-modal-view> -->
   <ul>
 
-    <li ng-repeat="image in appGalleryCtrl.images" class="mainLiEl">
+    <li ng-show="appGalleryCtrl.listShown" ng-repeat="image in appGalleryCtrl.images" class="mainLiEl">
     <app-text  title="{{image.title}}" desc="{{image.desc}}" img-src="{{image.imgSrc}}"></app-text>
 </li>
 
 <br>
 
-<li ng-repeat="image in appGalleryCtrl.images" class="mainLiEl">
-  <app-gallery-thumbnail img-src="{{image.imgSrc}}"></app-gallery-thumbnail>
+<li ng-show="appGalleryCtrl.thumbnailShown" ng-repeat="image in appGalleryCtrl.images" class="mainLiEl">
+  <app-gallery-thumbnail image:"({imageUrl: imgSrc})" img-src="{{image.imgSrc}}"><app-modal-view ng-show="appGalleryCtrl.showThisModal" ng-click="showModal(imgSrc)"></app-modal-view></app-gallery-thumbnail>
 </li>
 
 <br>
 
     <li ng-repeat="image in appGalleryCtrl.images" class="mainLiEl">
-    <app-gallery-fullSize title="{{image.title}}" desc="{{image.desc}}" img-src="{{image.imgSrc}}">hello world</app-gallery-fullSize>
+    <app-gallery-fullSize ng-show="appGalleryCtrl.fullsizeShown" title="{{image.title}}" desc="{{image.desc}}" img-src="{{image.imgSrc}}">hello world</app-gallery-fullSize>
 </li>
   </ul>
 </section>

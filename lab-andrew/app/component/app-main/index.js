@@ -2,3 +2,4 @@
 
 require('./app-main-directive.js');
 require('./app-main.scss');
+require('./app-main-controller');

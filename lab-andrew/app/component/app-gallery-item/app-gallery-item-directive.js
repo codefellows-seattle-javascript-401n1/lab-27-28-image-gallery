@@ -7,9 +7,10 @@ angular.module('galleryApp').directive('appGalleryItem', function () {
     restrict: 'E',
     replace: true,
     scope: {
+      image: '=',
       title: '@',
-      desc: '@',
       imgSrc: '@',
+      desc: '@'
     },
     controller: 'AppGalleryItemController',
     controllerAs: 'appGalleryCtrl',

@@ -7,10 +7,10 @@ angular.module('galleryApp').directive('appMain', function(){
     restrict: 'E',
     replace: true,
     scope: {
-      imgSrc:'@',
-      title: '@',
-      desc: '@',
     },
     template: require('./app-main.html'),
+    controller: 'AppMainController',
+    controllerAs: 'appMainCtrl',
+    bindToController: true
   };
 });
