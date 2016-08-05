@@ -4,20 +4,23 @@
 
   <div class="gallery-item-container">
 
-    <app-list-item ng-repeat="item in appGalleryCtrl.images" ng-show="appGalleryCtrl.galleryStyle === 'list'" image="item">
-    </app-list-item>
+    <app-gallery-list
+    ng-repeat="item in appGalleryCtrl.images"
+    ng-show="appGalleryCtrl.galleryStyle === 'list'"
+    image="item">
+    </app-gallery-list>
 
-    <app-thumb-item
+    <app-gallery-thumb
     ng-repeat="item in appGalleryCtrl.images"
     ng-show="appGalleryCtrl.galleryStyle === 'thumb'"
     image="item">
-    </app-thumb-item>
+  </app-gallery-thumb>
 
-    <app-image-item
+    <app-gallery-item
     ng-repeat="item in appGalleryCtrl.images"
     ng-show="appGalleryCtrl.galleryStyle === 'image'"
     image="item">
-    </app-image-item>
-    
+  </app-gallery-item>
+
   </div>
 </div>

@@ -10,7 +10,7 @@ angular.module('imageGallery')
 
 function AppGalleryController(imageService) {
   // this.images = {};
-  this.galleryStyle = 'image';
+  // this.galleryStyle = 'image';
 
   imageService.addImage({
     title: 'Cake One',
@@ -51,7 +51,7 @@ function AppGalleryController(imageService) {
   this.images = imageService.images;
   console.log('gallery', this.images);
   this.selectGalleryStyle = function(style) {
-    if (style === 'text' || style === 'thumbnail' || style === 'image') {
+    if (style === 'list' || style === 'thumb' || style === 'image') {
       this.galleryStyle = style;
       return this.galleryStyle;
     }
