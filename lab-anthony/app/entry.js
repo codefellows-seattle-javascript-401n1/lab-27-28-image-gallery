@@ -18,3 +18,4 @@ require('./components/app-gallery-item-form');
 require('./components/app-gallery-thumbnail');
 require('./components/app-gallery-text');
 require('./components/app-gallery');
+require('./components/app-modal-image');

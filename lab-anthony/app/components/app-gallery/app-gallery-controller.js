@@ -41,6 +41,17 @@ function AppGalleryController() {
     this.views.tile = true;
   };
 
+  this.displayModalImage = false;
+
+  this.showModalImage = function(imageUrl) {
+    this.displayImageUrl = imageUrl;
+    this.displayModalImage = true;
+  };
+
+  this.hideModalImage = function() {
+    this.displayModalImage = false;
+  };
+
   this.images = [
     {
       title: 'Mountain One',

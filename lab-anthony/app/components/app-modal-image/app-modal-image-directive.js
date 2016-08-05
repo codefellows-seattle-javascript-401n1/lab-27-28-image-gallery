@@ -11,6 +11,7 @@ angular.module('galleryApp')
     scope: {
       imageUrl: '=',
       title: '=',
+      showModal: '&',
       closeModal: '&'
     }
   };
