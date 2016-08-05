@@ -17,6 +17,30 @@ function AppGalleryController() {
     this.galleryItem = {title: '', desc: '', imgSrc: ''};
   };
 
+  this.views = {
+    thumbnail: false,
+    list: true,
+    tile: false
+  };
+
+  this.thumbnailView = function() {
+    this.views.thumbnail = true;
+    this.views.list = false;
+    this.views.tile = false;
+  };
+
+  this.listView = function() {
+    this.views.thumbnail = false;
+    this.views.list = true;
+    this.views.tile = false;
+  };
+
+  this.tileView = function() {
+    this.views.thumbnail = false;
+    this.views.list = false;
+    this.views.tile = true;
+  };
+
   this.images = [
     {
       title: 'Mountain One',
