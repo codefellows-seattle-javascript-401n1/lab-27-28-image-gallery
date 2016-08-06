@@ -30,6 +30,8 @@ function AppMainController(){
 
   this.icon = {
     galleryIcon: require('../../asset/button/gallery-icon.svg'),
-    listIcon: require('../../asset/button/list-icon.svg')
+    listIcon: require('../../asset/button/list-icon.svg'),
+    closeIcon: require('../../asset/button/close-icon.svg')
+
   };
 }

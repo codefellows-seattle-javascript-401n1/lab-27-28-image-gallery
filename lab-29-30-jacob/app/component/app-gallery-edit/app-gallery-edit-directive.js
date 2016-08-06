@@ -10,7 +10,8 @@ angular.module('imageGallery')
     template: require('./app-gallery-edit.html'),
     scope: {
       btnTitle: '@',
-      submit: '&'
+      submit: '&',
+      close: '&'
     }
   };
 });

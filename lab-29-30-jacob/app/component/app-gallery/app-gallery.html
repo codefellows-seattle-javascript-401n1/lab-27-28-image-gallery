@@ -1,6 +1,7 @@
 <section class="app-gallery">
 
-  <app-gallery-edit btn-title="Add Image" submit="appGalleryCtrl.addImage(image)"></app-gallery-edit>
+  <button class="addImage" type="button" ng-click="appGalleryCtrl.toggleEditForm()" ng-show="!appGalleryCtrl.galleryEdit"> + </button>
+  <app-gallery-edit ng-show="appGalleryCtrl.galleryEdit" btn-title="Add Image" close="appGalleryCtrl.toggleEditForm()" submit="appGalleryCtrl.addImage(image)"></app-gallery-edit>
 
   <ul>
     <app-gallery-text ng-show="appMainCtrl.list" ng-repeat="item in appGalleryCtrl.images" title="{{item.title}}" desc="{{item.desc}}" link="{{item.link}}"></app-gallery-text>

@@ -7,12 +7,18 @@ angular.module('imageGallery').controller('AppGalleryController', [AppGalleryCon
 function AppGalleryController(){
   this.thumb = true;
   this.full = false;
+  this.galleryEdit = false;
   this.galleryItem = {
     title: '',
     desc: '',
     thumbSrc: '',
     imgSrc: '',
     link: ''
+  };
+
+  this.toggleEditForm = function(){
+    if (this.galleryEdit === false) return this.galleryEdit = true;
+    if (this.galleryEdit === true)  return this.galleryEdit = false;
   };
 
   this.showFull = function(){
@@ -28,6 +34,7 @@ function AppGalleryController(){
   this.addImage = function(image){
     if (typeof image === 'object' && image.title && image.imgSrc){
       this.images.push(image);
+      this.toggleEditForm();
     }
   };
 

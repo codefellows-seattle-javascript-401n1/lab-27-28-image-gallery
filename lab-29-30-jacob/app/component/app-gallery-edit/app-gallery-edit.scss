@@ -22,5 +22,11 @@
 
 .app-gallery-edit {
   background-color: $app-itemBackground;
-  padding: 10px;
+  padding-bottom: 10px;
+}
+
+.closeEdit {
+  background-color: $app-borderMain;
+  width: 5%;
+  height: 10%;
 }

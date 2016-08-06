@@ -1,4 +1,5 @@
 <form ng-submit="submit({image: {title: title, desc: desc, imgSrc: imgSrc, thumbSrc: thumbSrc, link: link}})" novalidate class="form-block app-gallery-edit">
+<button class="closeEdit" type="button" ng-click="close()"> - </button>
 
   <div class="menu">
     <div class="inputs">
@@ -27,7 +28,7 @@
         <input type="text" name="link" ng-model="link">
       </div>
     </div>
-    
+
     <button class="btn btn-default" type="submit">{{ btnTitle }}</button>
   </div>
 
