@@ -1,8 +1,6 @@
 <form ng-submit="submit({image: {title: title, desc: desc, imgSrc: imgSrc, thumbSrc: thumbSrc, link: link}})" novalidate class="form-block app-gallery-edit">
 
   <div class="menu">
-    <button class="btn btn-default" type="submit">{{ btnTitle }}</button>
-
     <div class="inputs">
       <div class="form-group">
         <label for="title">Title</label>
@@ -29,7 +27,8 @@
         <input type="text" name="link" ng-model="link">
       </div>
     </div>
-
+    
+    <button class="btn btn-default" type="submit">{{ btnTitle }}</button>
   </div>
 
 </form>

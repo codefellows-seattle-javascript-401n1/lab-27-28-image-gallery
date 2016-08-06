@@ -12,7 +12,7 @@
     top: 50%;
     left: 50%;
     margin-left: -425px;
-    margin-top: 20%;
+    margin-top: 10%;
     z-index: 100;
     display: flex;
     flex-direction: column;
@@ -27,7 +27,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: $app-itemBackground;
-    opacity: 0.5;
+    background-color: white;
+    opacity: 0.7;
   }
 }
