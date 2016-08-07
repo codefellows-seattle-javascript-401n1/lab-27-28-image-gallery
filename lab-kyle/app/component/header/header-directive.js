@@ -3,14 +3,13 @@
 const angular = require('angular');
 
 angular.module('demoApp')
-.directive('appGalleryItemForm', function(){
+.directive('appHeader', function(){
   return {
     restrict: 'E',
     replace: true,
-    template: require('./app-gallery-item-form.html'),
+    template: require('./header.html'),
     scope: {
-      btnTitle: '@',
-      submit: '&'
+      selectGalleryStyle: '&'
     }
   };
 });

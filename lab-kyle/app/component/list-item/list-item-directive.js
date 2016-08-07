@@ -1,16 +1,14 @@
 'use strict';
 
 const angular = require('angular');
-
 angular.module('demoApp')
-.directive('appGalleryItemForm', function(){
+.directive('appListItem', function(){
   return {
     restrict: 'E',
     replace: true,
-    template: require('./app-gallery-item-form.html'),
+    template: require('./list-item.html'),
     scope: {
-      btnTitle: '@',
-      submit: '&'
+      image: '='
     }
   };
 });
