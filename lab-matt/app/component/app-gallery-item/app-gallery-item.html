@@ -1,0 +1,29 @@
+
+<div class="app-gallery-item">
+  <div class="">
+    <app-nav show-thumb = "appGalleryCtrl.thumbFunc()" show-text = "appGalleryCtrl.textFunc()" show-full = "appGalleryCtrl.fullFunc()"></app-nav>
+    <app-modal-image
+    image-url="{{ appGalleryCtrl.displayImageUrl }}"
+    ng-show="appGalleryCtrl.displayModalImage"
+    close-modal="appGalleryCtrl.hideModalImage()"
+
+    ></app-modal-image>
+
+  </div>
+    <ol>
+      <li ng-repeat="image in appGalleryCtrl.images">
+        <app-text  show-image="appGalleryCtrl.showModalImage(image)"
+        ng-show="appGalleryCtrl.showText"
+          image="image"
+         ></app-text>
+        <app-thumbnail
+          show-image="appGalleryCtrl.showModalImage(image)" ng-show="appGalleryCtrl.showThumb"
+          img-src="{{image.link}}"
+        ></app-thumbnail>
+        <app-fullsize
+          show-image="appGalleryCtrl.showModalImage(image)" ng-show="appGalleryCtrl.showFull" img-src="{{image.link}}">
+        </app-fullsize>
+
+      </li>
+    </ol>
+</div>

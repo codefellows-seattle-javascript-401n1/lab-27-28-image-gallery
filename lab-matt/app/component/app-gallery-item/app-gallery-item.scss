@@ -1,0 +1,10 @@
+@import "../../scss/_theme.scss";
+
+.app-gallery-item {
+  display: inline-block;
+}
+
+.make-bigger-btn {
+  background-color: $app-green;
+  border-radius: 5px;
+}

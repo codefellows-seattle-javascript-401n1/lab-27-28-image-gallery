@@ -1,0 +1,21 @@
+@import "vendor/normalize.scss";
+@import "vendor/bootstrap.scss";
+@import "vendor/font-awesome/scss/font-awesome.scss";
+@import "_theme";
+
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  background-color: $app-white;
+
+}
+
+body main ul, li {
+  list-style-type:none;
+}
+
+// div {
+//   border: 10px solid black;
+// }
