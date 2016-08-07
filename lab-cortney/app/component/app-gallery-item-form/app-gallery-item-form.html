@@ -1,0 +1,17 @@
+<form novalidate
+ng-submit="submit({image: {title: title, desc: desc}})"
+class="form-inline app-gallery-item-form">
+
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input type="text" name="title" ng-model="title">
+  </div>
+
+  <div class="form-group">
+    <label for="desc">Description:</label>
+    <input type="text" name="desc" ng-model="desc">
+  </div>
+
+  <button class="btn btn-default" type="submit"> {{ btnTitle }} </button>
+
+</form>

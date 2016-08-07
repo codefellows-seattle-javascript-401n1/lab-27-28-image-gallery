@@ -1,0 +1,44 @@
+@import "../../scss/_theme.scss";
+
+.app-modal-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 4000;
+  background-color: rgba(0,0,0,0.5);
+
+  main {
+    position: relative;
+    margin-top: (100vh) * 0.2;
+    width: 500px;
+    height: 400px;
+    z-index: 100;
+    overflow: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: #fff;
+
+    img, p, h2 {
+      display: block;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+    }
+  }
+
+  .app-close-modal {
+    font-size: 20px;
+    position: fixed;
+    background-color: white;
+    border: 1px solid black;
+    margin: 10px;
+  }
+
+  .app-close-modal:hover {
+    color: red;
+  }
+}

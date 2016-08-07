@@ -1,0 +1,15 @@
+<div class="app-gallery-thumb">
+
+  <app-modal-image
+  image="appGalleryThumbCtrl.thumbModalImage"
+  ng-if="appGalleryThumbCtrl.displayThumbsModalImage"
+  close="appGalleryThumbCtrl.hideThumbsModalImage()">
+  </app-modal-image>
+
+  <img
+  ng-click="appGalleryThumbCtrl.showThumbsModalImage(image)"
+  ng-src="{{ image.imgUrl }}"
+  alt="{{ image.title }}"
+  class="thumb-image" />
+
+</div>
