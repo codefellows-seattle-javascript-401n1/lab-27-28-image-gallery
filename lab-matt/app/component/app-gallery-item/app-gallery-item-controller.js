@@ -7,10 +7,10 @@ angular.module('demoApp')
 
 function AppGalleryItemController() {
   this.showThumb = false;
-  this.showText = false;
+  this.showText = true;
   this.showFull = false;
   this.displayModalImage = false;
-  this.defaultImage = 'http://static.nautil.us/7515_a3c36d0c741ddabbdb44b35a4fbebcb4.png'
+  this.defaultImage = 'http://static.nautil.us/7515_a3c36d0c741ddabbdb44b35a4fbebcb4.png';
 
 
 
@@ -70,5 +70,12 @@ function AppGalleryItemController() {
   this.hideModalImage = function() {
     console.log('hello from hideModalImage!');
     this.displayModalImage = false;
+  };
+  this.updateImage = function(image){
+    console.log('Hit updateImage', image);
+    Object.keys(image).forEach(key => {
+      console.log(image[key]);
+      if(image[key]) this.image[key] = image[key];
+    });
   };
 }

@@ -49,13 +49,17 @@
 	__webpack_require__(1);
 	__webpack_require__(2);
 
-	var angular = __webpack_require__(7);
+	var angular = __webpack_require__(12);
 
 	angular.module('demoApp', []);
 
-	__webpack_require__(9);
-	__webpack_require__(10);
-	__webpack_require__(15);
+	__webpack_require__(14);
+	__webpack_require__(19);
+	__webpack_require__(25);
+	__webpack_require__(30);
+	__webpack_require__(35);
+	__webpack_require__(40);
+	__webpack_require__(45);
 
 /***/ },
 /* 1 */
@@ -74,15 +78,20 @@
 /* 4 */,
 /* 5 */,
 /* 6 */,
-/* 7 */
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(8);
+	__webpack_require__(13);
 	module.exports = angular;
 
 
 /***/ },
-/* 8 */
+/* 13 */
 /***/ function(module, exports) {
 
 	/**
@@ -31560,27 +31569,66 @@
 	!window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
 
 /***/ },
-/* 9 */
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(15);
+	__webpack_require__(17);
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var angular = __webpack_require__(12);
+
+	angular.module('demoApp').directive('appText', function () {
+	  return {
+	    restrict: 'E',
+	    replace: true,
+	    scope: {
+	      imgSrc: '@',
+	      title: '@',
+	      desc: '@',
+	      showImage: '&'
+	    },
+	    template: __webpack_require__(16)
+	  };
+	});
+
+/***/ },
+/* 16 */
 /***/ function(module, exports) {
 
-	"use strict";
+	module.exports = "<div class=\"app-text\">\n  <h1>{{title}}</h1>\n  <p>\n    {{desc}}\n  </p>\n  <p>\n    Link: {{imgSrc}}\n  </p>\n  <p>\n    Click on an image to toggle full image view\n  </p>\n</div>\n";
 
 /***/ },
-/* 10 */
+/* 17 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 18 */,
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(11);
-	__webpack_require__(13);
+	__webpack_require__(20);
+	__webpack_require__(22);
+	__webpack_require__(23);
 
 /***/ },
-/* 11 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var angular = __webpack_require__(7);
+	var angular = __webpack_require__(12);
 
 	angular.module('demoApp').directive('appGalleryItem', function () {
 	  return {
@@ -31589,61 +31637,295 @@
 	    scope: {
 	      imgSrc: '@',
 	      title: '@',
-	      desc: '@'
+	      desc: '@',
+	      image: '='
 	    },
-	    template: __webpack_require__(12)
+	    controller: 'AppGalleryItemController',
+	    controllerAs: 'appGalleryCtrl',
+	    bindToController: true,
+	    template: __webpack_require__(21)
 	  };
 	});
 
 /***/ },
-/* 12 */
+/* 21 */
 /***/ function(module, exports) {
 
-	module.exports = "<li class=\"app-gallery=item\">\n  <img ng-src=\"{{imgSrc}}\">\n  <h2>{{title}}</h2>\n  <p>{{desc}}</p>\n</li>\n";
+	module.exports = "\n<div class=\"app-gallery-item\">\n  <app-nav show-thumb = \"appGalleryCtrl.thumbFunc()\" show-text = \"appGalleryCtrl.textFunc()\" show-full = \"appGalleryCtrl.fullFunc()\"></app-nav>\n  <app-modal-image\n  image-url=\"{{ appGalleryCtrl.displayImageUrl }}\"\n  ng-show=\"appGalleryCtrl.displayModalImage\"\n  close-modal=\"appGalleryCtrl.hideModalImage()\"\n\n  ></app-modal-image>\n    <ol>\n      <li ng-repeat=\"image in appGalleryCtrl.images\">\n        <app-text title=\"{{image.name}}\" show-image=\"appGalleryCtrl.showModalImage(image)\"\n        ng-show=\"appGalleryCtrl.showText\" desc=\"{{image.description}}\" img-src=\"{{image.link}}\"></app-text>\n        <app-thumbnail\n          show-image=\"appGalleryCtrl.showModalImage(image)\" ng-show=\"appGalleryCtrl.showThumb\"\n          img-src=\"{{image.link}}\"\n        ></app-thumbnail>\n        <app-fullsize\n          show-image=\"appGalleryCtrl.showModalImage(image)\" ng-show=\"appGalleryCtrl.showFull\" img-src=\"{{image.link}}\">\n        </app-fullsize>\n      </li>\n    </ol>\n</div>\n";
 
 /***/ },
-/* 13 */
+/* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var angular = __webpack_require__(12);
+
+	angular.module('demoApp').controller('AppGalleryItemController', [AppGalleryItemController]);
+
+	function AppGalleryItemController() {
+	  this.showThumb = false;
+	  this.showText = false;
+	  this.showFull = false;
+	  this.displayModalImage = false;
+	  this.defaultImage = 'http://static.nautil.us/7515_a3c36d0c741ddabbdb44b35a4fbebcb4.png';
+
+	  this.images = [{
+	    name: 'Dog Programmer',
+	    description: 'How we all fell at one point',
+	    link: 'http://www.smartfile.com/blog/wp-content/uploads/2013/06/dog.jpg'
+	  }, {
+	    name: 'Science Dog Programmer',
+	    description: 'Programmers with a CS degree',
+	    link: 'http://s2.quickmeme.com/img/c1/c16c94b2aa0b5deaf6e6ff04f117c665c1edde074d751383adf02d184941e4c0.jpg'
+	  }, {
+	    name: 'Coffee Dog Programmer',
+	    description: 'Always remember your coffee!',
+	    link: 'https://i.ytimg.com/vi/0bSPTYExyBM/hqdefault.jpg'
+	  }, {
+	    name: 'Corgi Programmer',
+	    description: 'A very smart looking programmer',
+	    link: 'https://hackbrightacademy.com/content/uploads/2016/01/puppy-coding.jpg'
+	  }], this.thumbFunc = function () {
+	    console.log('Hit thumbFunc');
+	    this.showThumb = true;
+	    this.showText = false;
+	    this.showFull = false;
+	  };
+	  this.textFunc = function () {
+	    console.log('Hit textFunc');
+	    this.showThumb = false;
+	    this.showText = true;
+	    this.showFull = false;
+	  };
+	  this.fullFunc = function () {
+	    console.log('Hit fullFunc');
+	    this.showThumb = false;
+	    this.showText = false;
+	    this.showFull = true;
+	  };
+
+	  this.showModalImage = function (imageUrl) {
+	    console.log('Hit ShowModalImage, imageUrl:', imageUrl);
+	    this.displayImageUrl = imageUrl || this.defaultImage;
+	    console.log(this.displayImageUrl);
+	    this.displayModalImage = true;
+	    console.log(this.displayModalImage);
+	  };
+
+	  this.hideModalImage = function () {
+	    console.log('hello from hideModalImage!');
+	    this.displayModalImage = false;
+	  };
+	}
+
+/***/ },
+/* 23 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 14 */,
-/* 15 */
+/* 24 */,
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(16);
-	__webpack_require__(18);
+	__webpack_require__(26);
+	__webpack_require__(28);
 
 /***/ },
-/* 16 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var angular = __webpack_require__(7);
+	var angular = __webpack_require__(12);
 
 	angular.module('demoApp').directive('appMain', function () {
 	  return {
 	    restrict: 'E',
 	    replace: true,
-	    template: __webpack_require__(17)
+	    template: __webpack_require__(27)
 	  };
 	});
 
 /***/ },
-/* 17 */
+/* 27 */
 /***/ function(module, exports) {
 
-	module.exports = "<main class=\"app-main\">\n  <app-gallery-item img-src=\"http://vignette2.wikia.nocookie.net/beyondthestars/images/c/c6/Unicorn_cat.gif/revision/latest?cb=20120325024015\" title=\"unicorn cat\" desc=\"booya kitty cat numba1 #yolo #swag #hax\"> </app-gallery-item>\n</main>\n";
+	module.exports = "\n\n\n\n\n\n<main class=\"app-main\">\n  <app-gallery-item></app-gallery-item>\n\n\n</main>\n";
 
 /***/ },
-/* 18 */
+/* 28 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 29 */,
+/* 30 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(31);
+	__webpack_require__(33);
+
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var angular = __webpack_require__(12);
+
+	angular.module('demoApp').directive('appThumbnail', function () {
+	  return {
+	    restrict: 'E',
+	    replace: true,
+	    scope: {
+	      imgSrc: '@',
+	      showImage: '&'
+
+	    },
+	    template: __webpack_require__(32)
+	  };
+	});
+
+/***/ },
+/* 32 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"app-thumbnail\">\n  <img ng-click=\"showImage({ image: imgSrc })\" ng-src=\"{{imgSrc}}\" height='100' width='100'>\n</div>\n";
+
+/***/ },
+/* 33 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 34 */,
+/* 35 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(36);
+	__webpack_require__(38);
+
+/***/ },
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var angular = __webpack_require__(12);
+
+	angular.module('demoApp').directive('appFullsize', function () {
+	  return {
+	    restrict: 'E',
+	    replace: true,
+	    scope: {
+	      imgSrc: '@',
+	      showImage: '&'
+	    },
+	    template: __webpack_require__(37)
+	  };
+	});
+
+/***/ },
+/* 37 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"app-fullsize\">\n  <img ng-click=\"showImage({ image: imgSrc })\" ng-src=\"{{ imgSrc }}\" width=100% height=100%>\n</div>\n";
+
+/***/ },
+/* 38 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 39 */,
+/* 40 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(41);
+	__webpack_require__(43);
+
+/***/ },
+/* 41 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var angular = __webpack_require__(12);
+
+	angular.module('demoApp').directive('appModalImage', function () {
+	  return {
+	    restrict: 'E',
+	    replace: true,
+	    template: __webpack_require__(42),
+	    scope: {
+	      imageUrl: '@',
+	      closeModal: '&'
+	    }
+	  };
+	});
+
+/***/ },
+/* 42 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"app-modal-image\">\n\n  <div ng-click=\"closeModal()\">\n  </div>\n\n  <main>\n    <img ng-src=\"{{imageUrl}}\" alt=\"Dog Programmer\" width=200 height=200 />\n  </main>\n</div>\n";
+
+/***/ },
+/* 43 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 44 */,
+/* 45 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(46);
+	// require('./app-nav.scss');
+
+/***/ },
+/* 46 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var angular = __webpack_require__(12);
+
+	angular.module('demoApp').directive('appNav', function () {
+	  return {
+	    restrict: 'E',
+	    replace: true,
+	    template: __webpack_require__(47),
+	    scope: {
+	      showFull: '&',
+	      showText: '&',
+	      showThumb: '&'
+	    }
+	  };
+	});
+
+/***/ },
+/* 47 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"btn-group\" role=\"group\" aria-label=\"...\">\n  <button ng-click='showText()' type=\"button\" class=\"btn btn-default\">Text</button>\n  <button ng-click='showThumb()' type=\"button\" class=\"btn btn-primary\">Thumbs</button>\n  <button ng-click='showFull()' type=\"button\" class=\"btn btn-success\">Large</button>\n</div>\n";
 
 /***/ }
 /******/ ]);

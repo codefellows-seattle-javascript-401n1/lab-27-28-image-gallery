@@ -1,0 +1,14 @@
+<div class="app-text">
+  <h1>{{appTextCtrl.image.name}}</h1>
+  <p>
+    {{appTextCtrl.image.description}}
+  </p>
+  <p>
+    Link: {{appTextCtrl.image.link}}
+  </p>
+  <p>
+    Click on an image to toggle full image view
+  </p>
+
+  <app-gallery-form submit="appTextCtrl.updateImage(image)" btn-title="update image"></app-gallery-form>
+</div>

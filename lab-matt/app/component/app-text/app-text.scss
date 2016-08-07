@@ -1,0 +1,10 @@
+@import "../../scss/_theme";
+
+.app-text {
+  background-color: $app-white;
+  border: 1px solid $app-disabled;
+}
+
+.app-text p {
+  font-weight: bold;
+}
