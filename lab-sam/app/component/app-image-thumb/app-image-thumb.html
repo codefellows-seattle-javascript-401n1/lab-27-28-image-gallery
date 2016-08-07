@@ -1,3 +1,5 @@
-<div class="app-image-thumb" data-ng-init="console.log(imgThumbSrc)">
-  <img ng-src="{{imgThumbSrc}}">
+<div class="app-image-thumb">
+  <img ng-src="{{appImageThumbCtrl.image.imgThumbSrc}}" ng-click="appImageThumbCtrl.showModalImage(appImageThumbCtrl.image)">
+  <app-modal-image ng-show="appImageThumbCtrl.displayModalImage" close-modal="appImageThumbCtrl.hideModalImage()" image="appImageThumbCtrl.image">
+  </app-modal-image>
 </div>

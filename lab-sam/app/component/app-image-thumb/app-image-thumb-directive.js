@@ -6,8 +6,11 @@ angular.module('galleryApp').directive('appImageThumb', function(){
   return {
     restrict: 'E',
     replace: true,
+    controller: 'appImageThumbController',
+    controllerAs: 'appImageThumbCtrl',
+    bindToController: true,
     scope: {
-      imgThumbSrc: '@',
+      image: '='
     },
     template: require('./app-image-thumb.html')
   }

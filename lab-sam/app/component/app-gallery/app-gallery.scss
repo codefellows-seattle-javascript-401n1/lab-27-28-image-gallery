@@ -1,16 +1,11 @@
 // @import "_theme";
 
-.app-gallery{
-    height: 100%;
+.app-gallery {
+  height: 100%;
+  width: 100%;
 
-    h1 {
-      color: $app-light;
-    }
-
-    .app-gallery-container {
-      display: flex;
-      flex-wrap: wrap;
-    }
+  .app-gallery-container {
+    display: flex;
+    flex-wrap: wrap;
   }
-
 }

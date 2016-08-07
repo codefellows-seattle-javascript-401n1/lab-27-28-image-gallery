@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
-require('./app-modal-view-directive.js')
-require('./app-modal-view.scss')
+require('./app-modal-view-directive.js');
+require('./app-modal-view.scss');

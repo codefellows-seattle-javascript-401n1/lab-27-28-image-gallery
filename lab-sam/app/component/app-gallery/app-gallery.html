@@ -14,7 +14,8 @@
     <app-image-link ng-repeat="image in appGalleryCtrl.images" title="{{image.title}}" img-link-url="{{image.link}}" description="{{image.description}}"> </app-image-link>
   </ul>
   <div class="app-gallery-container" ng-show="appGalleryCtrl.thumbView">
-    <app-image-thumb ng-repeat="image in appGalleryCtrl.images" img-thumb-src="{{image.imgThumbSrc}}"> </app-image-thumb>
+    <app-image-thumb ng-repeat="image in appGalleryCtrl.images" image="image">
+   </app-image-thumb>
   </div>
   <div class="app-gallery-container" ng-show="appGalleryCtrl.fullView">
     <app-image-full ng-repeat="image in appGalleryCtrl.images" title="{{image.title}}" description="{{image.description}}" img-src="{{image.imgSrc}}"> </app-image-full>

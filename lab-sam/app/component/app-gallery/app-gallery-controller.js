@@ -10,8 +10,8 @@ function AppGalleryController(){
     description: '',
     imgSrc: '',
   }
-  this.linkView = true;
-  this.thumbView = false;
+  this.linkView = false;
+  this.thumbView = true;
   this.fullView = false;
 
   this.addImageFull = function(){
