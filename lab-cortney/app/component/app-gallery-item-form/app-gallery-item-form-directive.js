@@ -1,15 +1,15 @@
 'use strict';
 
 const angular = require('angular');
-
 angular.module('imageGallery')
-.directive('appShowModalForm', function() {
+.directive('appGalleryItemForm', function() {
   return {
     restrict: 'E',
     replace: true,
-    template: require('./app-show-modal-form.html'),
+    template: require('./app-gallery-item-form.html'),
     scope: {
-      showImage: '&'
+      btnTitle: '@',
+      submit: '&'
     }
   };
 });

@@ -1,12 +1,12 @@
 <div class="app-modal-image">
 
-  <div ng-click="appModalImageCtrl.close()" class="app-close-modal">
+  <div ng-click="close()" class="app-close-modal">
     Close?!?
     </div>
     <main>
-      <img ng-src="{{ appModalImageCtrl.image.imgUrl }}" />
-      <h2> {{ appModalImageCtrl.image.title }} </h2>
-      <p> {{ appModalImageCtrl.image.desc }} </p>
+      <img ng-src="{{ image.imgUrl }}" />
+      <h2> {{ image.title }} </h2>
+      <p> {{ image.desc }} </p>
     </main>
 
 </div>

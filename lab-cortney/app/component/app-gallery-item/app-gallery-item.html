@@ -2,4 +2,9 @@
   <h2> {{image.title}} </h2>
   <img ng-src="{{image.imgUrl}}" />
   <p class="app-desc"> {{image.desc}} </p>
+
+  <app-gallery-item-form
+  submit="appMainCtrl.updateImage(image)"
+  btn-title="Update Image"></app-gallery-item-form>
+
 </div>
