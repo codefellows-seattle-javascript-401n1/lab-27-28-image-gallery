@@ -2,14 +2,14 @@
 
 const angular = require('angular');
 angular.module('demoApp')
-.directive('appEditGalleryItemForm', function(){
+.directive('appGalleryItemForm', function(){
   return{
     restrict: 'E',
     replace: true,
     scope: {
       btnTitle: '@',
-      desc: '&'
+      submit: '&'
     },
-    template: require('./app-edit-gallery-item-form.html')
+    template: require('./app-gallery-item-form.html')
   };
 });

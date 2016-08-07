@@ -1,8 +1,15 @@
 
 @import "vendor/normalize.css";
 
+@import "vendor/bootstrap.css";
+@import "vendor/font-awesome/css/font-awesome.css";
 
+@import "./lib/_theme";
+
+html, body {
+  height: 100%;
+}
 
 body {
-  background-color: green;
+  background-color: $app-default;
 }
