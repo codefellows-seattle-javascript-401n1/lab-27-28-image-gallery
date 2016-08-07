@@ -1,0 +1,11 @@
+<section class="app-gallery">
+  <app-gallery-header select-gallery-style="appGalleryCtrl.selectGalleryStyle(style)"></app-gallery-header>
+  <app-item-modal ng-show="appGalleryCtrl.displayModalImage" image-url="appGalleryCtrl.displayImageUrl" close-modal="appGalleryCtrl.hideModalImage()"></app-item-modal>
+  <div class="gallery--item-container">
+    <div>
+      <app-gallery-item-text ng-repeat="item in appGalleryCtrl.images" ng-show="appGalleryCtrl.galleryStyle === 'list'" title="{{item.title}}" desc="{{item.desc}}" img-src="{{item.imgSrc}}"></app-gallery-item-text>
+      <app-gallery-item-fullsize ng-repeat="item in appGalleryCtrl.images" ng-show="appGalleryCtrl.galleryStyle === 'image'" title="{{item.title}}" desc="{{item.desc}}" img-src="{{item.imgSrc}}"></app-gallery-item-fullsize>
+      <app-gallery-item-thumbnail ng-repeat="item in appGalleryCtrl.images" ng-show="appGalleryCtrl.galleryStyle === 'thumb'" image="item" show-modal="appGalleryCtrl.showModalImage(image)"></app-gallery-item-thumbnail>
+    </div>
+  </div>
+</section>

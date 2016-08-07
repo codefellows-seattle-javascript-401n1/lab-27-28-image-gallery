@@ -1,0 +1,12 @@
+@import "vendor/normalize.css";
+@import "vendor/bootstrap.scss";
+@import "vendor/font-awesome/scss/font-awesome";
+@import "_theme.scss";
+
+body {
+  color: $app_darkGrey;
+}
+
+h1 {
+  color: $app_seaweed;
+}

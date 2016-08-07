@@ -1,0 +1,10 @@
+@import "../../scss/_theme.scss";
+.app-gallery-item-text{
+  margin: 5px;
+  padding: 5px;
+  
+  a {
+    color: $app_seaweed;
+    text-decoration: none;
+  }
+}
