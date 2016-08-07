@@ -1,0 +1,35 @@
+<form ng-submit="submit({image: {title: title, desc: desc, imgSrc: imgSrc, thumbSrc: thumbSrc, link: link}})" novalidate class="form-block app-gallery-edit">
+<button class="closeEdit" type="button" ng-click="close()"> - </button>
+
+  <div class="menu">
+    <div class="inputs">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" name="title" ng-model="title">
+      </div>
+
+      <div class="form-group">
+        <label for="imgSrc">Url:</label>
+        <input type="text" name="imgSrc" ng-model="imgSrc">
+      </div>
+
+      <div class="form-group">
+        <label for="thumbSrc">Optional Thumbnail url:</label>
+        <input type="text" name="thumbSrc" ng-model="thumbSrc">
+      </div>
+
+      <div class="form-group">
+        <label for="desc">Description:</label>
+        <input type="text" name="desc" ng-model="desc">
+      </div>
+
+      <div class="form-group">
+        <label for="link">link to original website:</label>
+        <input type="text" name="link" ng-model="link">
+      </div>
+    </div>
+
+    <button class="btn btn-default" type="submit">{{ btnTitle }}</button>
+  </div>
+
+</form>

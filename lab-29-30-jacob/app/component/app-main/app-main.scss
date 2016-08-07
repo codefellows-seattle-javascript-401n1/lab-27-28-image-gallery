@@ -1,0 +1,17 @@
+@import "_theme";
+
+.heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+  text-align: center;
+
+  input {
+    height: 40px;
+  }
+}
+
+img {
+  border: solid thick $app-borderMain;
+}
