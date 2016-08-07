@@ -1,0 +1,27 @@
+// @import "../scss/_theme.scss";
+.app-modal-view {
+  // z-index: 1;
+  position: absolute;;
+  width: 100%;
+  height: 100%;
+
+  .modalMain {
+    z-index: 100;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right:auto;
+  }
+
+  .modalDiv {
+    z-index: 2;
+    color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);;
+  }
+}

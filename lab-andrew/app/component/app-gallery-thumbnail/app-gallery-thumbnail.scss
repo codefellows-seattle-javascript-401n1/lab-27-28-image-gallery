@@ -1,0 +1,13 @@
+@import "../../scss/_theme.scss";
+
+.app-gallery-thumbnail {
+  text-decoration: none;
+  display: inline-flex;
+  border: solid 2px white;
+}
+
+.app-gallery-thumbnail > img:hover {
+  box-shadow: 5px 5px 5px;
+  border: none;
+  border-color: $app_grey;
+}

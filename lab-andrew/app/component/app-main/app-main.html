@@ -1,0 +1,7 @@
+<main class="app-main">
+  <!-- <button ng-click="appMainCtrl.showModalImage()">Show Modal</button> -->
+
+  <app-modal-view img-url="{{appMainCtrl.displayImage}}" ng-show="appMainCtrl.displayModalImage" close-modal="appMainCtrl.hideModalImage()"></app-modal-view>
+<app-gallery-item show-modal-image="appMainCtrl.showModalImage(imageModal)"></app-gallery-item>
+
+</main>
