@@ -1,0 +1,32 @@
+@import "_theme";
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2% 10% 2% 10%;
+}
+
+.form-group {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.app-gallery-edit {
+  background-color: $app-itemBackground;
+  padding-bottom: 10px;
+}
+
+.closeEdit {
+  background-color: $app-borderMain;
+  width: 5%;
+  height: 10%;
+}

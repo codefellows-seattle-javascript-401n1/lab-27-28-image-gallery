@@ -1,0 +1,16 @@
+@import "../../scss/_theme.scss";
+
+.app-gallery-item {
+  display: inline-block;
+  margin: 20px 0 20px 0;
+  border: solid thick $app-itemborder;
+  background-color: $app-itembackground;
+}
+
+.app-gallery-item h2, .app-gallery-item p {
+  text-align: center;
+}
+
+.app-gallery-item p {
+  padding: 0 5px 0 5px;
+}
