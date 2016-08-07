@@ -8,7 +8,8 @@ angular.module('imageGallery').directive('appGalleryThumb', function() {
     replace: true,
     template: require('./app-gallery-thumb.html'),
     scope: {
-      image: '='
+      image: '=',
+      close: '&'
     }
   };
 });

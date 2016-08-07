@@ -7,7 +7,9 @@ angular.module('imageGallery')
   const images = [];
 
   const addImage = function(img) {
-    this.images.push(img);
+    if (typeof img === 'object' && img.title && img.imgUrl) {
+      this.images.push(img);
+    }
   };
 
   return {

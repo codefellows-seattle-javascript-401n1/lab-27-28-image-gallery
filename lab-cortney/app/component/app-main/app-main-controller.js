@@ -7,15 +7,18 @@ angular.module('imageGallery')
 
 function AppMainController() {
 
-  this.displayModalImage = false;
+  const frownyFace = require('../../asset/image/default/frown.jpg');
+
+  this.displayModalImage = true;
 
   this.hideModalImage = function() {
     this.displayModalImage = false;
   };
 
   this.showModalImage = function(image) {
-    this.modalImage = image;
+    this.modalImage = image || frownyFace;
+    console.log('boooo');
     this.displayModalImage = true;
   };
-  
+
 }
