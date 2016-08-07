@@ -9,8 +9,6 @@ angular.module('imageGallery')
 ]);
 
 function AppGalleryController(imageService) {
-  // this.images = {};
-  // this.galleryStyle = 'image';
 
   imageService.addImage({
     title: 'Cake One',
@@ -20,14 +18,14 @@ function AppGalleryController(imageService) {
 
   imageService.addImage({
     title: 'Cake Two',
-    desc: 'I\'m gonna guess this couple is into music. Pretty!',
+    desc: 'A "rustic" style of cake. I\'d eat it!',
     imgUrl: require('../../asset/image/cake/cake-1.jpg')
   });
 
   imageService.addImage({
     title: 'Cake Three',
     desc: 'This cake is in another language.',
-    imageUrl: require('../../asset/image/cake/cake-2.jpg')
+    imgUrl: require('../../asset/image/cake/cake-2.jpg')
   });
 
   imageService.addImage({

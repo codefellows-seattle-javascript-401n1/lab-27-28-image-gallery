@@ -7,12 +7,11 @@ angular.module('imageGallery')
 function AppGalleryItemController() {
 
   this.updateImage = function(image) {
-    console.log('image updating?', image);
     Object.keys(this.image).forEach( (key) => {
       if (image[key]) {
         this.image[key] = image[key];
       }
     });
   };
-  
+
 }

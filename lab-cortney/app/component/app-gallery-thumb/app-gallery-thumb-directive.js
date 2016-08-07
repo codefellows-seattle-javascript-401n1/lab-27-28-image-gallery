@@ -12,8 +12,6 @@ angular.module('imageGallery').directive('appGalleryThumb', function() {
     scope: {
       image: '=',
       close: '&'
-      // appGalleryCtrl: '=',
-      // appMainCtrl: '='
     }
   };
 });
