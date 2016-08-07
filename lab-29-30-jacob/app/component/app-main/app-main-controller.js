@@ -8,6 +8,7 @@ function AppMainController(){
   this.list = true;
   this.gallery  = false;
   this.modalImage = false;
+  this.modalImageUrl = null;
 
   this.showList = function(){
     if (this.list === false) this.list = true;

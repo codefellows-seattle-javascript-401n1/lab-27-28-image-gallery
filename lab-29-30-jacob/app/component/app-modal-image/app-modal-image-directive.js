@@ -11,7 +11,6 @@ angular.module('imageGallery')
     scope: {
       imageUrl: '=',
       closeModal: '&'
-      //imageAlt: '='
     }
   };
 });
