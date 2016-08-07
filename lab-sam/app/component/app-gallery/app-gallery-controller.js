@@ -10,15 +10,14 @@ function AppGalleryController(){
     description: '',
     imgSrc: '',
   }
+  this.linkView = true;
+  this.thumbView = false;
+  this.fullView = false;
 
   this.addImageFull = function(){
     this.images.push(angular.copy(this.imageFull))
     this.imageFull = {title: '', description: '', imgSrc: ''}
   }
-
-  this.linkView = true;
-  this.thumbView = false;
-  this.fullView = false;
 
   this.activateLinkView = function(){
     this.linkView = true;

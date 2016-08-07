@@ -1,6 +1,13 @@
+@import "_theme";
+
 .app-image-link {
-  display: inline-block;
-  background-color: #1582BD;
-  border-color: #1582BD;
-  border-width: 0.25 em;
+  li {
+    display: inline-block;
+    float: left;
+    width: 500px;
+    padding: 10px;
+    border-width: 0.25 em;
+    border-color: #1582BD;
+    background-color: #1582BD;
+  }
 }
