@@ -6,10 +6,11 @@ angular.module('galleryApp').directive('appText', function(){
   return {
     restrict: 'E',
     replace: true,
+    controller: 'AppTextController',
+    controllerAs: 'appTextCtrl',
+    bindToController: true,
     scope: {
-      imgSrc:'@',
-      title: '@',
-      desc: '@',
+      image: '='
     },
     template: require('./app-text.html')
   };

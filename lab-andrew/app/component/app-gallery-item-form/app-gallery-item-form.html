@@ -1,13 +1,13 @@
-<form novalidate ng-submit="submit({image: {title: title, imageUrl: imageUrl}})" class="form-inline app-gallery-item-form">
+<form novalidate ng-submit="submit({ image: {title: title, imgSrc: imgSrc}})" class="form-inline app-gallery-item-form">
 
   <div class="form-group">
-    <label for="title">Title</label>
+    <label for="title">Title:</label>
     <input type="text" name="title" ng-model="title">
   </div>
 
   <div class="form-group">
-    <label for="imgUrl">Url:</label>
-    <input type="text" name="imageUrl" ng-model="imageUrl">
+    <label for="imgSrc">Url:</label>
+    <input type="text" name="imgSrc" ng-model="imgSrc">
   </div>
 
   <button class="btn btn-default" type="submit">{{btnTitle}}</button>
