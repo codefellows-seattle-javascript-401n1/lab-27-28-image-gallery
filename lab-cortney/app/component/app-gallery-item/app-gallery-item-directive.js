@@ -8,6 +8,9 @@ angular.module('imageGallery')
     restrict: 'E',
     replace: true,
     template: require('./app-gallery-item.html'),
+    controller: 'AppGalleryItemController',
+    controllerAs: 'appGalleryItemCtrl',
+    bindToController: true,
     scope: {
       image: '='
     }

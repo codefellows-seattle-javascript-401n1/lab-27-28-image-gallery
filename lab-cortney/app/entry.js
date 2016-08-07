@@ -15,3 +15,4 @@ require('./component/app-gallery-list');
 require('./component/app-gallery-thumb');
 require('./component/app-gallery-item');
 require('./component/app-modal-image');
+require('./component/app-gallery-item-form');

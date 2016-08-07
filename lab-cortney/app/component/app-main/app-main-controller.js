@@ -20,12 +20,4 @@ function AppMainController() {
     this.displayModalImage = true;
   };
 
-  this.updateImage = function(image) {
-    Object.keys(this.image).forEach( (key) => {
-      if (image[key]) {
-        this.image[key] = image[key];
-      }
-    });
-  };
-
 }

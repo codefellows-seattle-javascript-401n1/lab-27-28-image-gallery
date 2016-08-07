@@ -1,10 +1,11 @@
 <div class="app-gallery-item">
-  <h2> {{image.title}} </h2>
-  <img ng-src="{{image.imgUrl}}" />
-  <p class="app-desc"> {{image.desc}} </p>
+  <h2> {{appGalleryItemCtrl.image.title}} </h2>
+  <img ng-src="{{appGalleryItemCtrl.image.imgUrl}}" />
+  <p class="app-desc"> {{appGalleryItemCtrl.image.desc}} </p>
 
   <app-gallery-item-form
-  submit="appMainCtrl.updateImage(image)"
-  btn-title="Update Image"></app-gallery-item-form>
+  submit="appGalleryItemCtrl.updateImage(image)"
+  btn-title="Update Image">
+  </app-gallery-item-form>
 
 </div>
