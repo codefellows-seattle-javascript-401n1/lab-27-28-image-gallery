@@ -10,6 +10,7 @@ angular.module('galleryApp').directive('appModalView', function(){
     scope: {
       image: '=',
       closeModal: '&',
+      submit: '&'
     }
   }
 })

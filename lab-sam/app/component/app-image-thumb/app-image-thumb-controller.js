@@ -6,6 +6,7 @@ angular.module('galleryApp').controller('appImageThumbController', [appImageThum
 
 function appImageThumbController(){
   this.displayModalImage = false;
+  this.displayImageForm = false;
 
   this.showModalImage = function(image){
     this.displayModalImage = true;
@@ -17,5 +18,15 @@ function appImageThumbController(){
   this.hideModalImage = function(){
     console.log('HIDE ME!');
     this.displayModalImage = false;
+  }
+
+  this.toggleForm = function(){
+    if(this.displayImageForm === false){
+      this.displayImageForm = true;
+    }
+    if(this.displayImageForm === true){
+      this.displayImageForm = false;
+    }
+    console.log("displayImageForm:", displayImageForm);
   }
 }

@@ -1,5 +1,5 @@
 <div class="app-image-thumb">
   <img ng-src="{{appImageThumbCtrl.image.imgThumbSrc}}" ng-click="appImageThumbCtrl.showModalImage(appImageThumbCtrl.image)">
-  <app-modal-view ng-show="appImageThumbCtrl.displayModalImage" close-modal="appImageThumbCtrl.hideModalImage()" image="appImageThumbCtrl.image">
+  <app-modal-view ng-show="appImageThumbCtrl.displayModalImage" close-modal="appImageThumbCtrl.hideModalImage()" image="appImageThumbCtrl.image" submit="appImageThumbCtrl.toggleForm()">
   </app-modal-view>
 </div>
