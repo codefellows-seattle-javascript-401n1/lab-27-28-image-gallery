@@ -17,7 +17,6 @@ function AppMainController() {
 
   this.showModalImage = function(image) {
     this.modalImage = image || frownyFace;
-    console.log('boooo');
     this.displayModalImage = true;
   };
 

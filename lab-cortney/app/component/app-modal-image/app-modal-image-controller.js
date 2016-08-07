@@ -2,9 +2,13 @@
 
 const angular = require('angular');
 
-angular.module('imageGallery').controller('AppModalImageController', [AppModalImageController]);
+angular.module('imageGallery').controller('AppModalImageController', [
+  '$scope',
+  '$log',
+  AppModalImageController
+]);
 
-function AppModalImageController() {
+function AppModalImageController($scope, $log) {
   this.image = {};
   this.updateImageWithData = function(image) {
     if (typeof image === 'object' && typeof this.image == 'object') {
@@ -14,5 +18,8 @@ function AppModalImageController() {
         }
       });
     }
+  };
+  this.initialize = function initialize() {
+    $log.warn('THIS IS THE IMAGE: ', $scope.image);
   };
 }

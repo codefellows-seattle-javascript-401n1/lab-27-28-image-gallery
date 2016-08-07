@@ -49,7 +49,6 @@ function AppGalleryController(imageService) {
   });
 
   this.images = imageService.images;
-  console.log('gallery', this.images);
   this.selectGalleryStyle = function(style) {
     if (style === 'list' || style === 'thumb' || style === 'image') {
       this.galleryStyle = style;

@@ -13,14 +13,16 @@
     <app-gallery-thumb
     ng-repeat="item in appGalleryCtrl.images"
     ng-show="appGalleryCtrl.galleryStyle === 'thumb'"
+    app-gallery-ctrl="appGalleryCtrl"
+    app-main-ctrl="appMainCtrl"
     image="item">
-  </app-gallery-thumb>
+    </app-gallery-thumb>
 
     <app-gallery-item
     ng-repeat="item in appGalleryCtrl.images"
     ng-show="appGalleryCtrl.galleryStyle === 'image'"
     image="item">
-  </app-gallery-item>
+    </app-gallery-item>
 
   </div>
 </div>

@@ -7,9 +7,13 @@ angular.module('imageGallery').directive('appGalleryThumb', function() {
     restrict: 'E',
     replace: true,
     template: require('./app-gallery-thumb.html'),
+    controller: 'AppGalleryThumbController',
+    controllerAs: 'appGalleryThumbCtrl',
     scope: {
       image: '=',
       close: '&'
+      // appGalleryCtrl: '=',
+      // appMainCtrl: '='
     }
   };
 });
