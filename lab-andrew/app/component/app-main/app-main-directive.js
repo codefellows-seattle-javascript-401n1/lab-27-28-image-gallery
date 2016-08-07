@@ -7,6 +7,7 @@ angular.module('galleryApp').directive('appMain', function(){
     restrict: 'E',
     replace: true,
     scope: {
+      imageModal: '='
     },
     template: require('./app-main.html'),
     controller: 'AppMainController',

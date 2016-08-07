@@ -7,7 +7,9 @@ angular.module('galleryApp').directive('appGalleryThumbnail', function() {
     restrict: 'E',
     replace: true,
     scope: {
+      imageModal: '=',
       imgSrc: '@',
+      showModal: '&'
     },
     template: require('./app-gallery-thumbnail.html')
   };

@@ -7,6 +7,8 @@ angular.module('galleryApp').directive('appGalleryItem', function () {
     restrict: 'E',
     replace: true,
     scope: {
+      showModalImage: '&',
+      imageModal: '=',
       image: '=',
       title: '@',
       imgSrc: '@',

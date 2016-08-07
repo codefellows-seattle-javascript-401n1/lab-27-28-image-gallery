@@ -7,8 +7,8 @@ angular.module('galleryApp').directive('appModalView', function() {
     restrict: 'E',
     replace: true,
     scope: {
+      imgUrl: '@',
       showModal: '&',
-      imgUrl: '=',
       closeModal: '&'
     },
     template: require('./app-modal-view.html')
