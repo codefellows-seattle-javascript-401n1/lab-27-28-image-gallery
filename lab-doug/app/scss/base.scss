@@ -1,6 +1,10 @@
 @import "./vendor/normalize.scss";
 @import "_theme";
 
+html {
+  height: 100;
+}
 body {
   background-color: $app-blue;
+  height: 100%;
 }

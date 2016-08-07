@@ -7,5 +7,11 @@ angular.module('galleryApp').directive('appMain', function(){
     restrict: 'E',
     replace: true,
     template: require('./app-main.html'),
+    controller: AppMainController,
+    controllerAs: AppMainCtrl,
+    bindToController: true,
+    scope: {
+
+    },
   };
 });
