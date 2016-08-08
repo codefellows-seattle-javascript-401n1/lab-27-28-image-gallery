@@ -1,0 +1,30 @@
+.app-gallery {
+  position: relative;
+}
+
+.tile {
+  position: absolute;
+  z-index: 98;
+}
+
+.app-modal-image {
+  position: absolute;
+
+  main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    overflow: hidden;
+  }
+
+  div {
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100vmax;
+    height: 100vmax;
+    background-color: rgba(100,100,100,0.9);
+  }
+}

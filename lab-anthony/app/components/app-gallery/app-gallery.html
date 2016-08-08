@@ -1,0 +1,25 @@
+<section class="app-gallery">
+  <input type="button" ng-click="appGalleryCtrl.thumbnailView()" name="name" value="Thumbnail">
+  <input type="button" ng-click="appGalleryCtrl.listView()" name="name" value="List">
+  <input type="button" ng-click="appGalleryCtrl.tileView()" name="name" value="Tile">
+  <div ng-show="appGalleryCtrl.views.list" class="list-view">
+    <h2>List View</h2>
+    <ul>
+      <app-gallery-text ng-repeat="item in appGalleryCtrl.images" title="{{ item.title }}" desc="{{ item.desc}}" img-src="{{ item.imgSrc }}" ></app-gallery-text>
+    </ul>
+  </div>
+  <div ng-show="appGalleryCtrl.views.thumbnail" class="thumbnail-view">
+    <h2>Thumbnail View</h2>
+    <ul>
+      <app-gallery-thumbnail ng-repeat="item in appGalleryCtrl.images" img-src="{{item.imgSrc}}"></app-gallery-thumbnail>
+    </ul>
+  </div>
+  <div ng-show="appGalleryCtrl.views.tile" class="tile">
+    <h2>Tile View</h2>
+    <ul>
+      <app-gallery-item ng-repeat="item in appGalleryCtrl.images" image="item" show-modal-image="appGalleryCtrl.showModalImage(imgSrc)">
+      </app-gallery-item>
+    </ul>
+  </div>
+  <app-modal-image image-url="appGalleryCtrl.displayImageUrl" ng-show="appGalleryCtrl.displayModalImage" close-modal="appGalleryCtrl.hideModalImage()"></app-modal-image>
+</section>

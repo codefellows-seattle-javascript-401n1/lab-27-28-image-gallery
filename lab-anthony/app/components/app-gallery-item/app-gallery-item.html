@@ -1,0 +1,9 @@
+
+<li class="app-gallery-item">
+  <img ng-src="{{ appGalleryItemCtrl.image.imgSrc }}">
+  <h2>{{ appGalleryItemCtrl.image.title }}</h2>
+  <p>{{ appGalleryItemCtrl.image.desc }}</p>
+  <app-gallery-item-form submit="appGalleryItemCtrl.updateImage(image)"
+  btn-title="Update"></app-gallery-item-form>
+  <input type="button" ng-click="appGalleryItemCtrl.showModalImage({imgSrc: appGalleryItemCtrl.imgSrc})" name="name" value="Show Image">
+</li>
