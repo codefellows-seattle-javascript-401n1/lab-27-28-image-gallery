@@ -14,10 +14,12 @@
       <app-gallery-thumbnail ng-repeat="item in appGalleryCtrl.images" img-src="{{item.imgSrc}}"></app-gallery-thumbnail>
     </ul>
   </div>
-  <div ng-show="appGalleryCtrl.views.tile" class="gallery">
+  <div ng-show="appGalleryCtrl.views.tile" class="tile">
     <h2>Tile View</h2>
     <ul>
-      <app-gallery-item ng-repeat="item in appGalleryCtrl.images" title="{{item.title}}" desc="{{item.desc}}" img-src="{{item.imgSrc}}"> </app-gallery-item>
+      <app-gallery-item ng-repeat="item in appGalleryCtrl.images" image="item" show-modal-image="appGalleryCtrl.showModalImage(imgSrc)">
+      </app-gallery-item>
     </ul>
   </div>
+  <app-modal-image image-url="appGalleryCtrl.displayImageUrl" ng-show="appGalleryCtrl.displayModalImage" close-modal="appGalleryCtrl.hideModalImage()"></app-modal-image>
 </section>

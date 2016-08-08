@@ -6,16 +6,6 @@ angular.module('galleryApp')
 .controller('AppGalleryController', [AppGalleryController]);
 
 function AppGalleryController() {
-  this.galleryItem = {
-    title: '',
-    desc: '',
-    imgSrc: ''
-  };
-
-  this.addGalleryItem = function(){
-    this.images.push(angular.copy(this.galleryItem));
-    this.galleryItem = {title: '', desc: '', imgSrc: ''};
-  };
 
   this.views = {
     thumbnail: false,

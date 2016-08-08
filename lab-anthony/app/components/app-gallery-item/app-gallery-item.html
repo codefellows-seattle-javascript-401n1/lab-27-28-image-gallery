@@ -1,8 +1,9 @@
-<li class="app-gallery-item">
-  <img ng-src="{{ imgSrc }}">
-  <h2>{{ title }}</h2>
-  <p>{{ desc }}</p>
 
-  <input type="button" ng-click="appGalleryCtrl.showModalImage({{imgSrc}})" name="name" value="Show Image">
-  <app-modal-image image-url="appGalleryCtrl.displayImageUrl" ng-show="appGalleryCtrl.displayModalImage" show-modal="appGalleryCtrl.showModalImage()" close-modal="appGalleryCtrl.hideModalImage()"></app-modal-image>
+<li class="app-gallery-item">
+  <img ng-src="{{ appGalleryItemCtrl.image.imgSrc }}">
+  <h2>{{ appGalleryItemCtrl.image.title }}</h2>
+  <p>{{ appGalleryItemCtrl.image.desc }}</p>
+  <app-gallery-item-form submit="appGalleryItemCtrl.updateImage(image)"
+  btn-title="Update"></app-gallery-item-form>
+  <input type="button" ng-click="appGalleryItemCtrl.showModalImage({imgSrc: appGalleryItemCtrl.imgSrc})" name="name" value="Show Image">
 </li>

@@ -7,10 +7,12 @@ angular.module('galleryApp')
   return {
     restrict: 'E',
     replace: true,
+    controller: 'AppGalleryItemController',
+    controllerAs: 'appGalleryItemCtrl',
+    bindToController: true,
     scope: {
-      imgSrc: '@',
-      title: '@',
-      desc: '@'
+      image: '=',
+      showModalImage: '&'
     },
     template: require('./app-gallery-item.html')
   };

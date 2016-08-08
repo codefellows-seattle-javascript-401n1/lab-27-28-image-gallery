@@ -10,8 +10,6 @@ angular.module('galleryApp')
     template: require('./app-modal-image.html'),
     scope: {
       imageUrl: '=',
-      title: '=',
-      showModal: '&',
       closeModal: '&'
     }
   };
