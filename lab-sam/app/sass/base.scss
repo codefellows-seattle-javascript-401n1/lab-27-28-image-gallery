@@ -1,0 +1,16 @@
+@import "vendor/normalize.css";
+@import "vendor/bootstrap.scss";
+@import "_theme";
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: $app-main;
+}
+
+img {
+  border-radius: 3px;
+  border-color: $app-dark;
+}
