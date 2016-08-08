@@ -1,9 +1,9 @@
 'use strict';
 
 const angular = require('angular');
-angular.module('demoApp').controller('MainController', [MainController]);
+angular.module('demoApp').controller('ThumbController', [ThumbController]);
 
-function MainController(){
+function ThumbController(){
   this.displayModalImage = true;
 
   this.hideModalImage = function(){

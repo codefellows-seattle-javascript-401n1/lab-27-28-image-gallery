@@ -1,6 +1,6 @@
 'use strict';
 
-const angular = require('angular')
+const angular = require('angular');
 angular.module('demoApp')
 .directive('appShowModalForm', function(){
   return {
@@ -8,7 +8,7 @@ angular.module('demoApp')
     replace: true,
     template: require('./app-show-modal-form.html'),
     scope: {
-      showImage: '&',
-    },
-  }
+      showImage: '&'
+    }
+  };
 });
