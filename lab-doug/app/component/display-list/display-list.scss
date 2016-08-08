@@ -1,0 +1,15 @@
+@import "../../scss/_theme";
+
+.display-list {
+  display: list-item;
+  list-style-type: none;
+  background-color: white;
+  border: thin solid black;
+  border-radius: 5px;
+  text-align: left;
+  padding: 2px;
+  margin: 2px;
+  font-size: .75em;
+  color: $app-link-text;
+
+}
