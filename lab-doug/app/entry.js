@@ -2,7 +2,7 @@
 
 
 /**
- * the file loader copies index.html to index.html.  This is added to the build as a seperate file not as part of the bundles we defined in webpack.config.js.  One side affect of this, is that the index.html is not hot loaded by webpack after its inital copy.  This limits the developer from seeing real time changes while working.  To work around that, later, we create a "app-main" element directive that is the body of the html page.  That way, each time a change is made in any of the html templates contained within the "app-main" element (or children), the html-loader will hot load that change in real time.
+ * the file loader copies index.html to index.html in the "build" folder.  This is added to the build as a seperate file not as part of the bundles we defined in webpack.config.js.  One side affect of this, is that the index.html is not hot loaded by webpack after its inital copy.  This limits the developer from seeing real time changes while working.  To work around that, later, we create a "app-main" element directive that is the body of the html page.  That way, each time a change is made in any of the html templates contained within the "app-main" element (or children), the html-loader will hot load that change in real time.
  */
 require('!!file?name=[name].[ext]!./html/index.html');
 
