@@ -1,0 +1,11 @@
+<div class="app-modal-image">
+  <i ng-click="modalImageCtrl.close()" class="app-close-modal fa fa-times-circle-o fa-3x" aria-hidden="true"></i>
+
+  <main>
+    <img ng-src="{{modalImageCtrl.image.imgUrl}}" alt="{{modalImageCtrl.image.title}}">
+    <h2> {{ modalImageCtrl.image.title }} </h2>
+    <label><i class="fa fa-pencil" aria-hidden="true"></i>Edit Title Here: <input ngMouseover="updateImageWithData" type="text" ng-model="modalImageCtrl.image.title"/></label>
+    <p> {{ modalImageCtrl.image.desc }} </p>
+    <lable><i class="fa fa-pencil" aria-hidden="true"></i>Edit Desc Here: <input ngMouseover="updateImageWithData" type="text" ng-model='modalImageCtrl.image.desc'></label>
+  </main>
+</div>

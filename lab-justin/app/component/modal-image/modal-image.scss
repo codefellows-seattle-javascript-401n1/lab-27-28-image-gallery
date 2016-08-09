@@ -1,0 +1,64 @@
+@import "_theme";
+
+.app-modal-image {
+  position:fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 4000;
+  display: flex;
+  flex-wrap: wrap;
+
+  main {
+    position: relative;
+    margin-top: (100vh ) * 0.2;
+    background-color: $app-default;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    // width: 150px;
+    // height: 150px;
+    border: solid 4px #c5f7ce;
+    box-shadow: 4px 4px $app-shadow;
+    overflow: scroll;
+    // border-radius: 10px 0px 10px 0px;
+
+    img {
+      // width: 440px;
+      border: solid 4px #c5f7ce;
+      // border-radius: 10px 0px 10px 0px;
+      box-shadow: 4px 4px $app-shadow;
+      overflow: scroll;
+    }
+
+    h2 {
+      line-height: 1.4em;
+      padding-left: 10px;
+      padding-bottom: 3px;
+      padding-top: 3px;
+      color: $app-default;
+      background-color: $app-light;
+      width: calc(100% + 7px);
+      border-radius: 4px 4px 4px 4px;
+    }
+
+    // p {
+    //   font-weight: bold;
+    //   overflow: scroll;
+    // }
+  }
+
+  .app-close-modal {
+    float: right;
+    margin-right: 20px;
+    margin-top: 15px;
+    color: #c5f7ce;
+  }
+
+  .app-close-modal:hover {
+    color: $app-blood;
+  }
+  .app-close-modal:active {
+    color: $app-active;
+  }
+}

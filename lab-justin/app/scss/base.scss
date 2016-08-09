@@ -1,0 +1,11 @@
+@import './vendor/normalize.scss';
+@import './vendor/bootstrap.scss';
+@import './lib/_theme.scss';
+@import './vendor/font-awesome/scss/font-awesome.scss';
+
+html, body {
+  background-color: $app-mint;
+  font-family: 'Indie Flower', monospace;
+  font-size: 20px;
+  height: 100%;
+}

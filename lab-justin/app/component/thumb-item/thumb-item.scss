@@ -1,0 +1,29 @@
+@import "_theme";
+
+.thumb-item-title {
+  color: $app-blood;
+}
+
+.app-thumb-item {
+  position: relative;
+  padding: 4px;
+
+  img {
+    // border: 4px solid $app-dark;
+    // box-shadow: 4px 4px $app-light;
+    // border-radius: 10px 0px 10px 0px;
+    border-radius: 50%;
+  }
+
+  // .app-social-status {
+  //   margin-top: 2px;
+  //   margin-left: 8px;
+  // }
+}
+
+.app-thumb-item:hover {
+  img {
+    border: 5px solid #22abf4;
+    box-shadow: 7px 4px #2241f4;
+  }
+}
