@@ -1,0 +1,13 @@
+@import "vendor/normalize.css";
+@import "vendor/bootstrap.scss";
+@import "vendor/font-awesome/scss/font-awesome.scss";
+// partials
+@import "_theme";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #0CF508;
+}
