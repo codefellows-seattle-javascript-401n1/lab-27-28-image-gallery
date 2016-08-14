@@ -7,13 +7,10 @@ angular.module('demoApp')
   return {
     restrict: 'E',
     replace: true,
-    controller: 'ThumbController',
-    controllerAs: 'thumbCtrl',
     template: require('./thumb-item.html'),
     scope: {
       image: '=',
-      showModalImage: '&',
-      hideModalImage: '&'
+      showModalImage: '&'
     }
   };
 });

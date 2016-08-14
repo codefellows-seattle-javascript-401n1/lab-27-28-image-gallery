@@ -4,7 +4,7 @@ const angular = require('angular');
 angular.module('demoApp').controller('MainController', [MainController]);
 
 function MainController(){
-  this.displayModalImage = true;
+  this.displayModalImage = false;
 
   this.hideModalImage = function(){
     this.displayModalImage = false;

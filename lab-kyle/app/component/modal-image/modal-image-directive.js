@@ -13,7 +13,8 @@ angular.module('demoApp')
     bindToController: true,
     scope: {
       image: '=',
-      close: '&'
+      close: '&',
+      desc: '='
     }
   };
 });
