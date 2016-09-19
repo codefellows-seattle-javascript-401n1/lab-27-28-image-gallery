@@ -1,0 +1,8 @@
+
+<main class="app-main">
+  <app-gallery-item-form btn-title ="Add image" submit = "appMainCtrl.addImage(image)"> </app-gallery-item-form>
+
+  <div class = "app-gallery-container">
+    <app-gallery-item ng-repeat = "item in appMainCtrl.images" image="item"></app-gallery-item>
+  </div>
+</main>
