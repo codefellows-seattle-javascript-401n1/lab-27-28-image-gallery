@@ -7,7 +7,7 @@ angular.module('demoApp')
     return {
       restrict: 'E',
       replace: true,
-      controller: 'AppGalleryController',
+      controller: 'AppGalleryItemController',
       controllerAs: 'appGalleryItemCtrl',
       bindToController: true,
       scope: {

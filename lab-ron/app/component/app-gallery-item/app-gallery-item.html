@@ -1,8 +1,5 @@
-<div class="app-gallery-item" data-ng-init="appGalleryItemCtrl.initialize()">
-  <img ng-src="{{ appGalleryItemCtrl.image.imageUrl }}">
-  <h2> {{appGalleryItemCtrl.image.title}} </h2>
-
-  <app-gallery-item-form submit="appGalleryItemCtrl.updateImage(image)"
-       btn-title="update image"
-    > </app-gallery-item-form>
+<div class ="app-gallery-item">
+  <img ng-src="{{appGalleryItemCtrl.image.imageUrl}}">
+  <h2>{{ appGalleryItemCtrl.image.title }}</h2>
+  <app-edit-gallery-item-form submit="appGalleryItemCtrl.updateImages(image)" btn-title ="update image"></app-edit-gallery-item-form>
 </div>

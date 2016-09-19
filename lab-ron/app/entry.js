@@ -14,4 +14,3 @@ require('./component/app-modal-image');
 require('./component/app-show-modal-form');
 require('./component/app-gallery-item');
 require('./component/app-gallery-item-form');
-//require('./controller/example-parrent.js')

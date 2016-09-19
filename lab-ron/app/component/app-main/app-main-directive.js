@@ -11,7 +11,7 @@ angular.module('demoApp')
     controller: 'AppMainController',
     controllerAs: 'appMainCtrl',
     bindToController: true,
-    scope:{
+    scope: {
 
     }
   };
