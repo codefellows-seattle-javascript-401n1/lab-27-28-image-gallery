@@ -1,0 +1,47 @@
+@import "_theme";
+
+.app-gallery {
+  margin: 10px 0 10px 0;
+  border-top: thick solid $app-borderMain;
+  border-bottom: thick solid $app-borderMain;
+}
+
+.thumb {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 20px 0 50px 0;
+  padding: 30px 0 50px 0;
+}
+
+.pics {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20px 0 50px 0;
+  padding: 30px 0 50px 0;
+}
+
+.full {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.addImage {
+  background-color: $app-borderMain;
+  width: 5%;
+  height: 10%;
+}
+
+button {
+  margin: 0 auto;
+  border: solid thin $app-borderMain;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}

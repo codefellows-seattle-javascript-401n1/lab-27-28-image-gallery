@@ -1,0 +1,31 @@
+@import "../../scss/_theme.scss";
+
+.app-gallery-text {
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  list-style-type: none;
+  width: 75%;
+  margin: 20px auto 20px auto;
+  border-radius: 20px 20px 20px 20px;
+  border: solid thin $app-textBorder;
+
+  .info {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  p, h2, a {
+    padding: 10px 10px 10px 10px;
+  }
+
+  h2 {
+    border-bottom: solid thin $app-borderMain;
+  }
+
+  a:hover {
+    color: #1BFFDA;
+  }
+}

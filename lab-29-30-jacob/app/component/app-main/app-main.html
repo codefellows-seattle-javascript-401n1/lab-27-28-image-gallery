@@ -1,0 +1,15 @@
+<main class="app-main">
+
+  <app-modal-image image-url="appMainCtrl.modalImageUrl" ng-show="appMainCtrl.modalImage" close-modal="appMainCtrl.hideModalImage()"></app-modal-image>
+
+  <app-modal-edit-form ng-show="appMainCtrl.modalImage" show-image="appMainCtrl.showModalImage(imageUrl)"></app-modal-edit-form>
+
+
+  <div class="heading">
+    <input type="image" ng-src="{{appMainCtrl.icon.listIcon}}" ng-click="appMainCtrl.showList()">
+    <h1>Gallery of Images!</h1>
+    <input type="image" ng-src="{{appMainCtrl.icon.galleryIcon}}" ng-click="appMainCtrl.showGallery()">
+  </div>
+
+  <app-gallery></app-gallery>
+</main>

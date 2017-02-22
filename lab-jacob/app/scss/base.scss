@@ -1,0 +1,23 @@
+@import "vendor/normalize.css";
+@import "_theme.scss";
+
+body {
+  background-color: $app-background;
+}
+
+h1, h2, h3 {
+  color: $app-heading;
+}
+
+p {
+  color: $app-text;
+}
+
+ul {
+  margin-top: 0;
+}
+
+.app-gallery {
+  background-color: white;
+
+}
